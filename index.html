@@ -3,32 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>V.V. Mart, Nanganallur</title>
-<meta name="description" content="Design concept for V.V. Mart, the neighbourhood supermarket on 1st Main Road, Nanganallur. Groceries, vegetables, pooja items, cosmetics and gifts since 2013.">
-<meta name="theme-color" content="#2C1218">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3CclipPath id='c'%3E%3Ccircle cx='20' cy='20' r='16.2'/%3E%3C/clipPath%3E%3Ccircle cx='20' cy='20' r='18' fill='%23F4F0FF' stroke='%23E5245E' stroke-width='2.6'/%3E%3Cg clip-path='url(%23c)' fill='none' stroke='%23E5245E' stroke-width='3.4'%3E%3Cpath d='M-1 4L20 35.5L41 4'/%3E%3Cpath d='M5.5 2L20 23.5L34.5 2'/%3E%3Cpath d='M12 0L20 11.5L28 0'/%3E%3C/g%3E%3C/svg%3E">
+<title>Needs Supermarket, Nanganallur</title>
+<meta name="description" content="Needs Supermarket, 1st Main Road, Nanganallur: cookware, brass, gifts, toys, stationery, personal care, home decor, pet supplies and kolu stands. Order on WhatsApp.">
+<meta name="theme-color" content="#2B1810">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23FFE11A'/%3E%3Cpath d='M20 21c-1 6 1 10 0 14' fill='none' stroke='%232E9E4F' stroke-width='2.4'/%3E%3Ccircle cx='20' cy='14' r='8' fill='%23E2264A'/%3E%3C/svg%3E">
 <style>[hidden]{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;500;600;700&family=Nanum+Pen+Script&family=Archivo+Black&family=Tiro+Tamil&family=Catamaran:wght@400;600;800&family=Kavivanar&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;500;600;700&family=Nanum+Pen+Script&family=Lobster&family=Tiro+Tamil&family=Catamaran:wght@400;600;800&family=Kavivanar&display=swap" rel="stylesheet">
 <style>
 :root{
   color-scheme:light;
-  /* taken from the shop's own signboard: maroon band, red wordmark, blue Tamil lettering, purple emblem, yellow welcome banners */
-  --sign:#2C1218;
-  --sign-2:#45202A;
-  --vv-red:#E3202B;
-  --vv-red-dark:#A9141D;
-  --vv-blue:#2638C9;
-  --vv-plum:#932C8C;
-  --turmeric:#FFD81F;
+  /* taken from the Needs storefront and logo: dark wood facade, blue script sign, red rose, green leaves, yellow logo disc */
+  --sign:#2B1810;
+  --sign-2:#4A2B1C;
+  --vv-red:#E2264A;
+  --vv-red-dark:#A3122F;
+  --vv-blue:#1D3FC4;
+  --vv-plum:#2E9E4F;
+  --turmeric:#FFE11A;
   --turmeric-deep:#F5B800;
-  --leaf:#2638C9;
-  --leaf-dark:#17208A;
-  --kumkum:#E3202B;
-  --ink:#1F1418;
+  --leaf:#1D3FC4;
+  --leaf-dark:#12288A;
+  --kumkum:#E2264A;
+  --ink:#1E1611;
   --paper:#FFFFFF;
-  --mint:#F1EEF7;
+  --mint:#EEF2FC;
   --ruled:#BFD6E8;
   --line:rgba(26,31,22,.14);
   --muted:#4E5649;
@@ -491,6 +491,56 @@ html[data-lang="ta"] .front-h{font-size:clamp(2rem,4.4vw,4rem);line-height:1.2;l
   .mf .w,.mf i{opacity:1;transform:none}
 }
 
+/* ================= Needs brand layer ================= */
+.brand-mark{width:40px;height:40px;filter:drop-shadow(0 0 8px rgba(255,225,26,.35))}
+.brand .wm{font-family:"Lobster",cursive;font-size:30px;color:#8EA4FF;text-shadow:0 0 14px rgba(111,139,255,.75);letter-spacing:0;line-height:1;padding-bottom:4px}
+.intro-sign{gap:18px}
+.intro-emb{width:clamp(64px,10vw,104px)}
+.intro-en{font-family:"Lobster",cursive !important;font-size:clamp(64px,12vw,140px) !important;color:#8EA4FF !important;text-shadow:0 0 30px rgba(111,139,255,.9) !important;line-height:1}
+.intro-sub{position:absolute;left:0;right:0;bottom:calc(50% - 110px);text-align:center;color:rgba(255,255,255,.75);font-size:15px;letter-spacing:.2em;text-transform:uppercase;opacity:0;animation:neon 1s .9s steps(1,end) forwards}
+.intro{display:grid;place-items:center}
+.intro-emb .petal{transform-origin:20px 20px;animation:bloom .8s .1s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes bloom{from{transform:scale(.2) rotate(-40deg)}}
+.hero{background:radial-gradient(120% 90% at 85% 10%,var(--sign-2),var(--sign) 60%)}
+.hero::after{background:linear-gradient(90deg,var(--vv-red) 0 30%,var(--vv-plum) 30% 45%,var(--vv-blue) 45% 80%,var(--turmeric) 80%)}
+.board{background:var(--sign)}
+/* storefront illustration: picture on top, words underneath so the sign stays visible */
+.front{min-height:0;display:block}
+.front::after{content:none}
+.front-img{position:relative;inset:auto;height:clamp(300px,50vw,680px);overflow:hidden;filter:none}
+.front-img svg{width:100%;height:110%;will-change:transform}
+.front-img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(transparent,var(--sign))}
+.front-copy{padding-block:8px 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px 48px;align-items:end}
+.front-copy p{margin-top:0}
+.front-h{grid-column:1/-1}
+.front-copy .btn-sign{margin-top:0;justify-self:start}
+@media (max-width:760px){.front-copy{grid-template-columns:1fr}}
+.ph-cap{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:520px){.ph-cap{-webkit-line-clamp:3}.ph-art svg{width:52%;transform:translateY(-14px)}}
+/* reels */
+.reels{background:var(--sign);color:#fff;overflow:hidden}
+.reels .sub{color:rgba(255,255,255,.75)}
+.reels-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.reel-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.reels .btn-ink{background:var(--vv-red);box-shadow:0 4px 0 var(--vv-red-dark)}
+.reels .btn-ink svg{width:20px;height:20px}
+.reels .btn-line{border-color:rgba(255,255,255,.6);color:#fff}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:end}
+.phone{position:relative;display:flex;flex-direction:column;aspect-ratio:9/17;border-radius:28px;background:#111;border:6px solid #2a2a2a;overflow:hidden;color:#fff;text-decoration:none;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);transform:translateY(calc(var(--i) * -18px)) rotate(calc((var(--i) - 1) * 3deg));transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.phone:hover{transform:translateY(calc(var(--i) * -18px - 10px)) rotate(0deg)}
+.ph-top{display:flex;align-items:center;gap:8px;padding:12px 12px 0;font-size:12px;z-index:1}
+.ph-av{width:22px;height:22px;flex:none}.ph-av svg{width:100%;height:100%}
+.ph-top b{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ph-art{flex:1;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--tint) 45%,#fff),color-mix(in srgb,var(--tint) 75%,#000))}
+.ph-art svg{width:62%;height:auto;animation:floaty 3.2s ease-in-out infinite;animation-delay:calc(var(--i) * -1s)}
+@keyframes floaty{50%{transform:translateY(-8px) rotate(-4deg)}}
+.ph-cap{position:absolute;left:0;right:0;bottom:0;padding:40px 12px 14px;font-size:12.5px;line-height:1.35;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.ph-play{position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,255,255,.85);color:#111;display:grid;place-items:center;opacity:0;transition:opacity .25s}
+.ph-play svg{width:20px;height:20px}
+.phone:hover .ph-play{opacity:1}
+@media (max-width:900px){.reels-grid{grid-template-columns:1fr}.phones{gap:10px}.phone{border-width:4px;border-radius:18px}.ph-cap{font-size:11px;padding:30px 8px 10px}.ph-top{padding:8px 8px 0;font-size:10px}}
+@media (prefers-reduced-motion:reduce){.ph-art svg{animation:none}}
+
 /* ---------- type: premium serif ---------- */
 .hero h1{font-size:var(--hero);letter-spacing:var(--hero-ls)}
 .h2{letter-spacing:var(--h2-ls)}
@@ -535,27 +585,21 @@ html[data-lang="ta"] .empty{font-size:19px}
 <body>
 <div class="intro" id="intro" aria-hidden="true">
   <div class="intro-sign">
-    <svg class="intro-emb" viewBox="0 0 40 40"><defs><clipPath id="embI"><circle cx="20" cy="20" r="16.2"/></clipPath></defs><circle cx="20" cy="20" r="18" fill="#F4F0FF" stroke="#E5245E" stroke-width="2.6"/><g clip-path="url(#embI)" fill="none" stroke="#E5245E" stroke-width="3.4"><path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/></g></svg>
-    <span class="intro-ta">வி.வி. மார்ட்</span>
-    <span class="intro-en">V.V. MART</span>
+    <svg class="intro-emb" viewBox="0 0 40 40"><circle class="petal" cx="20" cy="20" r="19" fill="#FFE11A"/><g transform="translate(6 5) scale(0.75)"><path d="M20 21c-1 6 1 10 0 17" fill="none" stroke="#2E9E4F" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30c-5-1-8-4-8-7 4 0 7 2 8 7zM20 27c4-2 8-2 9 1-3 2-6 1-9-1z" fill="#2E9E4F"/><circle cx="20" cy="13" r="9" fill="#E2264A"/><path d="M14 9c2-4 10-4 12 1M13 15c2 5 11 6 14-1M17 11c2-2 6-2 7 1 1 3-3 5-6 3-2-2 0-4 2-3" fill="none" stroke="#A3122F" stroke-width="1.6" stroke-linecap="round"/></g></svg>
+    <span class="intro-en">Needs</span>
   </div>
+  <p class="intro-sub">Supermarket, Nanganallur</p>
 </div>
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="V.&#8202;V. Mart home">
-      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-        <defs><clipPath id="embClip"><circle cx="20" cy="20" r="16.2"/></clipPath></defs>
-        <circle cx="20" cy="20" r="18" fill="#F4F0FF" stroke="#E5245E" stroke-width="2.6"/>
-        <g clip-path="url(#embClip)" fill="none" stroke="#E5245E" stroke-width="3.4" stroke-linejoin="miter" stroke-linecap="butt">
-          <path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/>
-        </g>
-      </svg>
-      <span class="wm en">V.V. MART</span><span class="wm wm-ta ta">வி.வி. மார்ட்</span>
+    <a class="brand" href="#top" aria-label="Needs Supermarket home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#FFE11A"/><g transform="translate(6 5) scale(0.75)"><path d="M20 21c-1 6 1 10 0 17" fill="none" stroke="#2E9E4F" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30c-5-1-8-4-8-7 4 0 7 2 8 7zM20 27c4-2 8-2 9 1-3 2-6 1-9-1z" fill="#2E9E4F"/><circle cx="20" cy="13" r="9" fill="#E2264A"/><path d="M14 9c2-4 10-4 12 1M13 15c2 5 11 6 14-1M17 11c2-2 6-2 7 1 1 3-3 5-6 3-2-2 0-4 2-3" fill="none" stroke="#A3122F" stroke-width="1.6" stroke-linecap="round"/></g></svg>
+      <span class="wm">Needs</span>
     </a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#aisles"><span class="en">Aisles</span><span class="ta">பிரிவுகள்</span></a>
-      <a href="#offers"><span class="en">Offers</span><span class="ta">சலுகைகள்</span></a>
-      <a href="#festival"><span class="en">Festival shelf</span><span class="ta">பண்டிகை</span></a>
+      <a href="#aisles"><span class="en">Shop</span><span class="ta">பிரிவுகள்</span></a>
+      <a href="#offers"><span class="en">Finds</span><span class="ta">புதியவை</span></a>
+      <a href="#festival"><span class="en">Special days</span><span class="ta">விசேஷங்கள்</span></a>
       <a href="#visit"><span class="en">Visit</span><span class="ta">வருகை</span></a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -577,12 +621,12 @@ html[data-lang="ta"] .empty{font-size:19px}
     <div class="hero-grid">
       <div>
         <h1>
-          <span class="en">Your whole list, one shop away.</span>
-          <span class="ta">உங்கள் முழு பட்டியலும் ஒரே கடையில்.</span>
+          <span class="en">All your home needs, in one shop.</span>
+          <span class="ta">வீட்டுக்குத் தேவையான எல்லாம், ஒரே கடையில்.</span>
         </h1>
         <p class="lede">
-          <span class="en">Rice and dal, Monday's vegetables, camphor for the evening lamp, a gift for Saturday's function. V.&#8202;V. Mart has stocked Nanganallur's everyday since 2013. Send us your list on WhatsApp and we'll pack it the same day.</span>
-          <span class="ta">அரிசி, பருப்பு, காய்கறி, மாலை விளக்குக்குக் கற்பூரம், சனிக்கிழமை விசேஷத்துக்கு ஒரு பரிசு. 2013 முதல் நங்கநல்லூரின் அன்றாடத் தேவைகள் வி.வி. மார்ட்டில். உங்கள் பட்டியலை வாட்ஸ்அப்பில் அனுப்புங்கள், அன்றே தயார் செய்து தருகிறோம்.</span>
+          <span class="en">Pressure cookers and brass lamps, school stationery and birthday gifts, kolu stands, pet food and the finds from our reels. Needs is on 1st Main Road, Nanganallur, open 9 am to 10 pm. Send us your list on WhatsApp and we'll keep it ready.</span>
+          <span class="ta">பிரஷர் குக்கர், பித்தளை விளக்கு, பள்ளி எழுதுபொருட்கள், பிறந்தநாள் பரிசுகள், கொலு படிகள், செல்லப்பிராணி உணவு, எங்கள் ரீல்ஸில் வரும் புதிய பொருட்கள். நீட்ஸ், 1வது மெயின் ரோடு, நங்கநல்லூர், காலை 9 முதல் இரவு 10 வரை. பட்டியலை வாட்ஸ்அப்பில் அனுப்புங்கள், தயாராக வைத்திருப்போம்.</span>
         </p>
         <div class="hero-actions">
           <a class="btn btn-ink" href="#order">
@@ -599,69 +643,68 @@ html[data-lang="ta"] .empty{font-size:19px}
           <ul id="padList"></ul>
           <div class="pad-foot">
             <span id="padCount">0 / 6</span>
-            <span class="ready" id="padReady"><i></i><span class="en">Packed, out for delivery</span><span class="ta">தயார், டெலிவரிக்கு புறப்பட்டது</span></span>
+            <span class="ready" id="padReady"><i></i><span class="en">Packed at the counter</span><span class="ta">கவுண்டரில் தயார்</span></span>
           </div>
         </div>
-        <svg class="pad-bag" viewBox="0 0 300 340"><path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/>
-      <path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#FFD81F" stroke-width="10" stroke-linecap="round"/>
-      <path d="M40 96h220l-6 18H46z" fill="#C99600"/><path d="M34 96h232l-8 222a14 14 0 0 1-14 13H56a14 14 0 0 1-14-13z" fill="#FFD81F"/>
-      <path d="M34 96h232l-1 18H35z" fill="#F2B705"/>
-      <path d="M48 110h204l-7 200a8 8 0 0 1-8 8H63a8 8 0 0 1-8-8z" fill="none" stroke="#C99600" stroke-width="1.6" stroke-dasharray="5 5"/>
-      <g transform="translate(128 150) scale(1.1)"><circle cx="20" cy="20" r="18" fill="#FFF8D6" stroke="#E5245E" stroke-width="2.6"/><g clip-path="url(#embCh)" fill="none" stroke="#E5245E" stroke-width="3.4"><path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/></g><clipPath id="embCh"><circle cx="20" cy="20" r="16.2"/></clipPath></g>
-      <text x="150" y="232" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="30" fill="#E3202B" letter-spacing="1">V.V. MART</text>
-      <text x="150" y="262" text-anchor="middle" font-family="Catamaran, sans-serif" font-weight="800" font-size="19" fill="#2638C9">வி.வி. மார்ட்</text>
-      <text x="150" y="292" text-anchor="middle" font-family="Albert Sans, sans-serif" font-size="11" fill="#7A5A00" letter-spacing="1.2">NANGANALLUR, EST. 2013</text></svg>
+        <svg class="pad-bag" viewBox="0 0 300 340"><path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#12288A" stroke-width="16" stroke-linecap="round"/>
+      <path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#1D3FC4" stroke-width="10" stroke-linecap="round"/>
+      <path d="M40 96h220l-6 18H46z" fill="#C9B000"/><path d="M34 96h232l-8 222a14 14 0 0 1-14 13H56a14 14 0 0 1-14-13z" fill="#FFE11A"/>
+      <path d="M34 96h232l-1 18H35z" fill="#F2CF00"/>
+      <path d="M48 110h204l-7 200a8 8 0 0 1-8 8H63a8 8 0 0 1-8-8z" fill="none" stroke="#C9B000" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <g transform="translate(114 128) scale(1.9)"><path d="M20 21c-1 6 1 10 0 17" fill="none" stroke="#2E9E4F" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30c-5-1-8-4-8-7 4 0 7 2 8 7zM20 27c4-2 8-2 9 1-3 2-6 1-9-1z" fill="#2E9E4F"/><circle cx="20" cy="13" r="9" fill="#E2264A"/><path d="M14 9c2-4 10-4 12 1M13 15c2 5 11 6 14-1M17 11c2-2 6-2 7 1 1 3-3 5-6 3-2-2 0-4 2-3" fill="none" stroke="#A3122F" stroke-width="1.6" stroke-linecap="round"/></g>
+      <text x="150" y="252" text-anchor="middle" font-family="Lobster, cursive" font-size="58" fill="#1D3FC4">Needs</text>
+      <text x="150" y="284" text-anchor="middle" font-family="Albert Sans, sans-serif" font-weight="600" font-size="12" fill="#5C4B00" letter-spacing="2.5">SUPERMARKET</text>
+      <text x="150" y="302" text-anchor="middle" font-family="Albert Sans, sans-serif" font-size="10.5" fill="#5C4B00" letter-spacing="1.4">NANGANALLUR</text></svg>
       </div>
     </div>
 
     <div class="facts">
-      <div class="fact"><strong>4.1★</strong><span class="en">from 4,600+ Google reviews</span><span class="ta">4,600+ கூகுள் மதிப்புரைகள்</span></div>
-      <div class="fact"><strong><span class="en">Since 2013</span><span class="ta">2013 முதல்</span></strong><span class="en">on 1st Main Road</span><span class="ta">1வது மெயின் ரோட்டில்</span></div>
-      <div class="fact"><strong><span class="en">Till 10 pm</span><span class="ta">இரவு 10 வரை</span></strong><span class="en">open every day</span><span class="ta">தினமும் திறந்திருக்கும்</span></div>
-      <div class="fact"><strong><span class="en">Same day</span><span class="ta">அதே நாள்</span></strong><span class="en">home delivery nearby</span><span class="ta">அருகில் வீட்டு டெலிவரி</span></div>
+      <div class="fact"><strong>98K</strong><span class="en">follow our finds on Instagram</span><span class="ta">இன்ஸ்டாகிராமில் பின்தொடர்பவர்கள்</span></div>
+      <div class="fact"><strong><span class="en">9 am to 10 pm</span><span class="ta">காலை 9 – இரவு 10</span></strong><span class="en">on 1st Main Road</span><span class="ta">1வது மெயின் ரோட்டில்</span></div>
+      <div class="fact"><strong><span class="en">Delivery</span><span class="ta">டெலிவரி</span></strong><span class="en">around Nanganallur</span><span class="ta">நங்கநல்லூர் சுற்றுவட்டாரம்</span></div>
+      <div class="fact"><strong><span class="en">Every mode</span><span class="ta">எல்லா முறையும்</span></strong><span class="en">UPI, cards and cash</span><span class="ta">UPI, கார்டு, ரொக்கம்</span></div>
     </div>
   </div>
 </section>
 
-
-<!-- ================= STORY: the manjappai fills up as you scroll ================= -->
+<!-- ================= STORY: the Needs bag fills up as you scroll ================= -->
 <section class="story" id="story" aria-label="A week of shopping in one bag">
   <div class="story-pin">
     <div class="wrap story-grid">
       <div class="story-copy">
         <p class="story-kicker"><span class="en">One bag, all week</span><span class="ta">ஒரே பை, வாரம் முழுதும்</span></p>
         <ol class="stages">
-          <li class="on"><b><span class="en">Monday, the monthly rice and dal.</span><span class="ta">திங்கள், மாதாந்திர அரிசி பருப்பு.</span></b><span class="en">Ponni from our sacks, toor dal, gingelly oil.</span><span class="ta">மூட்டையிலிருந்து பொன்னி, துவரம் பருப்பு, நல்லெண்ணெய்.</span></li>
-          <li><b><span class="en">Wednesday, the vegetables.</span><span class="ta">புதன், காய்கறிகள்.</span></b><span class="en">Drumstick for sambar, tomatoes, curry leaves.</span><span class="ta">சாம்பாருக்கு முருங்கை, தக்காளி, கறிவேப்பிலை.</span></li>
-          <li><b><span class="en">Friday, the evening lamp.</span><span class="ta">வெள்ளி, மாலை விளக்கு.</span></b><span class="en">Camphor, cotton wicks, a new agal.</span><span class="ta">கற்பூரம், திரி, புதிய அகல்.</span></li>
-          <li><b><span class="en">Saturday, a gift for the function.</span><span class="ta">சனி, விசேஷத்துக்கு ஒரு பரிசு.</span></b><span class="en">Wrapped at the counter, with filter coffee for home.</span><span class="ta">கவுண்டரிலேயே பொதிந்து, வீட்டுக்கு ஃபில்டர் காபியுடன்.</span></li>
+          <li class="on"><b><span class="en">Monday, the kitchen.</span><span class="ta">திங்கள், சமையலறை.</span></b><span class="en">A new pressure cooker and a non-stick tawa.</span><span class="ta">புதிய பிரஷர் குக்கர், நான்-ஸ்டிக் தவா.</span></li>
+          <li><b><span class="en">Wednesday, school starts.</span><span class="ta">புதன், பள்ளி தொடக்கம்.</span></b><span class="en">Notebooks, pens and a geometry box.</span><span class="ta">நோட்டுப் புத்தகம், பேனா, ஜியோமெட்ரி பாக்ஸ்.</span></li>
+          <li><b><span class="en">Friday, the pooja shelf.</span><span class="ta">வெள்ளி, பூஜை அலமாரி.</span></b><span class="en">A brass kuthuvilakku and agal lamps.</span><span class="ta">பித்தளை குத்துவிளக்கு, அகல் விளக்குகள்.</span></li>
+          <li><b><span class="en">Saturday, the birthday party.</span><span class="ta">சனி, பிறந்தநாள் விழா.</span></b><span class="en">Return gifts, and a teddy for the birthday girl.</span><span class="ta">தாம்பூலப் பரிசுகள், பிறந்தநாள் குழந்தைக்கு ஒரு டெடி.</span></li>
         </ol>
         <p class="story-count"><span id="storyN">0</span> <span class="en">of 8 in the bag</span><span class="ta">/ 8 பையில்</span></p>
       </div>
       <div class="story-stage" id="stage">
-        <svg class="bag-back" viewBox="0 0 300 340" aria-hidden="true"><path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/>
-      <path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#FFD81F" stroke-width="10" stroke-linecap="round"/>
-      <path d="M40 96h220l-6 18H46z" fill="#C99600"/></svg>
+        <svg class="bag-back" viewBox="0 0 300 340" aria-hidden="true"><path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#12288A" stroke-width="16" stroke-linecap="round"/>
+      <path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#1D3FC4" stroke-width="10" stroke-linecap="round"/>
+      <path d="M40 96h220l-6 18H46z" fill="#C9B000"/></svg>
         <div class="flyers" id="flyers"></div>
-        <svg class="bag-front" viewBox="0 0 300 340" aria-hidden="true"><path d="M34 96h232l-8 222a14 14 0 0 1-14 13H56a14 14 0 0 1-14-13z" fill="#FFD81F"/>
-      <path d="M34 96h232l-1 18H35z" fill="#F2B705"/>
-      <path d="M48 110h204l-7 200a8 8 0 0 1-8 8H63a8 8 0 0 1-8-8z" fill="none" stroke="#C99600" stroke-width="1.6" stroke-dasharray="5 5"/>
-      <g transform="translate(128 150) scale(1.1)"><circle cx="20" cy="20" r="18" fill="#FFF8D6" stroke="#E5245E" stroke-width="2.6"/><g clip-path="url(#embCs)" fill="none" stroke="#E5245E" stroke-width="3.4"><path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/></g><clipPath id="embCs"><circle cx="20" cy="20" r="16.2"/></clipPath></g>
-      <text x="150" y="232" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="30" fill="#E3202B" letter-spacing="1">V.V. MART</text>
-      <text x="150" y="262" text-anchor="middle" font-family="Catamaran, sans-serif" font-weight="800" font-size="19" fill="#2638C9">வி.வி. மார்ட்</text>
-      <text x="150" y="292" text-anchor="middle" font-family="Albert Sans, sans-serif" font-size="11" fill="#7A5A00" letter-spacing="1.2">NANGANALLUR, EST. 2013</text></svg>
+        <svg class="bag-front" viewBox="0 0 300 340" aria-hidden="true"><path d="M34 96h232l-8 222a14 14 0 0 1-14 13H56a14 14 0 0 1-14-13z" fill="#FFE11A"/>
+      <path d="M34 96h232l-1 18H35z" fill="#F2CF00"/>
+      <path d="M48 110h204l-7 200a8 8 0 0 1-8 8H63a8 8 0 0 1-8-8z" fill="none" stroke="#C9B000" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <g transform="translate(114 128) scale(1.9)"><path d="M20 21c-1 6 1 10 0 17" fill="none" stroke="#2E9E4F" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30c-5-1-8-4-8-7 4 0 7 2 8 7zM20 27c4-2 8-2 9 1-3 2-6 1-9-1z" fill="#2E9E4F"/><circle cx="20" cy="13" r="9" fill="#E2264A"/><path d="M14 9c2-4 10-4 12 1M13 15c2 5 11 6 14-1M17 11c2-2 6-2 7 1 1 3-3 5-6 3-2-2 0-4 2-3" fill="none" stroke="#A3122F" stroke-width="1.6" stroke-linecap="round"/></g>
+      <text x="150" y="252" text-anchor="middle" font-family="Lobster, cursive" font-size="58" fill="#1D3FC4">Needs</text>
+      <text x="150" y="284" text-anchor="middle" font-family="Albert Sans, sans-serif" font-weight="600" font-size="12" fill="#5C4B00" letter-spacing="2.5">SUPERMARKET</text>
+      <text x="150" y="302" text-anchor="middle" font-family="Albert Sans, sans-serif" font-size="10.5" fill="#5C4B00" letter-spacing="1.4">NANGANALLUR</text></svg>
         <div class="bag-shadow"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= MANIFESTO: inline pictures in the sentence ================= -->
+<!-- ================= MANIFESTO: pictures inside the sentence ================= -->
 <section class="manifesto">
   <div class="wrap">
     <p class="mf" id="mf">
-      <span class="en">From <i data-ic="sack|y"></i> ponni rice to <i data-ic="flame|w"></i> karpooram, from <i data-ic="cup|b"></i> filter coffee to <i data-ic="rings|r"></i> bangles. Since 2013, Nanganallur has brought its <i data-ic="pouch|r"></i> whole list to one shop on 1st Main Road.</span>
-      <span class="ta"><i data-ic="sack|y"></i> பொன்னி அரிசி முதல் <i data-ic="flame|w"></i> கற்பூரம் வரை, <i data-ic="cup|b"></i> ஃபில்டர் காபி முதல் <i data-ic="rings|r"></i> வளையல் வரை. 2013 முதல் நங்கநல்லூர் தன் <i data-ic="pouch|r"></i> முழு பட்டியலையும் 1வது மெயின் ரோட்டில் உள்ள ஒரே கடைக்குக் கொண்டு வருகிறது.</span>
+      <span class="en">From <i data-ic="cooker|k"></i> pressure cookers to <i data-ic="kuthu|y"></i> brass lamps, from <i data-ic="notebook|u"></i> notebooks to <i data-ic="teddy|o"></i> teddy bears. Nearly a lakh people follow our finds on Instagram. The rest of Nanganallur just <i data-ic="bag|r"></i> walks in.</span>
+      <span class="ta"><i data-ic="cooker|k"></i> பிரஷர் குக்கர் முதல் <i data-ic="kuthu|y"></i> பித்தளை விளக்கு வரை, <i data-ic="notebook|u"></i> நோட்டுப் புத்தகம் முதல் <i data-ic="teddy|o"></i> டெடி பியர் வரை. ஏறக்குறைய ஒரு லட்சம் பேர் எங்கள் புதிய பொருட்களை இன்ஸ்டாகிராமில் பின்தொடர்கிறார்கள். மற்ற நங்கநல்லூர் <i data-ic="bag|r"></i> நேரடியாக வருகிறது.</span>
     </p>
   </div>
 </section>
@@ -671,17 +714,17 @@ html[data-lang="ta"] .empty{font-size:19px}
   <div class="wrap">
     <div class="aisles-head">
       <div>
-        <h2 class="h2"><span class="en">Walk the aisles from your sofa.</span><span class="ta">வீட்டிலிருந்தே கடையைச் சுற்றிப் பாருங்கள்.</span></h2>
-        <p class="sub"><span class="en">Eight aisles, from rice and dal to pooja items and gifts. Tap any item to pick its brand and size.</span><span class="ta">அரிசி, பருப்பு முதல் பூஜை பொருட்கள், பரிசுகள் வரை எட்டு பிரிவுகள். பொருளைத் தொட்டு பிராண்டு, அளவைத் தேர்வுசெய்யுங்கள்.</span></p>
+        <h2 class="h2"><span class="en">Walk the shop from your sofa.</span><span class="ta">வீட்டிலிருந்தே கடையைச் சுற்றிப் பாருங்கள்.</span></h2>
+        <p class="sub"><span class="en">Ten sections, from cookware and brass to pet supplies and kolu stands. Tap any item to pick its brand and size.</span><span class="ta">சமையல் பாத்திரங்கள், பித்தளை முதல் செல்லப்பிராணி பொருட்கள், கொலு படிகள் வரை பத்து பிரிவுகள். பொருளைத் தொட்டு பிராண்டு, அளவைத் தேர்வுசெய்யுங்கள்.</span></p>
       </div>
       <div class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
         <label for="q" class="sr">Search the shop</label>
-        <input id="q" type="search" autocomplete="off" placeholder="Search sambar, camphor, Aachi…">
+        <input id="q" type="search" autocomplete="off" placeholder="Search cooker, kolu, Prestige…">
       </div>
     </div>
     <div class="aisles">
-      <div class="board" role="tablist" aria-label="Aisles" id="board"></div>
+      <div class="board" role="tablist" aria-label="Sections" id="board"></div>
       <div class="shelf" role="tabpanel" id="shelf" aria-live="polite"></div>
     </div>
   </div>
@@ -692,24 +735,16 @@ html[data-lang="ta"] .empty{font-size:19px}
   <div class="wrap order-grid">
     <div>
       <h2 class="h2"><span class="en">Send the list. We'll do the running around.</span><span class="ta">பட்டியலை அனுப்புங்கள். மீதியை நாங்கள் பார்த்துக்கொள்கிறோம்.</span></h2>
-      <p class="sub"><span class="en">The way Nanganallur already shops: write it down, send it to the shop, pick it up or have it at your door.</span><span class="ta">நங்கநல்லூர் வழக்கம்போல: எழுதுங்கள், கடைக்கு அனுப்புங்கள், நேரில் வாங்குங்கள் அல்லது வீட்டுக்கே பெறுங்கள்.</span></p>
+      <p class="sub"><span class="en">Write it down here, send it to the shop on WhatsApp, then pick it up or have it delivered.</span><span class="ta">இங்கே எழுதுங்கள், வாட்ஸ்அப்பில் கடைக்கு அனுப்புங்கள், நேரில் வாங்குங்கள் அல்லது வீட்டுக்கே பெறுங்கள்.</span></p>
       <ol class="steps">
-        <li><div><b><span class="en">Write your list</span><span class="ta">பட்டியல் எழுதுங்கள்</span></b><span class="en">Tap items in the aisles or type anything we stock, brand names included.</span><span class="ta">பிரிவுகளில் தொட்டுச் சேர்க்கலாம் அல்லது பிராண்ட் பெயருடன் தட்டச்சு செய்யலாம்.</span></div></li>
-        <li><div><b><span class="en">We confirm on WhatsApp</span><span class="ta">வாட்ஸ்அப்பில் உறுதி செய்கிறோம்</span></b><span class="en">The shop replies with what's in stock and your total.</span><span class="ta">இருப்பு மற்றும் மொத்தத் தொகையைக் கடை பதில் அனுப்பும்.</span></div></li>
-        <li><div><b><span class="en">Collect or receive it today</span><span class="ta">இன்றே பெறுங்கள்</span></b><span class="en">We deliver the same day, or keep it packed at the billing counter so you skip the evening queue.</span><span class="ta">அன்றே டெலிவரி, அல்லது மாலை வரிசையைத் தவிர்க்க பில்லிங் கவுண்டரில் தயாராக வைத்திருப்போம்.</span></div></li>
+        <li><div><b><span class="en">Write your list</span><span class="ta">பட்டியல் எழுதுங்கள்</span></b><span class="en">Tap items in the shop above, or type anything you saw on our reels.</span><span class="ta">மேலே உள்ள பொருட்களைத் தொடுங்கள், அல்லது ரீல்ஸில் பார்த்ததை எழுதுங்கள்.</span></div></li>
+        <li><div><b><span class="en">We reply on WhatsApp</span><span class="ta">வாட்ஸ்அப்பில் பதில்</span></b><span class="en">With what's in stock, photos of the designs, and your total.</span><span class="ta">இருப்பு, டிசைன் புகைப்படங்கள், மொத்தத் தொகையுடன்.</span></div></li>
+        <li><div><b><span class="en">Collect it, or we deliver</span><span class="ta">நேரில் வாங்குங்கள், அல்லது டெலிவரி</span></b><span class="en">It waits packed at the billing counter, or comes to your door.</span><span class="ta">பில்லிங் கவுண்டரில் தயாராக இருக்கும், அல்லது உங்கள் வீட்டுக்கே வரும்.</span></div></li>
       </ol>
       <div class="areas">
-        <p><span class="en">We deliver around</span><span class="ta">டெலிவரி பகுதிகள்</span></p>
-        <div>
-          <span class="en">Nanganallur</span><span class="ta">நங்கநல்லூர்</span>
-          <span class="en">Pazhavanthangal</span><span class="ta">பழவந்தாங்கல்</span>
-          <span class="en">Adambakkam</span><span class="ta">ஆதம்பாக்கம்</span>
-          <span class="en">Madipakkam</span><span class="ta">மடிப்பாக்கம்</span>
-          <span class="en">Meenambakkam</span><span class="ta">மீனம்பாக்கம்</span>
-        </div>
+        <p><span class="en">Home delivery around Nanganallur. Ask about your area when you send the list.</span><span class="ta">நங்கநல்லூர் சுற்றுவட்டாரத்தில் டெலிவரி. பட்டியல் அனுப்பும்போது உங்கள் பகுதியைக் கேளுங்கள்.</span></p>
       </div>
     </div>
-
     <div class="sheet">
       <div class="sheet-head">
         <b><span class="en">My list</span><span class="ta">என் பட்டியல்</span></b>
@@ -720,7 +755,7 @@ html[data-lang="ta"] .empty{font-size:19px}
         <div class="empty" id="empty"><span class="en">Nothing here yet. Tap items in the aisles above, or write one below.</span><span class="ta">இன்னும் எதுவும் இல்லை. மேலே உள்ள பிரிவுகளில் தொடுங்கள், அல்லது கீழே எழுதுங்கள்.</span></div>
         <form class="add-line" id="addForm">
           <label for="addInput" class="en" style="position:absolute;left:-9999px">Add an item</label>
-          <input id="addInput" autocomplete="off" placeholder="+ Aachi sambar powder 200g">
+          <input id="addInput" autocomplete="off" placeholder="+ Prestige pressure cooker 5 L">
           <button type="submit"><span class="en">Add</span><span class="ta">சேர்</span></button>
         </form>
       </div>
@@ -731,7 +766,7 @@ html[data-lang="ta"] .empty{font-size:19px}
         </div>
         <div class="two">
           <div class="field"><label for="fName"><span class="en">Your name</span><span class="ta">உங்கள் பெயர்</span></label><input id="fName" autocomplete="name"></div>
-          <div class="field" id="addrField"><label for="fAddr"><span class="en">Street and area</span><span class="ta">தெரு மற்றும் பகுதி</span></label><input id="fAddr" autocomplete="street-address" placeholder="e.g. 4th Main Road, Nanganallur"></div>
+          <div class="field" id="addrField"><label for="fAddr"><span class="en">Street and area</span><span class="ta">தெரு மற்றும் பகுதி</span></label><input id="fAddr" autocomplete="street-address" placeholder="e.g. Ram Nagar, Nanganallur"></div>
         </div>
         <a class="send" id="sendBtn" href="#order" target="_blank" rel="noopener" aria-disabled="true">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
@@ -748,8 +783,8 @@ html[data-lang="ta"] .empty{font-size:19px}
   <div class="wrap">
     <div class="offers-head">
       <div>
-        <h2 class="h2"><span class="en">This week on the rack.</span><span class="ta">இந்த வார சலுகைகள்.</span></h2>
-        <p class="sub"><span class="en">Fresh tags every Monday. Tap a tag to add it to your list.</span><span class="ta">ஒவ்வொரு திங்களும் புதிய சலுகைகள். பட்டியலில் சேர்க்க டேக்கைத் தொடுங்கள்.</span></p>
+        <h2 class="h2"><span class="en">This week's finds.</span><span class="ta">இந்த வாரப் புதியவை.</span></h2>
+        <p class="sub"><span class="en">The things everyone asks about after our reels. Tap a tag to add it to your list.</span><span class="ta">ரீல்ஸ் பார்த்த பின் எல்லோரும் கேட்கும் பொருட்கள். பட்டியலில் சேர்க்க டேக்கைத் தொடுங்கள்.</span></p>
       </div>
       <small><span class="en">Sample prices for this concept. The shop updates these each week.</span><span class="ta">இவை மாதிரி விலைகள். கடை ஒவ்வொரு வாரமும் புதுப்பிக்கும்.</span></small>
     </div>
@@ -757,25 +792,63 @@ html[data-lang="ta"] .empty{font-size:19px}
   </div>
 </section>
 
-<!-- ================= FESTIVAL ================= -->
+<!-- ================= REELS ================= -->
+<section class="sec reels">
+  <div class="wrap reels-grid">
+    <div>
+      <h2 class="h2"><span class="en">Saw it on our reels? It's on the shelf.</span><span class="ta">ரீல்ஸில் பார்த்தீர்களா? கடையில் இருக்கிறது.</span></h2>
+      <p class="sub"><span class="en">Our team shows a new find almost every day. Follow along, then come and pick it up.</span><span class="ta">எங்கள் குழு ஏறக்குறைய தினமும் ஒரு புதிய பொருளைக் காட்டுகிறது. பின்தொடருங்கள், பிறகு வந்து வாங்குங்கள்.</span></p>
+      <div class="reel-ctas">
+        <a class="btn btn-ink" href="https://www.instagram.com/needs__supermarket/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="en">Follow on Instagram</span><span class="ta">இன்ஸ்டாகிராமில் பின்தொடர</span></a>
+        <a class="btn btn-line" href="https://www.youtube.com/@needs__supermarket" target="_blank" rel="noopener"><span class="en">Watch on YouTube</span><span class="ta">யூடியூபில் பார்க்க</span></a>
+      </div>
+    </div>
+    <div class="phones" id="phones"></div>
+  </div>
+</section>
+
+<!-- ================= SPECIAL DAYS ================= -->
 <section class="sec fest" id="festival">
   <div class="wrap fest-grid">
     <svg class="kolam" id="kolam" viewBox="0 0 400 400" aria-hidden="true"></svg>
     <div>
-      <h2 class="h2"><span class="en">The festival shelf fills up a week early.</span><span class="ta">பண்டிகைப் பொருட்கள் ஒரு வாரம் முன்பே தயார்.</span></h2>
-      <p class="sub"><span class="en">Deepavali, Karthigai Deepam, Pongal and every function in between. Pooja items, lamps, sweets and return gifts, all from the same counter.</span><span class="ta">தீபாவளி, கார்த்திகை தீபம், பொங்கல் மற்றும் எல்லா விசேஷங்களுக்கும். பூஜை பொருட்கள், விளக்குகள், இனிப்புகள், தாம்பூலப் பரிசுகள் ஒரே இடத்தில்.</span></p>
+      <h2 class="h2"><span class="en">Every special day starts here.</span><span class="ta">ஒவ்வொரு விசேஷமும் இங்கிருந்து தொடங்குகிறது.</span></h2>
+      <p class="sub"><span class="en">Navaratri kolu stands and dolls, Deepavali hampers, Karthigai lamps, Christmas stars and birthday return gifts.</span><span class="ta">நவராத்திரி கொலு படிகள், பொம்மைகள், தீபாவளி பரிசுப் பெட்டிகள், கார்த்திகை விளக்குகள், கிறிஸ்துமஸ் நட்சத்திரங்கள், பிறந்தநாள் தாம்பூலப் பரிசுகள்.</span></p>
       <div class="fest-list" id="festList"></div>
     </div>
   </div>
 </section>
 
 <!-- ================= STOREFRONT ================= -->
-<section class="front" aria-label="The V.V. Mart storefront">
-  <div class="front-img" id="frontImg" style="background-image:url(assets/storefront.jpg)" role="img" aria-label="V.V. Mart storefront at night: red V.V. MART sign on a maroon band, blue Tamil lettering, yellow welcome banners"></div>
+<section class="front" aria-label="The Needs storefront">
+  <div class="front-img" id="frontImg"><svg viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="width:100%;height:100%;display:block">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B1035"/><stop offset=".7" stop-color="#3A1E3A"/><stop offset="1" stop-color="#5A2E2A"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset=".52" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="shopglow" cx=".5" cy=".3" r=".7"><stop offset="0" stop-color="#FFF4D0"/><stop offset="1" stop-color="#F2C36B"/></radialGradient>
+<filter id="neon" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="rglow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1440" height="820" fill="url(#sky)"/>
+<rect x="150" y="40" width="1140" height="560" fill="#9A9488"/>
+<rect x="160" y="60" width="18" height="520" fill="#5E3824"/><rect x="178" y="60" width="18" height="520" fill="#55311F"/><rect x="196" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="214" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="232" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="250" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="268" y="60" width="18" height="520" fill="#5E3824"/><rect x="286" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="304" y="60" width="18" height="520" fill="#55311F"/><rect x="322" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="340" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="358" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="376" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="394" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="412" y="60" width="18" height="520" fill="#55311F"/><rect x="430" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="448" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="466" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="484" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="502" y="60" width="18" height="520" fill="#55311F"/><rect x="520" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="538" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="556" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="574" y="60" width="18" height="520" fill="#55311F"/><rect x="592" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="610" y="60" width="18" height="520" fill="#55311F"/><rect x="628" y="60" width="18" height="520" fill="#5E3824"/><rect x="646" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="664" y="60" width="18" height="520" fill="#55311F"/><rect x="682" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="700" y="60" width="18" height="520" fill="#5E3824"/><rect x="718" y="60" width="18" height="520" fill="#55311F"/><rect x="736" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="754" y="60" width="18" height="520" fill="#55311F"/><rect x="772" y="60" width="18" height="520" fill="#5E3824"/><rect x="790" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="808" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="826" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="844" y="60" width="18" height="520" fill="#55311F"/><rect x="862" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="880" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="898" y="60" width="18" height="520" fill="#5E3824"/><rect x="916" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="934" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="952" y="60" width="18" height="520" fill="#5E3824"/><rect x="970" y="60" width="18" height="520" fill="#5E3824"/><rect x="988" y="60" width="18" height="520" fill="#55311F"/><rect x="1006" y="60" width="18" height="520" fill="#55311F"/><rect x="1024" y="60" width="18" height="520" fill="#55311F"/><rect x="1042" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="1060" y="60" width="18" height="520" fill="#5E3824"/><rect x="1078" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="1096" y="60" width="18" height="520" fill="#5E3824"/><rect x="1114" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="1132" y="60" width="18" height="520" fill="#5E3824"/><rect x="1150" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="1168" y="60" width="18" height="520" fill="#4A2A1B"/><rect x="1186" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="1204" y="60" width="18" height="520" fill="#55311F"/><rect x="1222" y="60" width="18" height="520" fill="#5E3824"/><rect x="1240" y="60" width="18" height="520" fill="#55311F"/><rect x="1258" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="1276" y="60" width="18" height="520" fill="#4F2D1D"/><rect x="1294" y="60" width="18" height="520" fill="#4A2A1B"/>
+<rect x="230" y="70" width="980" height="190" fill="#3A2318"/>
+<rect x="240" y="80" width="960" height="170" fill="#F6F1E6"/><rect x="240" y="80" width="960" height="170" fill="url(#glass)"/><path d="M248 130.96825396825398h18l-3.6 -30.0h-10.799999999999999z" fill="#9C5BD6"/><ellipse cx="295.0" cy="112.96825396825398" rx="15.0" ry="18.0" fill="#FFE11A"/><path d="M320 130.96825396825398h30l-6.0 -18.0h-18.0z" fill="#E2264A"/><path d="M360 130.96825396825398h34l-6.800000000000001 -36.0h-20.4z" fill="#F28C28"/><circle cx="421.0" cy="117.96825396825398" r="13.0" fill="#3A7BD5"/><circle cx="415.8" cy="106.26825396825397" r="5.2" fill="#3A7BD5"/><circle cx="426.2" cy="106.26825396825397" r="5.2" fill="#3A7BD5"/><rect x="448" y="94.96825396825398" width="18" height="36.0" rx="4" fill="#E2264A"/><circle cx="487.0" cy="119.96825396825398" r="11.0" fill="#FFFFFF"/><circle cx="482.6" cy="110.06825396825397" r="4.4" fill="#FFFFFF"/><circle cx="491.4" cy="110.06825396825397" r="4.4" fill="#FFFFFF"/><circle cx="517.0" cy="121.96825396825398" r="9.0" fill="#3A7BD5"/><circle cx="513.4" cy="113.86825396825398" r="3.6" fill="#3A7BD5"/><circle cx="520.6" cy="113.86825396825398" r="3.6" fill="#3A7BD5"/><rect x="536" y="94.96825396825398" width="22" height="36.0" rx="4" fill="#F7A1B5"/><rect x="568" y="94.96825396825398" width="26" height="36.0" rx="4" fill="#2E9E4F"/><rect x="600" y="106.96825396825398" width="22" height="24.0" rx="4" fill="#2E9E4F"/><rect x="636" y="100.96825396825398" width="22" height="30.0" rx="4" fill="#F28C28"/><ellipse cx="685.0" cy="115.96825396825398" rx="17.0" ry="15.0" fill="#9C5BD6"/><ellipse cx="733.0" cy="121.96825396825398" rx="17.0" ry="9.0" fill="#3A7BD5"/><circle cx="781.0" cy="113.96825396825398" r="17.0" fill="#FFFFFF"/><circle cx="774.2" cy="98.66825396825398" r="6.8" fill="#FFFFFF"/><circle cx="787.8" cy="98.66825396825398" r="6.8" fill="#FFFFFF"/><rect x="804" y="94.96825396825398" width="30" height="36.0" rx="4" fill="#E2264A"/><rect x="840" y="106.96825396825398" width="30" height="24.0" rx="4" fill="#FFE11A"/><circle cx="885.0" cy="121.96825396825398" r="9.0" fill="#1D3FC4"/><circle cx="881.4" cy="113.86825396825398" r="3.6" fill="#1D3FC4"/><circle cx="888.6" cy="113.86825396825398" r="3.6" fill="#1D3FC4"/><ellipse cx="921.0" cy="121.96825396825398" rx="17.0" ry="9.0" fill="#FFE11A"/><ellipse cx="967.0" cy="118.96825396825398" rx="15.0" ry="12.0" fill="#F28C28"/><rect x="996" y="94.96825396825398" width="26" height="36.0" rx="4" fill="#FFE11A"/><rect x="1032" y="94.96825396825398" width="30" height="36.0" rx="4" fill="#3A7BD5"/><circle cx="1077.0" cy="121.96825396825398" r="9.0" fill="#F28C28"/><circle cx="1073.4" cy="113.86825396825398" r="3.6" fill="#F28C28"/><circle cx="1080.6" cy="113.86825396825398" r="3.6" fill="#F28C28"/><ellipse cx="1111.0" cy="121.96825396825398" rx="11.0" ry="9.0" fill="#2E9E4F"/><ellipse cx="1149.0" cy="118.96825396825398" rx="13.0" ry="12.0" fill="#F7A1B5"/><rect x="240" y="130.96825396825398" width="960" height="5" fill="#C8C2B4"/><circle cx="261.0" cy="171.93650793650795" r="13.0" fill="#F28C28"/><circle cx="255.8" cy="160.23650793650796" r="5.2" fill="#F28C28"/><circle cx="266.2" cy="160.23650793650796" r="5.2" fill="#F28C28"/><circle cx="293.0" cy="171.93650793650795" r="13.0" fill="#F7A1B5"/><circle cx="287.8" cy="160.23650793650796" r="5.2" fill="#F7A1B5"/><circle cx="298.2" cy="160.23650793650796" r="5.2" fill="#F7A1B5"/><ellipse cx="333.0" cy="172.93650793650795" rx="13.0" ry="12.0" fill="#2E9E4F"/><circle cx="367.0" cy="173.93650793650795" r="11.0" fill="#F7A1B5"/><circle cx="362.6" cy="164.03650793650795" r="4.4" fill="#F7A1B5"/><circle cx="371.4" cy="164.03650793650795" r="4.4" fill="#F7A1B5"/><circle cx="401.0" cy="175.93650793650795" r="9.0" fill="#F28C28"/><circle cx="397.4" cy="167.83650793650796" r="3.6" fill="#F28C28"/><circle cx="404.6" cy="167.83650793650796" r="3.6" fill="#F28C28"/><ellipse cx="433.0" cy="169.93650793650795" rx="17.0" ry="15.0" fill="#3A7BD5"/><rect x="464" y="154.93650793650795" width="26" height="30.0" rx="4" fill="#FFE11A"/><rect x="496" y="160.93650793650795" width="30" height="24.0" rx="4" fill="#9C5BD6"/><ellipse cx="557.0" cy="175.93650793650795" rx="17.0" ry="9.0" fill="#3A7BD5"/><path d="M584 184.93650793650795h18l-3.6 -18.0h-10.799999999999999z" fill="#FFFFFF"/><path d="M608 184.93650793650795h30l-6.0 -24.0h-18.0z" fill="#FFFFFF"/><circle cx="657.0" cy="175.93650793650795" r="9.0" fill="#3A7BD5"/><circle cx="653.4" cy="167.83650793650796" r="3.6" fill="#3A7BD5"/><circle cx="660.6" cy="167.83650793650796" r="3.6" fill="#3A7BD5"/><rect x="672" y="160.93650793650795" width="22" height="24.0" rx="4" fill="#1D3FC4"/><path d="M708 184.93650793650795h30l-6.0 -24.0h-18.0z" fill="#3A7BD5"/><rect x="748" y="160.93650793650795" width="22" height="24.0" rx="4" fill="#E2264A"/><ellipse cx="793.0" cy="172.93650793650795" rx="9.0" ry="12.0" fill="#FFFFFF"/><rect x="808" y="166.93650793650795" width="22" height="18.0" rx="4" fill="#F28C28"/><circle cx="855.0" cy="173.93650793650795" r="11.0" fill="#F28C28"/><circle cx="850.6" cy="164.03650793650795" r="4.4" fill="#F28C28"/><circle cx="859.4" cy="164.03650793650795" r="4.4" fill="#F28C28"/><path d="M872 184.93650793650795h18l-3.6 -30.0h-10.799999999999999z" fill="#3A7BD5"/><rect x="904" y="160.93650793650795" width="30" height="24.0" rx="4" fill="#F7A1B5"/><path d="M948 184.93650793650795h18l-3.6 -36.0h-10.799999999999999z" fill="#1D3FC4"/><path d="M972 184.93650793650795h22l-4.4 -24.0h-13.2z" fill="#3A7BD5"/><path d="M1000 184.93650793650795h34l-6.800000000000001 -18.0h-20.4z" fill="#9C5BD6"/><ellipse cx="1065.0" cy="166.93650793650795" rx="17.0" ry="18.0" fill="#FFE11A"/><rect x="1088" y="160.93650793650795" width="22" height="24.0" rx="4" fill="#F28C28"/><rect x="1116" y="148.93650793650795" width="34" height="36.0" rx="4" fill="#F7A1B5"/><path d="M1156 184.93650793650795h30l-6.0 -30.0h-18.0z" fill="#F7A1B5"/><rect x="240" y="184.93650793650795" width="960" height="5" fill="#C8C2B4"/><circle cx="261.0" cy="225.9047619047619" r="13.0" fill="#F7A1B5"/><circle cx="255.8" cy="214.2047619047619" r="5.2" fill="#F7A1B5"/><circle cx="266.2" cy="214.2047619047619" r="5.2" fill="#F7A1B5"/><ellipse cx="301.0" cy="226.9047619047619" rx="17.0" ry="12.0" fill="#F7A1B5"/><rect x="328" y="214.9047619047619" width="34" height="24.0" rx="4" fill="#3A7BD5"/><rect x="368" y="202.9047619047619" width="30" height="36.0" rx="4" fill="#9C5BD6"/><path d="M404 238.9047619047619h30l-6.0 -18.0h-18.0z" fill="#2E9E4F"/><rect x="440" y="208.9047619047619" width="22" height="30.0" rx="4" fill="#1D3FC4"/><circle cx="483.0" cy="223.9047619047619" r="15.0" fill="#FFE11A"/><circle cx="477.0" cy="210.4047619047619" r="6.0" fill="#FFE11A"/><circle cx="489.0" cy="210.4047619047619" r="6.0" fill="#FFE11A"/><path d="M508 238.9047619047619h22l-4.4 -24.0h-13.2z" fill="#1D3FC4"/><rect x="544" y="208.9047619047619" width="30" height="30.0" rx="4" fill="#FFFFFF"/><rect x="584" y="208.9047619047619" width="18" height="30.0" rx="4" fill="#E2264A"/><rect x="612" y="220.9047619047619" width="30" height="18.0" rx="4" fill="#FFFFFF"/><ellipse cx="669.0" cy="229.9047619047619" rx="13.0" ry="9.0" fill="#FFE11A"/><rect x="688" y="220.9047619047619" width="18" height="18.0" rx="4" fill="#F28C28"/><ellipse cx="725.0" cy="226.9047619047619" rx="13.0" ry="12.0" fill="#FFFFFF"/><circle cx="765.0" cy="225.9047619047619" r="13.0" fill="#1D3FC4"/><circle cx="759.8" cy="214.2047619047619" r="5.2" fill="#1D3FC4"/><circle cx="770.2" cy="214.2047619047619" r="5.2" fill="#1D3FC4"/><rect x="792" y="202.9047619047619" width="34" height="36.0" rx="4" fill="#9C5BD6"/><rect x="832" y="202.9047619047619" width="22" height="36.0" rx="4" fill="#FFE11A"/><path d="M860 238.9047619047619h18l-3.6 -30.0h-10.799999999999999z" fill="#FFE11A"/><circle cx="893.0" cy="229.9047619047619" r="9.0" fill="#FFE11A"/><circle cx="889.4" cy="221.8047619047619" r="3.6" fill="#FFE11A"/><circle cx="896.6" cy="221.8047619047619" r="3.6" fill="#FFE11A"/><path d="M912 238.9047619047619h34l-6.800000000000001 -36.0h-20.4z" fill="#F28C28"/><ellipse cx="969.0" cy="226.9047619047619" rx="17.0" ry="12.0" fill="#FFE11A"/><ellipse cx="1005.0" cy="226.9047619047619" rx="9.0" ry="12.0" fill="#2E9E4F"/><circle cx="1041.0" cy="225.9047619047619" r="13.0" fill="#F28C28"/><circle cx="1035.8" cy="214.2047619047619" r="5.2" fill="#F28C28"/><circle cx="1046.2" cy="214.2047619047619" r="5.2" fill="#F28C28"/><ellipse cx="1079.0" cy="223.9047619047619" rx="11.0" ry="15.0" fill="#9C5BD6"/><path d="M1100 238.9047619047619h18l-3.6 -18.0h-10.799999999999999z" fill="#E2264A"/><ellipse cx="1143.0" cy="220.9047619047619" rx="11.0" ry="18.0" fill="#2E9E4F"/><ellipse cx="1175.0" cy="220.9047619047619" rx="15.0" ry="18.0" fill="#F7A1B5"/><rect x="240" y="238.9047619047619" width="960" height="5" fill="#C8C2B4"/><rect x="477.0" y="80" width="6" height="170" fill="#8E8A80"/><rect x="717.0" y="80" width="6" height="170" fill="#8E8A80"/><rect x="957.0" y="80" width="6" height="170" fill="#8E8A80"/><rect x="240" y="80" width="960" height="170" fill="none" stroke="#7A766C" stroke-width="8"/>
+<rect x="150" y="270" width="1140" height="14" fill="#3A2318"/>
+<rect x="240" y="292" width="960" height="150" fill="#F6F1E6"/><rect x="240" y="292" width="960" height="150" fill="url(#glass)"/><ellipse cx="265.0" cy="340.0174418604651" rx="17.0" ry="18.75" fill="#2E9E4F"/><ellipse cx="303.0" cy="343.7674418604651" rx="11.0" ry="15.0" fill="#FFFFFF"/><path d="M320 358.7674418604651h22l-4.4 -22.5h-13.2z" fill="#FFE11A"/><rect x="352" y="328.7674418604651" width="30" height="30.0" rx="4" fill="#E2264A"/><path d="M392 358.7674418604651h34l-6.800000000000001 -37.5h-20.4z" fill="#2E9E4F"/><rect x="432" y="328.7674418604651" width="30" height="30.0" rx="4" fill="#1D3FC4"/><ellipse cx="481.0" cy="340.0174418604651" rx="13.0" ry="18.75" fill="#9C5BD6"/><ellipse cx="521.0" cy="343.7674418604651" rx="13.0" ry="15.0" fill="#E2264A"/><rect x="544" y="321.2674418604651" width="22" height="37.5" rx="4" fill="#1D3FC4"/><circle cx="585.0" cy="349.7674418604651" r="9.0" fill="#F28C28"/><circle cx="581.4" cy="341.6674418604651" r="3.6" fill="#F28C28"/><circle cx="588.6" cy="341.6674418604651" r="3.6" fill="#F28C28"/><rect x="600" y="336.2674418604651" width="22" height="22.5" rx="4" fill="#FFE11A"/><circle cx="639.0" cy="347.7674418604651" r="11.0" fill="#E2264A"/><circle cx="634.6" cy="337.86744186046514" r="4.4" fill="#E2264A"/><circle cx="643.4" cy="337.86744186046514" r="4.4" fill="#E2264A"/><circle cx="673.0" cy="345.7674418604651" r="13.0" fill="#FFE11A"/><circle cx="667.8" cy="334.0674418604651" r="5.2" fill="#FFE11A"/><circle cx="678.2" cy="334.0674418604651" r="5.2" fill="#FFE11A"/><path d="M700 358.7674418604651h22l-4.4 -45.0h-13.2z" fill="#9C5BD6"/><rect x="732" y="321.2674418604651" width="22" height="37.5" rx="4" fill="#1D3FC4"/><rect x="768" y="313.7674418604651" width="34" height="45.0" rx="4" fill="#F7A1B5"/><rect x="816" y="336.2674418604651" width="34" height="22.5" rx="4" fill="#2E9E4F"/><circle cx="867.0" cy="347.7674418604651" r="11.0" fill="#FFE11A"/><circle cx="862.6" cy="337.86744186046514" r="4.4" fill="#FFE11A"/><circle cx="871.4" cy="337.86744186046514" r="4.4" fill="#FFE11A"/><path d="M888 358.7674418604651h34l-6.800000000000001 -22.5h-20.4z" fill="#E2264A"/><rect x="936" y="313.7674418604651" width="22" height="45.0" rx="4" fill="#F28C28"/><rect x="964" y="336.2674418604651" width="34" height="22.5" rx="4" fill="#F7A1B5"/><ellipse cx="1027.0" cy="340.0174418604651" rx="15.0" ry="18.75" fill="#FFE11A"/><circle cx="1059.0" cy="347.7674418604651" r="11.0" fill="#3A7BD5"/><circle cx="1054.6" cy="337.86744186046514" r="4.4" fill="#3A7BD5"/><circle cx="1063.4" cy="337.86744186046514" r="4.4" fill="#3A7BD5"/><path d="M1080 358.7674418604651h18l-3.6 -45.0h-10.799999999999999z" fill="#F28C28"/><rect x="1112" y="336.2674418604651" width="22" height="22.5" rx="4" fill="#1D3FC4"/><circle cx="1161.0" cy="345.7674418604651" r="13.0" fill="#E2264A"/><circle cx="1155.8" cy="334.0674418604651" r="5.2" fill="#E2264A"/><circle cx="1166.2" cy="334.0674418604651" r="5.2" fill="#E2264A"/><rect x="240" y="358.7674418604651" width="960" height="5" fill="#C8C2B4"/><path d="M248 428.5348837209302h26l-5.2 -22.5h-15.6z" fill="#2E9E4F"/><circle cx="301.0" cy="411.5348837209302" r="17.0" fill="#3A7BD5"/><circle cx="294.2" cy="396.2348837209302" r="6.8" fill="#3A7BD5"/><circle cx="307.8" cy="396.2348837209302" r="6.8" fill="#3A7BD5"/><ellipse cx="341.0" cy="413.5348837209302" rx="17.0" ry="15.0" fill="#F28C28"/><rect x="368" y="391.0348837209302" width="18" height="37.5" rx="4" fill="#3A7BD5"/><rect x="400" y="391.0348837209302" width="30" height="37.5" rx="4" fill="#FFFFFF"/><path d="M436 428.5348837209302h18l-3.6 -22.5h-10.799999999999999z" fill="#1D3FC4"/><rect x="464" y="398.5348837209302" width="26" height="30.0" rx="4" fill="#F7A1B5"/><ellipse cx="509.0" cy="413.5348837209302" rx="13.0" ry="15.0" fill="#3A7BD5"/><rect x="532" y="406.0348837209302" width="30" height="22.5" rx="4" fill="#1D3FC4"/><path d="M572 428.5348837209302h30l-6.0 -45.0h-18.0z" fill="#F28C28"/><rect x="612" y="383.5348837209302" width="26" height="45.0" rx="4" fill="#9C5BD6"/><ellipse cx="657.0" cy="409.7848837209302" rx="9.0" ry="18.75" fill="#9C5BD6"/><rect x="672" y="406.0348837209302" width="22" height="22.5" rx="4" fill="#F28C28"/><circle cx="715.0" cy="413.5348837209302" r="15.0" fill="#FFE11A"/><circle cx="709.0" cy="400.0348837209302" r="6.0" fill="#FFE11A"/><circle cx="721.0" cy="400.0348837209302" r="6.0" fill="#FFE11A"/><rect x="740" y="406.0348837209302" width="26" height="22.5" rx="4" fill="#F28C28"/><ellipse cx="793.0" cy="413.5348837209302" rx="13.0" ry="15.0" fill="#2E9E4F"/><path d="M816 428.5348837209302h34l-6.800000000000001 -37.5h-20.4z" fill="#2E9E4F"/><circle cx="869.0" cy="419.5348837209302" r="9.0" fill="#F7A1B5"/><circle cx="865.4" cy="411.4348837209302" r="3.6" fill="#F7A1B5"/><circle cx="872.6" cy="411.4348837209302" r="3.6" fill="#F7A1B5"/><circle cx="901.0" cy="419.5348837209302" r="9.0" fill="#FFFFFF"/><circle cx="897.4" cy="411.4348837209302" r="3.6" fill="#FFFFFF"/><circle cx="904.6" cy="411.4348837209302" r="3.6" fill="#FFFFFF"/><ellipse cx="929.0" cy="406.0348837209302" rx="13.0" ry="22.5" fill="#E2264A"/><circle cx="967.0" cy="417.5348837209302" r="11.0" fill="#3A7BD5"/><circle cx="962.6" cy="407.63488372093025" r="4.4" fill="#3A7BD5"/><circle cx="971.4" cy="407.63488372093025" r="4.4" fill="#3A7BD5"/><circle cx="1001.0" cy="415.5348837209302" r="13.0" fill="#F28C28"/><circle cx="995.8" cy="403.83488372093024" r="5.2" fill="#F28C28"/><circle cx="1006.2" cy="403.83488372093024" r="5.2" fill="#F28C28"/><path d="M1020 428.5348837209302h26l-5.2 -45.0h-15.6z" fill="#F7A1B5"/><rect x="1052" y="398.5348837209302" width="22" height="30.0" rx="4" fill="#FFE11A"/><ellipse cx="1101.0" cy="413.5348837209302" rx="17.0" ry="15.0" fill="#3A7BD5"/><rect x="1128" y="398.5348837209302" width="30" height="30.0" rx="4" fill="#F7A1B5"/><rect x="1164" y="391.0348837209302" width="22" height="37.5" rx="4" fill="#F7A1B5"/><rect x="240" y="428.5348837209302" width="960" height="5" fill="#C8C2B4"/><rect x="477.0" y="292" width="6" height="150" fill="#8E8A80"/><rect x="717.0" y="292" width="6" height="150" fill="#8E8A80"/><rect x="957.0" y="292" width="6" height="150" fill="#8E8A80"/><rect x="240" y="292" width="960" height="150" fill="none" stroke="#7A766C" stroke-width="8"/>
+<rect x="150" y="450" width="1140" height="110" fill="#4A2A1B"/>
+<g transform="translate(528 452) scale(2.6)" filter="url(#rglow)"><path d="M20 21c-1 6 1 10 0 17" fill="none" stroke="#2E9E4F" stroke-width="2.4" stroke-linecap="round"/><path d="M20 30c-5-1-8-4-8-7 4 0 7 2 8 7zM20 27c4-2 8-2 9 1-3 2-6 1-9-1z" fill="#2E9E4F"/><circle cx="20" cy="13" r="9" fill="#E2264A"/><path d="M14 9c2-4 10-4 12 1M13 15c2 5 11 6 14-1M17 11c2-2 6-2 7 1 1 3-3 5-6 3-2-2 0-4 2-3" fill="none" stroke="#A3122F" stroke-width="1.6" stroke-linecap="round"/></g>
+<text x="760" y="540" text-anchor="middle" font-family="Lobster, cursive" font-size="104" fill="#6F8BFF" filter="url(#neon)">Needs</text>
+<text x="760" y="540" text-anchor="middle" font-family="Lobster, cursive" font-size="104" fill="#E6EBFF" opacity=".55">Needs</text>
+<path d="M150 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M190 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M230 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M270 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M310 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M350 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M390 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M430 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M470 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M510 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M550 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M590 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M630 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M670 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M710 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M750 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M790 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M830 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M870 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M910 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M950 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M990 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M1030 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M1070 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M1110 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M1150 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M1190 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/><path d="M1230 560h40v58c0 10-40 10-40 0z" fill="#6B4430"/><path d="M1270 560h40v58c0 10-40 10-40 0z" fill="#FFF3DA"/>
+<rect x="150" y="618" width="1140" height="202" fill="url(#shopglow)"/>
+<g opacity=".9"><ellipse cx="191.0" cy="677.5" rx="13.0" ry="22.5" fill="#2E9E4F"/><path d="M218 700h30l-6.0 -54.0h-18.0z" fill="#FFFFFF"/><path d="M254 700h30l-6.0 -45.0h-18.0z" fill="#9C5BD6"/><path d="M294 700h26l-5.2 -45.0h-15.6z" fill="#1D3FC4"/><ellipse cx="345.0" cy="686.5" rx="11.0" ry="13.5" fill="#F28C28"/><ellipse cx="381.0" cy="673.0" rx="15.0" ry="27.0" fill="#FFFFFF"/><path d="M402 700h22l-4.4 -27.0h-13.2z" fill="#FFFFFF"/><rect x="434" y="646.0" width="34" height="54.0" rx="4" fill="#E2264A"/><path d="M482 700h30l-6.0 -54.0h-18.0z" fill="#2E9E4F"/><ellipse cx="529.0" cy="682.0" rx="11.0" ry="18.0" fill="#F7A1B5"/><path d="M546 700h30l-6.0 -27.0h-18.0z" fill="#F7A1B5"/><path d="M582 700h22l-4.4 -36.0h-13.2z" fill="#E2264A"/><path d="M614 700h22l-4.4 -45.0h-13.2z" fill="#F7A1B5"/><rect x="650" y="673.0" width="18" height="27.0" rx="4" fill="#FFE11A"/><rect x="682" y="646.0" width="22" height="54.0" rx="4" fill="#F28C28"/><rect x="718" y="673.0" width="18" height="27.0" rx="4" fill="#F7A1B5"/><circle cx="759.0" cy="687.0" r="13.0" fill="#2E9E4F"/><circle cx="753.8" cy="675.3" r="5.2" fill="#2E9E4F"/><circle cx="764.2" cy="675.3" r="5.2" fill="#2E9E4F"/><ellipse cx="795.0" cy="682.0" rx="17.0" ry="18.0" fill="#E2264A"/><rect x="826" y="673.0" width="26" height="27.0" rx="4" fill="#E2264A"/><rect x="866" y="673.0" width="30" height="27.0" rx="4" fill="#F28C28"/><rect x="906" y="664.0" width="26" height="36.0" rx="4" fill="#3A7BD5"/><rect x="942" y="655.0" width="30" height="45.0" rx="4" fill="#FFFFFF"/><circle cx="999.0" cy="683.0" r="17.0" fill="#2E9E4F"/><circle cx="992.2" cy="667.7" r="6.8" fill="#2E9E4F"/><circle cx="1005.8" cy="667.7" r="6.8" fill="#2E9E4F"/><circle cx="1035.0" cy="687.0" r="13.0" fill="#2E9E4F"/><circle cx="1029.8" cy="675.3" r="5.2" fill="#2E9E4F"/><circle cx="1040.2" cy="675.3" r="5.2" fill="#2E9E4F"/><path d="M1058 700h26l-5.2 -27.0h-15.6z" fill="#3A7BD5"/><ellipse cx="1105.0" cy="673.0" rx="15.0" ry="27.0" fill="#E2264A"/><rect x="1126" y="673.0" width="30" height="27.0" rx="4" fill="#2E9E4F"/><path d="M1170 700h22l-4.4 -54.0h-13.2z" fill="#E2264A"/><path d="M1198 700h30l-6.0 -54.0h-18.0z" fill="#9C5BD6"/><rect x="1234" y="655.0" width="22" height="45.0" rx="4" fill="#2E9E4F"/><rect x="160" y="700" width="1120" height="6" fill="#C9A26A"/><path d="M178 790h30l-6.0 -27.0h-18.0z" fill="#F28C28"/><rect x="218" y="745.0" width="26" height="45.0" rx="4" fill="#3A7BD5"/><circle cx="259.0" cy="781.0" r="9.0" fill="#FFE11A"/><circle cx="255.4" cy="772.9" r="3.6" fill="#FFE11A"/><circle cx="262.6" cy="772.9" r="3.6" fill="#FFE11A"/><circle cx="291.0" cy="773.0" r="17.0" fill="#FFFFFF"/><circle cx="284.2" cy="757.7" r="6.8" fill="#FFFFFF"/><circle cx="297.8" cy="757.7" r="6.8" fill="#FFFFFF"/><path d="M318 790h30l-6.0 -27.0h-18.0z" fill="#E2264A"/><rect x="354" y="736.0" width="26" height="54.0" rx="4" fill="#2E9E4F"/><rect x="394" y="763.0" width="30" height="27.0" rx="4" fill="#FFFFFF"/><rect x="438" y="763.0" width="30" height="27.0" rx="4" fill="#FFFFFF"/><path d="M474 790h18l-3.6 -45.0h-10.799999999999999z" fill="#2E9E4F"/><rect x="506" y="745.0" width="26" height="45.0" rx="4" fill="#F28C28"/><ellipse cx="555.0" cy="767.5" rx="9.0" ry="22.5" fill="#9C5BD6"/><ellipse cx="583.0" cy="776.5" rx="9.0" ry="13.5" fill="#E2264A"/><path d="M598 790h30l-6.0 -54.0h-18.0z" fill="#FFFFFF"/><rect x="638" y="754.0" width="30" height="36.0" rx="4" fill="#3A7BD5"/><rect x="682" y="754.0" width="26" height="36.0" rx="4" fill="#2E9E4F"/><circle cx="733.0" cy="775.0" r="15.0" fill="#FFE11A"/><circle cx="727.0" cy="761.5" r="6.0" fill="#FFE11A"/><circle cx="739.0" cy="761.5" r="6.0" fill="#FFE11A"/><rect x="758" y="754.0" width="22" height="36.0" rx="4" fill="#FFFFFF"/><ellipse cx="801.0" cy="767.5" rx="15.0" ry="22.5" fill="#1D3FC4"/><rect x="822" y="745.0" width="18" height="45.0" rx="4" fill="#FFE11A"/><rect x="850" y="736.0" width="30" height="54.0" rx="4" fill="#1D3FC4"/><ellipse cx="905.0" cy="772.0" rx="15.0" ry="18.0" fill="#F7A1B5"/><rect x="934" y="745.0" width="18" height="45.0" rx="4" fill="#F28C28"/><rect x="962" y="745.0" width="26" height="45.0" rx="4" fill="#F28C28"/><rect x="994" y="754.0" width="22" height="36.0" rx="4" fill="#2E9E4F"/><circle cx="1041.0" cy="779.0" r="11.0" fill="#FFE11A"/><circle cx="1036.6" cy="769.1" r="4.4" fill="#FFE11A"/><circle cx="1045.4" cy="769.1" r="4.4" fill="#FFE11A"/><path d="M1058 790h34l-6.800000000000001 -36.0h-20.4z" fill="#FFE11A"/><ellipse cx="1107.0" cy="776.5" rx="9.0" ry="13.5" fill="#3A7BD5"/><ellipse cx="1137.0" cy="767.5" rx="15.0" ry="22.5" fill="#E2264A"/><path d="M1158 790h18l-3.6 -27.0h-10.799999999999999z" fill="#2E9E4F"/><circle cx="1201.0" cy="779.0" r="11.0" fill="#9C5BD6"/><circle cx="1196.6" cy="769.1" r="4.4" fill="#9C5BD6"/><circle cx="1205.4" cy="769.1" r="4.4" fill="#9C5BD6"/><rect x="1218" y="745.0" width="30" height="45.0" rx="4" fill="#E2264A"/><rect x="160" y="790" width="1120" height="6" fill="#C9A26A"/></g>
+<rect x="0" y="800" width="1440" height="20" fill="#2A2422"/>
+</svg></div>
   <div class="wrap front-copy">
-    <h2 class="front-h"><span class="en">One shop. 1st Main Road. Lit up till 10.</span><span class="ta">ஒரே கடை. 1வது மெயின் ரோடு. இரவு 10 வரை.</span></h2>
-    <p><span class="en">Look for the red V.V. MART sign above the yellow welcome banners, opposite the Sub Registrar office.</span><span class="ta">சார் பதிவாளர் அலுவலகம் எதிரே, மஞ்சள் வரவேற்பு பேனர்களுக்கு மேலே சிவப்பு V.V. MART பலகை.</span></p>
-    <a class="btn btn-sign" href="https://www.google.com/maps/search/?api=1&query=V.V.+Mart+39+1st+Main+Rd+NCBS+Colony+Nanganallur+Chennai" target="_blank" rel="noopener"><span class="en">Get directions</span><span class="ta">வழி காட்டு</span></a>
+    <h2 class="front-h"><span class="en">The blue sign with the rose.</span><span class="ta">ரோஜாவுடன் நீல நிறப் பலகை.</span></h2>
+    <p><span class="en">43/31, 1st Main Road, Ram Nagar, Nanganallur. Look for the window full of toys and the striped awning.</span><span class="ta">43/31, 1வது மெயின் ரோடு, ராம் நகர், நங்கநல்லூர். பொம்மைகள் நிறைந்த ஜன்னலையும் கோடிட்ட கூரையையும் பாருங்கள்.</span></p>
+    <a class="btn btn-sign" href="https://www.google.com/maps/search/?api=1&query=Needs+Supermarket+Nanganallur" target="_blank" rel="noopener"><span class="en">Get directions</span><span class="ta">வழி காட்டு</span></a>
   </div>
 </section>
 
@@ -783,24 +856,23 @@ html[data-lang="ta"] .empty{font-size:19px}
 <section class="sec" id="visit">
   <div class="wrap visit-grid">
     <div>
-      <h2 class="h2"><span class="en">Easy to find, opposite the registrar office.</span><span class="ta">பதிவு அலுவலகம் எதிரே, எளிதில் கண்டுபிடிக்கலாம்.</span></h2>
+      <h2 class="h2"><span class="en">Ram Nagar, on 1st Main Road.</span><span class="ta">ராம் நகர், 1வது மெயின் ரோடு.</span></h2>
       <div class="directions">
         <div class="dir">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>39, 1st Main Road, NCBS Colony, Nanganallur, Chennai 600061</b><span class="en">Near the ration shop, opposite the Sub Registrar office</span><span class="ta">ரேஷன் கடை அருகில், சார் பதிவாளர் அலுவலகம் எதிரே</span></div>
-        </div>
-        <div class="dir">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 18v3M16 18v3"/><circle cx="8.5" cy="14.5" r=".8" fill="currentColor"/><circle cx="15.5" cy="14.5" r=".8" fill="currentColor"/></svg>
-          <div><b><span class="en">Anjaneyar Kovil bus stop</span><span class="ta">ஆஞ்சநேயர் கோவில் பேருந்து நிறுத்தம்</span></b><span class="en">About a minute's walk. Pazhavanthangal station is the nearest train.</span><span class="ta">ஒரு நிமிட நடை. அருகிலுள்ள ரயில் நிலையம் பழவந்தாங்கல்.</span></div>
+          <div><b>43/31, 1st Main Road, Ram Nagar, Nanganallur, Chennai 600061</b><span class="en">Plus code X5MV+46, Chennai</span><span class="ta">பிளஸ் கோட் X5MV+46, சென்னை</span></div>
         </div>
         <div class="dir">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          <div><b>+91 00000 00000</b><span class="en">Shop phone and WhatsApp (sample number)</span><span class="ta">கடை தொலைபேசி மற்றும் வாட்ஸ்அப் (மாதிரி எண்)</span></div>
+          <div><b>098402 97100</b><span class="en">Call the shop, or ask about delivery</span><span class="ta">கடையை அழையுங்கள், டெலிவரி பற்றிக் கேளுங்கள்</span></div>
+        </div>
+        <div class="dir">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <div><b>@needs__supermarket</b><span class="en">New finds on Instagram and YouTube</span><span class="ta">இன்ஸ்டாகிராம், யூடியூபில் புதியவை</span></div>
         </div>
       </div>
       <div class="hours" id="hours"><i></i><span id="hoursText"></span></div>
-      <p class="busy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13" width="3" height="7" rx="1"/><rect x="8" y="9" width="3" height="11" rx="1"/><rect x="13" y="5" width="3" height="15" rx="1"/><rect x="18" y="10" width="3" height="10" rx="1"/></svg><span class="en">Evenings are the busiest. Come before 5 pm, or order ahead and just pick it up.</span><span class="ta">மாலை நேரம் கூட்டம் அதிகம். 5 மணிக்கு முன் வாருங்கள், அல்லது முன்பே ஆர்டர் செய்து எடுத்துச் செல்லுங்கள்.</span></p>
-      <p class="pay"><span class="en">Pay by UPI, card or cash at the counter. Ask about a monthly grocery account.</span><span class="ta">UPI, கார்டு அல்லது ரொக்கமாகச் செலுத்தலாம். மாதாந்திர மளிகைக் கணக்கு பற்றிக் கேளுங்கள்.</span></p>
+      <p class="pay"><span class="en">All payment modes accepted: UPI, cards and cash.</span><span class="ta">எல்லா கட்டண முறைகளும்: UPI, கார்டு, ரொக்கம்.</span></p>
     </div>
   </div>
 </section>
@@ -809,19 +881,19 @@ html[data-lang="ta"] .empty{font-size:19px}
 <footer>
   <div class="wrap">
     <figure class="quote">
-      <blockquote><p>“When I initially shifted to Nanganallur, only VV&#8202;Mart was my choice to have anything to everything for monthly groceries, toiletries, fancy products, gift items, pooja items.”</p></blockquote>
-      <figcaption><span class="en">A customer review on Justdial. Rated 4.1 from 4,600+ Google reviews.</span><span class="ta">ஜஸ்ட்டயலில் ஒரு வாடிக்கையாளர் மதிப்புரை. 4,600+ கூகுள் மதிப்புரைகளில் 4.1.</span></figcaption>
+      <blockquote><p>“Good place to shop all your home needs, they've stocked most of our needs, price also competitive. All payment modes accepted.”</p></blockquote>
+      <figcaption><span class="en">A Google review by a Local Guide.</span><span class="ta">ஒரு கூகுள் லோக்கல் கைடின் மதிப்புரை.</span></figcaption>
     </figure>
-    <div class="foot-big"><span class="en">Anything to everything.</span><span class="ta">எல்லாமே இங்கே.</span></div>
+    <div class="foot-big"><span class="en">Whatever you need.</span><span class="ta">தேவையானது எல்லாம்.</span></div>
     <div class="foot-row">
-      <span>V.&#8202;V. Mart, 39, 1st Main Road, NCBS Colony, Nanganallur, Chennai 600061</span>
+      <span>Needs Supermarket, 43/31, 1st Main Road, Ram Nagar, Nanganallur, Chennai 600061</span>
       <span><span class="en">Website concept. Not the shop's official site.</span><span class="ta">இணையதள மாதிரி. கடையின் அதிகாரப்பூர்வ தளம் அல்ல.</span></span>
     </div>
   </div>
 </footer>
 
 <nav class="mbar" aria-label="Quick actions">
-  <a href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="en">Call</span><span class="ta">அழை</span></a>
+  <a href="tel:+919840297100"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="en">Call</span><span class="ta">அழை</span></a>
   <a href="#aisles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h18M3 15h18M7 3v18M17 3v18"/></svg><span class="en">Aisles</span><span class="ta">பிரிவுகள்</span></a>
   <a href="#order" class="mbar-list"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg><span class="en">My list</span><span class="ta">பட்டியல்</span><b id="mbarCount">0</b></a>
 </nav>
@@ -830,99 +902,105 @@ html[data-lang="ta"] .empty{font-size:19px}
 
 <div class="toast" id="toast" role="status"><span id="toastText"></span><a href="#order"><span class="en">View list</span><span class="ta">பட்டியல் பார்</span></a></div>
 
+
 <script>
-/* Replace with the shop's real WhatsApp number (country code, no +) before handing over */
-const WHATSAPP = "910000000000";
+/* Shop phone from Google Maps (098402 97100). Confirm it is on WhatsApp before launch. */
+const WHATSAPP = "919840297100";
 
 /* item: [en, ta, icon, colour, brands, sizes]. Brands are examples; the shop sets its own range. */
-const KG=["250 g","500 g","1 kg"], BIG=["1 kg","5 kg","10 kg","25 kg"], PK=["100 g","200 g","500 g"], LT=["500 ml","1 L","5 L"];
+const S3=["Small","Medium","Large"], PACK=["Pack of 1","Pack of 3","Pack of 6"];
 const AISLES = [
-  {en:"Rice, dal & staples", ta:"அரிசி, பருப்பு, மளிகை", color:"y", items:[
-    ["Ponni rice","பொன்னி அரிசி","sack","y",["Loose from our sacks","Lalitha","Bell"],BIG],
-    ["Idli rice","இட்லி அரிசி","sack","w",["Loose from our sacks"],BIG],
-    ["Toor dal","துவரம் பருப்பு","pouch","y",["Udhaiyam","Tata Sampann","Loose"],KG],
-    ["Urad dal","உளுத்தம் பருப்பு","pouch","w",["Udhaiyam","Tata Sampann","Loose"],KG],
-    ["Wheat atta","கோதுமை மாவு","sack","o",["Aashirvaad","Pillsbury","Annapoorna"],["1 kg","5 kg","10 kg"]],
-    ["Rava","ரவை","pouch","o",["Anil","Aachi","Loose"],KG],
-    ["Sugar","சர்க்கரை","pouch","w",["Loose","Madhur"],["1 kg","2 kg","5 kg"]],
-    ["Gingelly oil","நல்லெண்ணெய்","bottle","o",["Idhayam","VVS","Anjali"],LT],
-    ["Groundnut oil","கடலை எண்ணெய்","bottle","y",["Gold Winner","Idhayam","Wood-pressed"],LT],
-    ["Tamarind","புளி","blocks","b",["Loose","Aachi"],KG]]},
-  {en:"Vegetables & fruits", ta:"காய்கறி & பழங்கள்", color:"g", items:[
-    ["Tomato","தக்காளி","round","r",[],KG],
-    ["Small onion","சின்ன வெங்காயம்","onion","p",[],KG],
-    ["Drumstick","முருங்கைக்காய்","sticks","g",[],["2 pcs","4 pcs","6 pcs"]],
-    ["Brinjal","கத்திரிக்காய்","pod","p",[],KG],
-    ["Ladies finger","வெண்டைக்காய்","pod","g",[],KG],
-    ["Curry leaves","கறிவேப்பிலை","leaves","g",[],["1 bunch","2 bunches"]],
-    ["Coriander","கொத்தமல்லி","leaves","l",[],["1 bunch","2 bunches"]],
-    ["Banana","வாழைப்பழம்","banana","y",["Poovan","Robusta","Nendran","Rasthali"],["6 pcs","1 dozen"]],
-    ["Coconut","தேங்காய்","round","b",[],["1 pc","2 pcs","3 pcs"]]]},
-  {en:"Masala & pickles", ta:"மசாலா & ஊறுகாய்", color:"r", items:[
-    ["Sambar powder","சாம்பார் பொடி","pouch","r",["Aachi","Sakthi","MTR","Eastern"],PK],
-    ["Rasam powder","ரசப் பொடி","pouch","o",["Aachi","Sakthi","MTR"],PK],
-    ["Turmeric powder","மஞ்சள் தூள்","tin","y",["Aachi","Sakthi","Everest"],PK],
-    ["Chilli powder","மிளகாய்த் தூள்","tin","r",["Aachi","Sakthi","Everest"],PK],
-    ["Asafoetida","பெருங்காயம்","tin","w",["LG","Everest"],["50 g","100 g"]],
-    ["Mustard","கடுகு","bowl","b",["Loose","Aachi"],PK],
-    ["Jeera","சீரகம்","bowl","o",["Loose","Aachi"],PK],
-    ["Mango pickle","மாங்காய் ஊறுகாய்","jar","r",["Aachi","Priya","Mother's Recipe"],["200 g","300 g","500 g"]]]},
-  {en:"Snacks & sweets", ta:"தின்பண்டம் & இனிப்பு", color:"o", items:[
-    ["Murukku","முறுக்கு","coil","o",["Shop-packed","Grand Sweets"],["200 g","500 g"]],
-    ["Mixture","மிக்சர்","pouch","y",["Shop-packed","Grand Sweets","Haldiram's"],["200 g","500 g"]],
-    ["Ribbon pakoda","ரிப்பன் பக்கோடா","pouch","o",["Shop-packed","Grand Sweets"],["200 g","500 g"]],
-    ["Mysore pak","மைசூர் பாக்","blocks","y",["Sri Krishna Sweets","Grand Sweets"],["250 g","500 g"]],
-    ["Biscuits","பிஸ்கட்","biscuit","o",["Britannia","Parle","Sunfeast"],["1 pack","Family pack"]],
-    ["Chocolates","சாக்லேட்","choco","b",["Cadbury","Nestlé","Amul"],["Small","Large"]],
-    ["Filter coffee powder","ஃபில்டர் காபி தூள்","cup","b",["Narasu's","Leo","Cothas","Bru"],["200 g","500 g"]]]},
-  {en:"Household & cleaning", ta:"வீட்டு உபயோகம்", color:"u", items:[
-    ["Detergent powder","சலவைத் தூள்","box","u",["Surf Excel","Ariel","Rin","Tide"],["500 g","1 kg","4 kg"]],
-    ["Dishwash bar","பாத்திரம் கழுவும் சோப்பு","bar","l",["Vim","Exo","Pril"],["1 bar","3 bars"]],
-    ["Floor cleaner","தரை சுத்திகரிப்பான்","bottle","u",["Lizol","Domex"],["500 ml","1 L","2 L"]],
-    ["Garbage bags","குப்பைப் பைகள்","roll","k",[],["Small","Medium","Large"]],
-    ["Mosquito coil","கொசுவர்த்தி","coil","g",["Good Knight","Mortein"],["1 pack","2 packs"]],
-    ["Scrub pads","தேய்ப்பான்","pad","l",["Scotch-Brite","Gala"],["1 pc","3 pcs"]]]},
-  {en:"Cosmetics & personal care", ta:"அழகு & பராமரிப்பு", color:"p", items:[
-    ["Coconut oil","தேங்காய் எண்ணெய்","bottle","b",["Parachute","VVD"],["200 ml","500 ml","1 L"]],
-    ["Shampoo","ஷாம்பு","bottle","p",["Clinic Plus","Dove","Sunsilk","Head & Shoulders"],["Sachets","180 ml","340 ml"]],
-    ["Bath soap","குளியல் சோப்பு","bar","p",["Mysore Sandal","Medimix","Hamam","Lux"],["1 bar","4 bars"]],
-    ["Toothpaste","பற்பசை","tube","r",["Colgate","Close-Up","Dabur Red","Pepsodent"],["100 g","150 g","200 g"]],
-    ["Kajal","கண் மை","tube","k",["Eyetex","Lakmé","Maybelline"],["1 pc"]],
-    ["Talc","பவுடர்","tin","p",["Pond's","Cuticura","Yardley"],["100 g","400 g"]],
-    ["Shikakai","சீயக்காய்","pouch","b",["Loose","Meera"],["100 g","200 g"]]]},
-  {en:"Pooja items", ta:"பூஜை பொருட்கள்", color:"y", items:[
-    ["Camphor","கற்பூரம்","flame","w",["Cycle","Mangaldeep","Loose"],["Small","Large"]],
-    ["Agarbathi","ஊதுபத்தி","incense","p",["Cycle","Zed Black","Hem"],["1 pack","3 packs"]],
-    ["Kumkum","குங்குமம்","bowl","r",["Loose"],["50 g","100 g"]],
-    ["Vibhuti","விபூதி","bowl","w",["Loose"],["50 g","100 g"]],
-    ["Lamp oil","விளக்கெண்ணெய்","bottle","y",["Loose","Deepam oil"],["500 ml","1 L"]],
-    ["Cotton wicks","திரி","lamp","o",["Loose"],["1 pack","3 packs"]],
-    ["Sambrani","சாம்பிராணி","incense","b",["Cycle","Loose"],["1 pack","3 packs"]],
-    ["Turmeric pieces","மஞ்சள் கிழங்கு","bowl","y",["Loose"],["100 g","250 g"]]]},
-  {en:"Gifts & fancy", ta:"பரிசு & ஃபேன்ஸி", color:"g", items:[
-    ["Gift boxes","பரிசுப் பெட்டிகள்","gift","r",[],["Under ₹100","₹100–300","₹300+"]],
+  {en:"Cookware & kitchen", ta:"சமையல் பாத்திரங்கள்", items:[
+    ["Pressure cooker","பிரஷர் குக்கர்","cooker","k",["Prestige","Hawkins","Butterfly","Pigeon"],["3 L","5 L","7.5 L"]],
+    ["Non-stick tawa","நான்-ஸ்டிக் தவா","pan","k",["Prestige","Pigeon","Butterfly"],["25 cm","28 cm"]],
+    ["Kadai","கடாய்","pan","r",["Prestige","Hawkins","Vinod"],["2 L","3 L"]],
+    ["Water bottle","தண்ணீர் பாட்டில்","bottle","u",["Milton","Cello","Borosil"],["750 ml","1 L"]],
+    ["Lunch box","லஞ்ச் பாக்ஸ்","tin","g",["Milton","Cello","Tupperware"],["2 tier","3 tier"]],
+    ["Storage containers","சேமிப்பு டப்பாக்கள்","jar","l",["Cello","Tupperware","Signoraware"],["Set of 3","Set of 6"]],
+    ["Steel tumblers","எவர்சில்வர் டம்ளர்","cup","w",[],["Set of 4","Set of 6"]]]},
+  {en:"Brass & pooja", ta:"பித்தளை & பூஜை", items:[
+    ["Kuthuvilakku","குத்துவிளக்கு","kuthu","y",[],["6 inch","9 inch","12 inch"]],
+    ["Agal vilakku","அகல் விளக்கு","lamp","o",[],["Pack of 6","Pack of 12"]],
+    ["Brass sombu","பித்தளை சொம்பு","tin","y",[],S3],
+    ["Pooja plate","பூஜை தட்டு","bowl","y",[],S3],
+    ["Camphor","கற்பூரம்","flame","w",["Cycle","Mangaldeep"],["Small","Large"]],
+    ["Agarbathi","ஊதுபத்தி","incense","p",["Cycle","Zed Black","Hem"],["1 pack","3 packs"]]]},
+  {en:"Gifts & toys", ta:"பரிசு & பொம்மைகள்", items:[
+    ["Gift hampers","பரிசுப் பெட்டிகள்","gift","r",[],["Under ₹500","₹500–1,000","₹1,000+"]],
     ["Return gifts","தாம்பூலப் பரிசுகள்","gift","g",[],["10 pcs","25 pcs","50 pcs"]],
-    ["Toys","பொம்மைகள்","top","u",[],["Under ₹100","₹100–300","₹300+"]],
-    ["Stationery","எழுதுபொருட்கள்","pencil","y",["Classmate","Natraj","Camlin"],["1 set"]],
-    ["Bangles","வளையல்கள்","rings","r",[],["1 dozen","2 dozen"]],
-    ["Hair clips","ஹேர் கிளிப்","rings","p",[],["1 card","3 cards"]]]}
+    ["Teddy bears","டெடி பியர்","teddy","o",[],S3],
+    ["Die-cast cars","டை-காஸ்ட் கார்","car","r",["Maisto","Bburago","Hot Wheels"],["1:64","1:43","1:24"]],
+    ["Board games","போர்டு கேம்ஸ்","box","u",["Funskool","Hasbro"],["Kids","Family"]],
+    ["Spinning tops","பம்பரம்","top","p",[],PACK]]},
+  {en:"Stationery", ta:"எழுதுபொருட்கள்", items:[
+    ["Notebooks","நோட்டுப் புத்தகம்","notebook","u",["Classmate","Navneet"],["Single","Pack of 6"]],
+    ["Pens","பேனா","pencil","u",["Reynolds","Cello","Linc"],["Pack of 5","Pack of 10"]],
+    ["Pencils & erasers","பென்சில், ரப்பர்","pencil","y",["Natraj","Apsara","Doms"],["Pack of 10","Kit"]],
+    ["Geometry box","ஜியோமெட்ரி பாக்ஸ்","tin","u",["Camlin","Faber-Castell"],["1 box"]],
+    ["Colour pencils","கலர் பென்சில்","pencil","r",["Camlin","Faber-Castell","Doms"],["12 shades","24 shades"]],
+    ["School bag","பள்ளிப் பை","bag","r",["Skybags","Wildcraft"],["Primary","Middle school","High school"]]]},
+  {en:"Personal care", ta:"அழகு & பராமரிப்பு", items:[
+    ["Shampoo","ஷாம்பு","bottle","p",["Clinic Plus","Dove","Sunsilk"],["180 ml","340 ml"]],
+    ["Bath soap","குளியல் சோப்பு","bar","p",["Mysore Sandal","Medimix","Dove"],["1 bar","4 bars"]],
+    ["Face wash","ஃபேஸ் வாஷ்","tube","l",["Himalaya","Garnier","Nivea"],["50 ml","100 ml"]],
+    ["Body lotion","பாடி லோஷன்","bottle","w",["Nivea","Vaseline","Parachute"],["200 ml","400 ml"]],
+    ["Toothpaste","பற்பசை","tube","r",["Colgate","Close-Up","Sensodyne"],["100 g","150 g"]],
+    ["Hair accessories","ஹேர் கிளிப்","rings","p",[],["1 card","3 cards"]]]},
+  {en:"Home decor", ta:"வீட்டு அலங்காரம்", items:[
+    ["Artificial plants","செயற்கைச் செடிகள்","leaves","g",[],S3],
+    ["Wall clocks","சுவர் கடிகாரம்","clock","u",["Ajanta","Titan"],["Small","Large"]],
+    ["Photo frames","போட்டோ ஃபிரேம்","frame","b",[],["4×6","5×7","8×10"]],
+    ["Candles & diffusers","மெழுகுவர்த்தி","flame","o",[],PACK],
+    ["Dress organiser","டிரஸ் ஆர்கனைசர்","hanger","u",[],["Single","Set of 3"]],
+    ["Doormats","கால் மிதியடி","pad","b",[],["Small","Large"]]]},
+  {en:"Electronics", ta:"மின்சாதனங்கள்", items:[
+    ["LED bulbs","LED பல்பு","bulb","y",["Philips","Syska","Wipro"],["9 W","12 W"]],
+    ["Extension boards","எக்ஸ்டென்ஷன் போர்டு","plug","k",["Anchor","GM","Havells"],["4 socket","6 socket"]],
+    ["Chargers & cables","சார்ஜர், கேபிள்","plug","w",["boAt","Ambrane","Portronics"],["Type-C","Lightning"]],
+    ["Emergency lamp","எமர்ஜென்சி லேம்ப்","bulb","w",["Philips","Wipro"],["Small","Large"]],
+    ["Batteries","பேட்டரி","tin","o",["Duracell","Eveready"],["AA","AAA"]]]},
+  {en:"Pet supplies", ta:"செல்லப்பிராணி", items:[
+    ["Dog food","நாய் உணவு","pouch","b",["Pedigree","Drools"],["1 kg","3 kg"]],
+    ["Cat food","பூனை உணவு","pouch","o",["Whiskas","Me-O"],["480 g","1.2 kg"]],
+    ["Pet bowls","செல்லப்பிராணி கிண்ணம்","bowl","u",[],["Small","Large"]],
+    ["Chew toys","கடிக்கும் பொம்மை","bone","w",[],PACK],
+    ["Collars & leashes","கழுத்துப் பட்டை","rings","r",[],["S","M","L"]]]},
+  {en:"Fashion & textiles", ta:"ஃபேஷன் & துணிகள்", items:[
+    ["Bedsheets","படுக்கை விரிப்பு","stack","r",["Bombay Dyeing","Spaces"],["Single","Double","King"]],
+    ["Towels","துண்டு","stack","u",["Bombay Dyeing","Welspun"],["Hand","Bath"]],
+    ["Umbrellas","குடை","umbrella","u",["Popy","Johns"],["Folding","Long"]],
+    ["Handbags","கைப்பை","bag","p",[],S3]]},
+  {en:"Special days", ta:"விசேஷ நாட்கள்", items:[
+    ["Kolu stand","கொலு படி","steps","b",[],["3 steps","5 steps","7 steps","9 steps"]],
+    ["Kolu dolls","கொலு பொம்மைகள்","top","p",[],["Set of 5","Set of 9"]],
+    ["Rangoli colours","கோலப் பொடி","bowl","r",[],["Pack of 6","Pack of 12"]],
+    ["Diyas","தீபங்கள்","lamp","o",[],["Pack of 6","Pack of 12"]],
+    ["Gift wrap","பரிசுக் காகிதம்","roll","r",[],["1 roll","5 rolls"]],
+    ["Party decorations","பார்ட்டி அலங்காரம்","round","r",[],["Birthday kit","Balloons"]]]}
 ];
+
 const OFFERS = [
-  {en:"Ponni boiled rice", ta:"பொன்னி புழுங்கல் அரிசி", uen:"25 kg bag", uta:"25 கிலோ மூட்டை", p:1349, o:1520, bg:"#FFC21A"},
-  {en:"Gingelly oil", ta:"நல்லெண்ணெய்", uen:"1 litre", uta:"1 லிட்டர்", p:289, o:330, bg:"#fff"},
-  {en:"Toor dal", ta:"துவரம் பருப்பு", uen:"1 kg", uta:"1 கிலோ", p:139, o:165, bg:"#E5284B", fg:"#fff"},
-  {en:"Detergent powder", ta:"சலவைத் தூள்", uen:"4 kg pack", uta:"4 கிலோ பேக்", p:399, o:460, bg:"#fff"},
-  {en:"Festive sweet box", ta:"பண்டிகை இனிப்புப் பெட்டி", uen:"500 g assorted", uta:"500 கிராம் கலவை", p:249, o:299, bg:"#2638C9", fg:"#fff"}
+  {en:"3-in-1 motivation water bottle", ta:"3-இன்-1 மோட்டிவேஷன் பாட்டில்", uen:"With time markers", uta:"நேரக் குறியீடுகளுடன்", p:349, o:449, bg:"#FFE11A"},
+  {en:"Dress organiser", ta:"டிரஸ் ஆர்கனைசர்", uen:"Saves wardrobe space", uta:"அலமாரியில் இடம் மிச்சம்", p:299, o:399, bg:"#fff"},
+  {en:"Non-stick fry pan", ta:"நான்-ஸ்டிக் ஃபிரை பான்", uen:"24 cm", uta:"24 செ.மீ.", p:549, o:699, bg:"#E2264A", fg:"#fff"},
+  {en:"Picnic basket", ta:"பிக்னிக் கூடை", uen:"With lid", uta:"மூடியுடன்", p:699, o:899, bg:"#fff"},
+  {en:"Die-cast F1 car", ta:"டை-காஸ்ட் F1 கார்", uen:"1:43 scale", uta:"1:43 அளவு", p:499, o:599, bg:"#1D3FC4", fg:"#fff"}
 ];
 
 const FEST = [
-  {en:"Deepavali sweet & savoury box", ta:"தீபாவளி இனிப்பு காரப் பெட்டி", den:"Mysore pak, murukku, mixture, packed to gift", dta:"மைசூர் பாக், முறுக்கு, மிக்சர், பரிசுப் பொதியில்"},
-  {en:"Karthigai agal vilakku set", ta:"கார்த்திகை அகல் விளக்கு செட்", den:"Clay lamps with wicks and lamp oil", dta:"களிமண் விளக்குகள், திரி, எண்ணெயுடன்"},
-  {en:"Complete pooja kit", ta:"முழு பூஜை கிட்", den:"Camphor, agarbathi, kumkum, turmeric, sambrani", dta:"கற்பூரம், ஊதுபத்தி, குங்குமம், மஞ்சள், சாம்பிராணி"},
-  {en:"Thamboolam return gifts", ta:"தாம்பூலப் பரிசுகள்", den:"For housewarmings, functions and golu, in bulk", dta:"கிரகப்பிரவேசம், விசேஷம், கொலுவுக்கு மொத்தமாக"}
+  {en:"Kolu stand, no assembly", ta:"கொலு படி, எளிதில் அமைக்கலாம்", den:"3 to 9 steps, folds flat after Navaratri", dta:"3 முதல் 9 படிகள், நவராத்திரிக்குப் பின் மடித்து வைக்கலாம்"},
+  {en:"Deepavali gift hampers", ta:"தீபாவளி பரிசுப் பெட்டிகள்", den:"Packed for family, friends and office", dta:"குடும்பம், நண்பர்கள், அலுவலகத்துக்கு"},
+  {en:"Karthigai lamp sets", ta:"கார்த்திகை விளக்கு செட்", den:"Agal lamps, brass vilakku, wicks and oil", dta:"அகல், பித்தளை விளக்கு, திரி, எண்ணெய்"},
+  {en:"Birthday return gifts", ta:"பிறந்தநாள் தாம்பூலப் பரிசுகள்", den:"In bulk, wrapped at the counter", dta:"மொத்தமாக, கவுண்டரிலேயே பொதிந்து"}
 ];
 
-const HERO = [["Ponni rice 5 kg","பொன்னி அரிசி 5 கிலோ"],["Toor dal 1 kg","துவரம் பருப்பு 1 கிலோ"],["Drumstick, tomato","முருங்கை, தக்காளி"],["Gingelly oil","நல்லெண்ணெய்"],["Camphor, wicks","கற்பூரம், திரி"],["Gift box for Priya","ப்ரியாவுக்கு பரிசுப் பெட்டி"]];
+const REELS = [
+  {ic:"bottle", c:"u", en:"3-in-1 Motivation Water Bottle. Stay hydrated. Stay motivated.", ta:"3-இன்-1 மோட்டிவேஷன் பாட்டில். தண்ணீர் குடியுங்கள், உற்சாகமாக இருங்கள்."},
+  {ic:"hanger", c:"p", en:"உங்க dress-ஐ neat-ஆ organise பண்ணணுமா? This dress organiser saves wardrobe space.", ta:"உங்க dress-ஐ neat-ஆ organise பண்ணணுமா? இந்த டிரஸ் ஆர்கனைசர் அலமாரியில் இடம் மிச்சம்."},
+  {ic:"car", c:"r", en:"Die-cast cars for the collectors in the family.", ta:"குடும்பத்தில் உள்ள கலெக்டர்களுக்கு டை-காஸ்ட் கார்கள்."}
+];
+
+const HERO = [["Pressure cooker 5 L","பிரஷர் குக்கர் 5 லி"],["Geometry box","ஜியோமெட்ரி பாக்ஸ்"],["Brass vilakku","பித்தளை விளக்கு"],["Return gifts × 20","தாம்பூலப் பரிசு × 20"],["Dog food 3 kg","நாய் உணவு 3 கிலோ"],["Kolu stand, 7 steps","கொலு படி, 7 படிகள்"]];
 
 let lang = "en";
 try{ const s = localStorage.getItem("vvm-lang"); if(s==="ta"||s==="en") lang = s; }catch(e){}
@@ -941,11 +1019,11 @@ function setLang(l){
   document.documentElement.dataset.lang = l;
   document.documentElement.lang = l;
   document.querySelectorAll("[data-set-lang]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.setLang===l));
-  $("#addInput").placeholder = t("+ Aachi sambar powder 200g","+ சாம்பார் பொடி 200 கிராம்");
-  $("#q").placeholder = t("Search sambar, camphor, Aachi…","சாம்பார், கற்பூரம், ஆச்சி… தேடுங்கள்");
-  $("#fAddr").placeholder = t("e.g. 4th Main Road, Nanganallur","எ.கா. 4வது மெயின் ரோடு, நங்கநல்லூர்");
+  $("#addInput").placeholder = t("+ Prestige pressure cooker 5 L","+ பிரஷர் குக்கர் 5 லி");
+  $("#q").placeholder = t("Search cooker, kolu, Prestige…","குக்கர், கொலு, பிரஸ்டீஜ்… தேடுங்கள்");
+  $("#fAddr").placeholder = t("e.g. Ram Nagar, Nanganallur","எ.கா. ராம் நகர், நங்கநல்லூர்");
   try{ localStorage.setItem("vvm-lang", l); }catch(e){}
-  renderBoard(); renderShelf(false); renderTags(); renderFest(); renderList(); renderHours();
+  renderBoard(); renderShelf(false); renderTags(); renderFest(); renderList(); renderHours(); renderPhones();
 }
 document.querySelectorAll("[data-set-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setLang)));
 
@@ -996,7 +1074,23 @@ const ICON={
  gift:c=>`<rect x="16" y="36" width="48" height="34" rx="4" fill="${c}" ${SK}/><rect x="12" y="28" width="56" height="12" rx="3" fill="${c}" ${SK}/><path d="M36 28h8v42h-8z" fill="var(--c-y)" ${SK}/><path d="M40 28c-8-12-20-10-16-2 3 4 10 2 16 2zM40 28c8-12 20-10 16-2-3 4-10 2-16 2z" fill="var(--c-y)" ${SK}/>`,
  top:c=>`<path d="M40 70L20 42c0-10 9-16 20-16s20 6 20 16z" fill="${c}" ${SK}/><path d="M20 42c6 5 34 5 40 0" fill="none" ${SK}/><path d="M28 50c6 3 18 3 24 0" stroke="var(--c-y)" stroke-width="4" stroke-linecap="round"/><rect x="36" y="14" width="8" height="12" rx="3" fill="var(--c-y)" ${SK}/>`,
  pencil:c=>`<path d="M18 62l36-36 8 8-36 36-11 3z" fill="${c}" ${SK}/><path d="M54 26l5-5 8 8-5 5" fill="var(--c-r)" ${SK}/><path d="M18 62l8 8" ${SK}/><path d="M15 73l3-11 8 8z" fill="var(--c-k2)" ${SK}/>`,
- rings:c=>`<ellipse cx="34" cy="40" rx="18" ry="14" fill="none" stroke="var(--ink)" stroke-width="9"/><ellipse cx="34" cy="40" rx="18" ry="14" fill="none" stroke="${c}" stroke-width="4.4"/><ellipse cx="46" cy="52" rx="18" ry="14" fill="none" stroke="var(--ink)" stroke-width="9"/><ellipse cx="46" cy="52" rx="18" ry="14" fill="none" stroke="var(--c-y)" stroke-width="4.4"/>`
+ rings:c=>`<ellipse cx="34" cy="40" rx="18" ry="14" fill="none" stroke="var(--ink)" stroke-width="9"/><ellipse cx="34" cy="40" rx="18" ry="14" fill="none" stroke="${c}" stroke-width="4.4"/><ellipse cx="46" cy="52" rx="18" ry="14" fill="none" stroke="var(--ink)" stroke-width="9"/><ellipse cx="46" cy="52" rx="18" ry="14" fill="none" stroke="var(--c-y)" stroke-width="4.4"/>`,
+ cooker:c=>`<rect x="18" y="34" width="44" height="34" rx="6" fill="var(--c-k2)" ${SK}/><path d="M14 34h52a4 4 0 0 1 0 8H14a4 4 0 0 1 0-8z" fill="${c}" ${SK}/><path d="M66 38h10" ${SK}/><rect x="34" y="20" width="12" height="14" rx="3" fill="${c}" ${SK}/><path d="M40 20v-8" ${SK}/><circle cx="40" cy="11" r="3" fill="var(--c-r)" ${SK}/><path d="M24 52h12" stroke="${W}" stroke-width="2.6" stroke-linecap="round"/>`,
+ pan:c=>`<ellipse cx="34" cy="46" rx="24" ry="18" fill="${c}" ${SK}/><ellipse cx="34" cy="44" rx="17" ry="12" fill="var(--c-k2)" ${SK}/><path d="M56 40l20-10" stroke="var(--ink)" stroke-width="8" stroke-linecap="round"/><path d="M57 40l18-9" stroke="var(--c-b)" stroke-width="4" stroke-linecap="round"/><path d="M26 40c3-3 8-4 12-3" stroke="${W}" stroke-width="2.4" stroke-linecap="round" fill="none"/>`,
+ kuthu:c=>`<path d="M40 8c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z" fill="var(--c-o)" ${SK}/><path d="M24 26h32l-4 6H28z" fill="${c}" ${SK}/><rect x="37" y="32" width="6" height="24" fill="${c}" ${SK}/><circle cx="40" cy="44" r="5" fill="${c}" ${SK}/><path d="M26 70c0-8 6-14 14-14s14 6 14 14z" fill="${c}" ${SK}/><path d="M22 70h36" ${SK}/>`,
+ teddy:c=>`<circle cx="26" cy="20" r="7" fill="${c}" ${SK}/><circle cx="54" cy="20" r="7" fill="${c}" ${SK}/><circle cx="40" cy="30" r="15" fill="${c}" ${SK}/><ellipse cx="40" cy="58" rx="17" ry="14" fill="${c}" ${SK}/><ellipse cx="40" cy="35" rx="6" ry="4.5" fill="var(--c-w)" ${SK}/><circle cx="34" cy="27" r="2" fill="var(--ink)"/><circle cx="46" cy="27" r="2" fill="var(--ink)"/><circle cx="40" cy="33.5" r="1.8" fill="var(--ink)"/><ellipse cx="40" cy="60" rx="8" ry="7" fill="var(--c-w)" ${SK}/>`,
+ car:c=>`<path d="M10 52l6-14c2-4 6-6 10-6h22c5 0 8 2 11 6l7 8h4a4 4 0 0 1 4 4v6H10z" fill="${c}" ${SK}/><path d="M28 36h18l7 10H24z" fill="var(--c-k2)" ${SK}/><circle cx="24" cy="58" r="8" fill="var(--c-k)" ${SK}/><circle cx="58" cy="58" r="8" fill="var(--c-k)" ${SK}/><circle cx="24" cy="58" r="3" fill="${W}"/><circle cx="58" cy="58" r="3" fill="${W}"/>`,
+ frame:c=>`<rect x="14" y="16" width="52" height="48" rx="3" fill="${c}" ${SK}/><rect x="22" y="24" width="36" height="32" fill="${W}" ${SK}/><path d="M22 52l10-12 8 8 6-6 12 10" fill="none" ${SK}/><circle cx="48" cy="32" r="3.5" fill="var(--c-y)" ${SK}/>`,
+ notebook:c=>`<rect x="20" y="12" width="42" height="56" rx="4" fill="${c}" ${SK}/><path d="M28 12v56" ${SK}/><rect x="36" y="24" width="20" height="10" rx="2" fill="${W}" ${SK}/><g fill="var(--ink)"><circle cx="20" cy="22" r="2"/><circle cx="20" cy="34" r="2"/><circle cx="20" cy="46" r="2"/><circle cx="20" cy="58" r="2"/></g>`,
+ bag:c=>`<path d="M30 24c0-8 4-12 10-12s10 4 10 12" fill="none" ${SK}/><rect x="18" y="22" width="44" height="48" rx="10" fill="${c}" ${SK}/><rect x="26" y="44" width="28" height="18" rx="4" fill="${W}" ${SK}/><path d="M26 36h28" ${SK}/>`,
+ bulb:c=>`<path d="M40 12a18 18 0 0 1 10 33c-2 2-3 4-3 7H33c0-3-1-5-3-7a18 18 0 0 1 10-33z" fill="${c}" ${SK}/><rect x="32" y="52" width="16" height="12" rx="2" fill="var(--c-k2)" ${SK}/><path d="M32 58h16" ${SK}/><path d="M36 68h8" ${SK}/><path d="M33 26c2-4 5-6 9-6" stroke="${W}" stroke-width="2.6" stroke-linecap="round" fill="none"/>`,
+ plug:c=>`<rect x="14" y="30" width="52" height="22" rx="6" fill="${c}" ${SK}/><g fill="var(--ink)"><circle cx="26" cy="41" r="3"/><circle cx="40" cy="41" r="3"/><circle cx="54" cy="41" r="3"/></g><path d="M14 41c-6 0-8 6-4 10s2 12-4 14" fill="none" ${SK}/><rect x="58" y="24" width="6" height="6" rx="1" fill="var(--c-r)" ${SK}/>`,
+ bone:c=>`<path d="M24 34a7 7 0 1 1 6-10l20 0a7 7 0 1 1 6 10a7 7 0 1 1-6 10H30a7 7 0 1 1-6-10z" fill="${c}" ${SK} transform="translate(0 6)"/>`,
+ steps:c=>`<path d="M10 66h60V58H10zM16 58h48v-10H16zM22 48h36V38H22zM28 38h24V28H28z" fill="${c}" ${SK}/><g ${SK}><circle cx="34" cy="23" r="4" fill="var(--c-r)"/><circle cx="46" cy="23" r="4" fill="var(--c-y)"/><circle cx="27" cy="33" r="4" fill="var(--c-u)"/><circle cx="53" cy="33" r="4" fill="var(--c-g)"/><circle cx="21" cy="43" r="4" fill="var(--c-p)"/><circle cx="59" cy="43" r="4" fill="var(--c-o)"/></g>`,
+ hanger:c=>`<path d="M40 22c0-6 8-6 8-1 0 3-4 4-8 7L12 46h56L40 28" fill="none" ${SK}/><rect x="16" y="46" width="48" height="24" rx="4" fill="${c}" ${SK}/><path d="M28 46v24M40 46v24M52 46v24" stroke="${W}" stroke-width="2.4"/>`,
+ stack:c=>`<rect x="14" y="52" width="52" height="14" rx="4" fill="${c}" ${SK}/><rect x="17" y="38" width="46" height="14" rx="4" fill="var(--c-y)" ${SK}/><rect x="20" y="24" width="40" height="14" rx="4" fill="var(--c-u)" ${SK}/><path d="M24 31h20M22 45h22M20 59h24" stroke="${W}" stroke-width="2.2" stroke-linecap="round"/>`,
+ umbrella:c=>`<path d="M10 42a30 30 0 0 1 60 0c-5-4-10-4-15 0-5-4-10-4-15 0-5-4-10-4-15 0-5-4-10-4-15 0z" fill="${c}" ${SK}/><path d="M40 12v4M40 42v20a6 6 0 0 1-12 0" fill="none" ${SK}/><path d="M40 16c-6 6-8 16-8 26M40 16c6 6 8 16 8 26" fill="none" stroke="${W}" stroke-width="2"/>`,
+ clock:c=>`<circle cx="40" cy="42" r="26" fill="${c}" ${SK}/><circle cx="40" cy="42" r="20" fill="${W}" ${SK}/><path d="M40 30v12l8 6" ${SK} fill="none"/><g fill="var(--ink)"><circle cx="40" cy="26" r="1.6"/><circle cx="56" cy="42" r="1.6"/><circle cx="40" cy="58" r="1.6"/><circle cx="24" cy="42" r="1.6"/></g>`
 };
 function drawItem(icon,col,cls){ return `<svg class="${cls||"ico"}" viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="40" cy="74" rx="24" ry="3.5" fill="var(--ink)" opacity=".12"/>${(ICON[icon]||ICON.pouch)(C[col]||C.y)}</svg>`; }
 function itemCount(en){ return list.filter(x=>x.base===en||x.en===en).reduce((n,x)=>n+x.q,0); }
@@ -1032,7 +1126,7 @@ $("#board").addEventListener("keydown",e=>{
 function tileHTML(it,k,ai){ const [en,ta,ic,col,br]=it, n=itemCount(en);
   return `<button class="tile ${n?"has":""}" data-a="${ai}" data-k="${k}" style="animation-delay:${Math.min(k,10)*40}ms">
     ${drawItem(ic,col)}<span class="tn">${esc(t(en,ta))}</span>
-    <span class="tb">${br.length>1?esc(t(`${br.length} brands`,`${br.length} பிராண்டுகள்`)):br.length===1?esc(br[0]):esc(t("Fresh daily","தினமும் புதியது"))}</span>
+    <span class="tb">${br.length>1?esc(t(`${br.length} brands`,`${br.length} பிராண்டுகள்`)):br.length===1?esc(br[0]):esc(t("Many designs","பல டிசைன்கள்"))}</span>
     ${n?`<span class="badge">${n}</span>`:""}</button>`; }
 function renderSearch(){
   const q=query.toLowerCase(), hits=[];
@@ -1061,10 +1155,10 @@ function openPick(it, from){
     <div class="pick-hero" style="--tint:${C[col]}">${drawItem(ic,col,"pick-ico")}</div>
     <div class="pick-body">
       <h3 id="pickTitle">${esc(t(en,ta))}</h3>
-      ${br.length?`<p class="pick-lab">${AISLES[1].items.includes(it)?t("Variety","வகை"):t("Brand","பிராண்டு")}</p>
+      ${br.length?`<p class="pick-lab">${false?t("Variety","வகை"):t("Brand","பிராண்டு")}</p>
       <div class="chips" data-g="brand">${br.map(x=>`<button type="button" class="chip" data-v="${esc(x)}" aria-pressed="${x===pkBrand}">${esc(x)}</button>`).join("")}
-        <button type="button" class="chip" data-v="__any" aria-pressed="false">${AISLES[1].items.includes(it)?t("Any variety","எதுவானாலும்"):t("Any brand","எதுவானாலும்")}</button></div>
-      <input class="pick-other" id="pickOther" placeholder="${t("Or write another brand","அல்லது வேறு பிராண்டை எழுதுங்கள்")}" autocomplete="off">`:`<p class="pick-fresh">${t("Picked fresh from the morning market.","காலைச் சந்தையிலிருந்து புதிதாக.")}</p>`}
+        <button type="button" class="chip" data-v="__any" aria-pressed="false">${false?t("Any variety","எதுவானாலும்"):t("Any brand","எதுவானாலும்")}</button></div>
+      <input class="pick-other" id="pickOther" placeholder="${t("Or write another brand","அல்லது வேறு பிராண்டை எழுதுங்கள்")}" autocomplete="off">`:`<p class="pick-fresh">${t("Lots of designs in store. We'll send photos on WhatsApp.","கடையில் பல டிசைன்கள் உள்ளன. வாட்ஸ்அப்பில் புகைப்படங்கள் அனுப்புவோம்.")}</p>`}
       <p class="pick-lab">${t("Size","அளவு")}</p>
       <div class="chips" data-g="size">${sz.map(x=>`<button type="button" class="chip" data-v="${esc(x)}" aria-pressed="${x===pkSize}">${esc(x)}</button>`).join("")}</div>
       <div class="pick-foot">
@@ -1128,7 +1222,7 @@ document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",(
 function updateLink(){
   const name=$("#fName").value.trim(), addr=$("#fAddr").value.trim();
   const lines = list.map((x,i)=>`${i+1}. ${x.en===x.ta?x.en:x.en+" / "+x.ta} × ${x.q}`).join("\n");
-  const msg = `Hi V.V. Mart, here's my list:\n\n${lines}\n\n${name?"Name: "+name+"\n":""}${mode==="pickup"?"I'll pick it up at the shop.":"Deliver to: "+(addr||"(will share)")}`;
+  const msg = `Hi Needs, here's my list:\n\n${lines}\n\n${name?"Name: "+name+"\n":""}${mode==="pickup"?"I'll pick it up at the shop.":"Deliver to: "+(addr||"(will share)")}`;
   $("#sendBtn").href = list.length ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}` : "#order";
 }
 ["#fName","#fAddr"].forEach(id=>$(id).addEventListener("input",updateLink));
@@ -1191,12 +1285,21 @@ $("#festList").addEventListener("click",e=>{
   new IntersectionObserver((es,ob)=>{ es.forEach(e=>{ if(e.isIntersecting){ svg.classList.add("drawn"); ob.disconnect(); } }); },{threshold:.35}).observe(svg);
 })();
 
+/* ---------- reels phones ---------- */
+function renderPhones(){
+  const el=$("#phones"); if(!el) return;
+  el.innerHTML=REELS.map((r,i)=>`<a class="phone" href="https://www.instagram.com/needs__supermarket/" target="_blank" rel="noopener" style="--i:${i}">
+    <span class="ph-top"><span class="ph-av">${'<svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#FFE11A"/></svg>'}</span><b>needs__supermarket</b></span>
+    <span class="ph-art" style="--tint:${C[r.c]}">${drawItem(r.ic,r.c)}</span>
+    <span class="ph-cap">${esc(t(r.en,r.ta))}</span>
+    <span class="ph-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></a>`).join("");
+}
 /* ---------- hours (IST) ---------- */
 function renderHours(){
   const now=new Date(), ist=new Date(now.getTime()+(now.getTimezoneOffset()+330)*60000), h=ist.getHours()+ist.getMinutes()/60;
-  const open = h>=8 && h<22;
+  const open = h>=9 && h<22;
   $("#hours").classList.toggle("closed",!open);
-  $("#hoursText").textContent = open ? t("Open now, until 10 pm today","இப்போது திறந்துள்ளது, இரவு 10 வரை") : t("Closed now, opens in the morning","இப்போது மூடியுள்ளது, காலையில் திறக்கும்");
+  $("#hoursText").textContent = open ? t("Open now, until 10 pm today","இப்போது திறந்துள்ளது, இரவு 10 வரை") : t("Closed now, opens at 9 am","இப்போது மூடியுள்ளது, காலை 9க்குத் திறக்கும்");
 }
 
 /* ---------- hero notepad: the one orchestrated moment ---------- */
@@ -1244,7 +1347,7 @@ addEventListener("scroll",()=>$("#nav").classList.toggle("scrolled",scrollY>10),
 })();
 
 /* story: items fly into the manjappai as the section scrolls */
-const STORY_ITEMS=[["sack","y"],["bottle","o"],["sticks","g"],["round","r"],["flame","w"],["lamp","o"],["gift","r"],["cup","b"]];
+const STORY_ITEMS=[["cooker","k"],["pan","r"],["notebook","u"],["pencil","y"],["kuthu","y"],["lamp","o"],["gift","r"],["teddy","o"]];
 const FLY=[ // start x,y and end x,y as % of the stage, then start and end rotation
  [-70,-6, 22,24, -40,-8],[130,-14, 52,22, 30,8],[-70,30, 36,21, -60,-28],[130,24, 58,27, 50,10],
  [-70,-24, 16,28, -20,-6],[130,-30, 44,29, 30,4],[-70,10, 30,26, -30,-10],[130,4, 58,24, 30,12]];
@@ -1293,9 +1396,9 @@ const FLY=[ // start x,y and end x,y as % of the stage, then start and end rotat
 
 /* storefront: slow parallax */
 (function(){
-  const im=$("#frontImg"); if(!im||reduce) return;
+  const im=$("#frontImg svg"); if(!im||reduce) return;
   addEventListener("scroll",()=>requestAnimationFrame(()=>{ const r=im.parentElement.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
-    im.style.transform=`translateY(${(r.top/innerHeight)*-60}px) scale(1.04)`; }),{passive:true});
+    im.style.transform=`translateY(${Math.max(-60,Math.min(0,(r.top/innerHeight)*-50))}px)`; }),{passive:true});
 })();
 
 setLang(lang);

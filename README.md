@@ -1,42 +1,35 @@
-# V.V. Mart, Nanganallur
+# Needs Supermarket, Nanganallur
 
-Website concept for **V.V. Mart**, the supermarket at 39, 1st Main Road, NCBS Colony, Nanganallur, Chennai 600061.
+Website for **Needs Supermarket**, 43/31, 1st Main Road, Ram Nagar, Nanganallur, Chennai 600061.
+"Your one-stop shop for all home needs." Instagram: [@needs__supermarket](https://www.instagram.com/needs__supermarket/)
 
-A single static page (`index.html`), bilingual in English and Tamil, in the shop's own signboard colours.
+A single static page (`index.html`), bilingual in English and Tamil, in the shop's own colours: the dark wood facade, the blue script sign, the red rose and the yellow logo disc.
 
 ## What's on the page
 
-- Neon intro: the V.V. Mart sign switches on, once per visit
-- Hero notepad that writes a shopping list and ticks it off
-- Scroll story: a yellow manjappai fills with a week of shopping
-- Eight aisles of drawn items with a brand and size picker, plus search
+- Intro: the blue "Needs" sign lights up and the rose blooms, once per visit
+- Hero notepad that writes a Saturday list and ticks it off
+- Scroll story: the yellow Needs bag fills with a week of shopping
+- Ten sections of drawn items (cookware, brass and pooja, gifts and toys, stationery, personal care, home decor, electronics, pet supplies, fashion and textiles, special days) with a brand and size picker, plus search
 - "My list" that sends the order to the shop on WhatsApp
-- Weekly offers as hanging price tags, festival shelf with a kolam that draws itself
-- Full-width storefront, directions, hours and a customer review
-- Mobile action bar (Call, Aisles, My list)
+- This week's finds as hanging price tags, a reels section linking to Instagram and YouTube
+- Special days shelf with a kolam that draws itself
+- Illustrated storefront, address, hours, phone and a customer review
+- Mobile action bar (Call, Shop, My list)
 
 ## Before going live
 
-Replace the sample values:
+| What | Where | Status |
+| --- | --- | --- |
+| WhatsApp number | `const WHATSAPP = "919840297100"` | Shop phone from Google Maps. Confirm it takes WhatsApp |
+| Phone | `tel:+919840297100`, `098402 97100` | From Google Maps |
+| Weekly finds and prices | `const OFFERS` | Sample prices |
+| Brands stocked | `const AISLES` | Examples, confirm with the shop |
+| Logo | `.brand-mark` SVG | Redrawn; swap in the official file |
+| Photos | storefront is an illustration | Add the shop's own photos if wanted |
 
-| What | Where |
-| --- | --- |
-| WhatsApp number | `const WHATSAPP = "910000000000"` in the script |
-| Phone number | `tel:+910000000000` and `+91 00000 00000` in the page |
-| Weekly offers and prices | `const OFFERS` |
-| Brands the shop stocks | `const AISLES` |
-| Delivery areas | the "We deliver around" list |
-| Logo | the emblem is redrawn from a photo; swap in the official file |
-| Storefront photo | `assets/storefront.jpg`, a higher-resolution photo will look sharper |
-
-Then remove the "Website concept" line in the footer and the sample-price notes.
+Then remove the "Website concept" line in the footer and the sample-price note.
 
 ## Run it
 
-No build step. Open `index.html`, or serve the folder:
-
-```
-npx serve .
-```
-
-Deploys as-is to GitHub Pages, Netlify or Vercel.
+No build step. Open `index.html`, or serve the folder with `npx serve .`. Deploys as-is to GitHub Pages, Netlify or Vercel.
