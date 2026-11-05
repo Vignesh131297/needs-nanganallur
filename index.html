@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>V.V. Mart, Nanganallur</title>
+<meta name="description" content="Design concept for V.V. Mart, the neighbourhood supermarket on 1st Main Road, Nanganallur. Groceries, vegetables, pooja items, cosmetics and gifts since 2013.">
+<meta name="theme-color" content="#2C1218">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3CclipPath id='c'%3E%3Ccircle cx='20' cy='20' r='16.2'/%3E%3C/clipPath%3E%3Ccircle cx='20' cy='20' r='18' fill='%23F4F0FF' stroke='%23E5245E' stroke-width='2.6'/%3E%3Cg clip-path='url(%23c)' fill='none' stroke='%23E5245E' stroke-width='3.4'%3E%3Cpath d='M-1 4L20 35.5L41 4'/%3E%3Cpath d='M5.5 2L20 23.5L34.5 2'/%3E%3Cpath d='M12 0L20 11.5L28 0'/%3E%3C/g%3E%3C/svg%3E">
+<style>[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;500;600;700&family=Nanum+Pen+Script&family=Archivo+Black&family=Tiro+Tamil&family=Catamaran:wght@400;600;800&family=Kavivanar&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  /* taken from the shop's own signboard: maroon band, red wordmark, blue Tamil lettering, purple emblem, yellow welcome banners */
+  --sign:#2C1218;
+  --sign-2:#45202A;
+  --vv-red:#E3202B;
+  --vv-red-dark:#A9141D;
+  --vv-blue:#2638C9;
+  --vv-plum:#932C8C;
+  --turmeric:#FFD81F;
+  --turmeric-deep:#F5B800;
+  --leaf:#2638C9;
+  --leaf-dark:#17208A;
+  --kumkum:#E3202B;
+  --ink:#1F1418;
+  --paper:#FFFFFF;
+  --mint:#F1EEF7;
+  --ruled:#BFD6E8;
+  --line:rgba(26,31,22,.14);
+  --muted:#4E5649;
+  /* premium serif display, clean grotesk body, pen-written list hand */
+  --display:"Young Serif","Tiro Tamil",Georgia,serif;
+  --body:"Albert Sans","Catamaran",system-ui,sans-serif;
+  --hand:"Nanum Pen Script","Kavivanar","Comic Sans MS",cursive;
+  --wrap:1240px;
+}
+html[data-lang="ta"]{
+  --display:"Tiro Tamil","Young Serif",Georgia,serif;
+  --body:"Catamaran","Albert Sans",system-ui,sans-serif;
+  --hand:"Kavivanar","Nanum Pen Script",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+html[data-lang="en"] .ta, html[data-lang="ta"] .en{display:none !important}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:var(--turmeric);transition:box-shadow .3s, background .3s}
+.nav.scrolled{box-shadow:0 1px 0 rgba(26,31,22,.18)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em;white-space:nowrap}
+.brand-mark{width:38px;height:38px;flex:none}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:15px}
+.nav-links a{text-decoration:none;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.lang{display:flex;border:2px solid var(--ink);border-radius:999px;padding:2px;font-size:14px;font-weight:600}
+.lang button{padding:5px 12px;border-radius:999px;transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--turmeric)}
+.list-btn{display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:10px 16px 10px 14px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.list-btn .count{min-width:22px;height:22px;border-radius:11px;background:var(--kumkum);display:grid;place-items:center;font-size:12px;padding:0 6px;transition:transform .3s cubic-bezier(.3,1.8,.5,1)}
+.list-btn .count.bump{transform:scale(1.35)}
+@media (max-width:900px){.nav-links{display:none}.lang{margin-left:auto}}
+@media (max-width:480px){.brand{font-size:18px !important}.list-btn .lbl{display:none}.nav .wrap{gap:12px}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--turmeric);position:relative;overflow:hidden;padding:56px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(3rem,7.4vw,6.9rem);line-height:.92;letter-spacing:-.045em;max-width:11ch}
+html[data-lang="ta"] .hero h1{font-size:clamp(2.4rem,5.6vw,5.2rem);line-height:1.08;letter-spacing:-.01em;max-width:12ch}
+.hero p.lede{font-size:clamp(1.05rem,1.4vw,1.25rem);max-width:44ch;margin-top:26px;color:#2b2f22}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;border-radius:14px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s, box-shadow .2s}
+.btn-ink{background:var(--ink);color:#fff;box-shadow:0 4px 0 var(--leaf-dark)}
+.btn-ink:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--leaf-dark)}
+.btn-ink:active{transform:translateY(2px);box-shadow:0 2px 0 var(--leaf-dark)}
+.btn-line{border:2px solid var(--ink)}
+.btn-line:hover{background:rgba(26,31,22,.07)}
+.btn svg{width:20px;height:20px}
+
+/* hero notepad: the signature moment */
+.pad-stage{position:relative;justify-self:center;width:min(100%,420px)}
+.pad{position:relative;background:#fff;border-radius:6px 6px 4px 4px;padding:58px 28px 30px 54px;transform:rotate(2.2deg);box-shadow:0 30px 60px -20px rgba(80,50,0,.45), 0 2px 0 #e9e1cf;
+  background-image:linear-gradient(90deg,transparent 40px,#F3B0BC 40px,#F3B0BC 42px,transparent 42px),repeating-linear-gradient(#fff 0 37px,var(--ruled) 37px 38px);background-position:0 0,0 46px}
+.pad::before{content:"";position:absolute;inset:0 0 auto;height:34px;background:var(--kumkum);border-radius:6px 6px 0 0}
+.pad::after{content:"";position:absolute;top:-10px;left:50%;width:120px;height:22px;margin-left:-60px;background:rgba(255,255,255,.55);border:1px solid rgba(0,0,0,.06);transform:rotate(-3deg);backdrop-filter:blur(2px)}
+.pad-title{position:absolute;top:44px;left:54px;font-family:var(--hand);font-size:26px;font-weight:700;color:var(--leaf);line-height:1}
+.pad ul{list-style:none;margin-top:28px}
+.pad li{font-family:var(--hand);font-size:27px;line-height:38px;height:38px;position:relative;white-space:nowrap;color:#23324a}
+html[data-lang="ta"] .pad li{font-size:22px}
+.pad li .w{display:inline-block;clip-path:inset(0 100% 0 0);animation:write .7s steps(14,end) forwards}
+.pad li .tick{position:absolute;left:-30px;top:9px;width:20px;height:20px;opacity:0}
+.pad li .tick path{stroke-dasharray:30;stroke-dashoffset:30}
+.pad li .strike{position:absolute;left:-4px;top:50%;height:2.5px;background:var(--kumkum);border-radius:2px;width:0}
+.pad li.done .tick{opacity:1}
+.pad li.done .tick path{animation:draw .35s ease-out forwards}
+.pad li.done .strike{animation:strike .35s ease-out forwards}
+.pad-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:14px;border-top:2px dashed #d9d2c2;font-size:14px;font-weight:600;color:var(--muted)}
+.pad-foot .ready{color:var(--leaf);display:flex;align-items:center;gap:6px;opacity:0;transition:opacity .5s}
+.pad-foot .ready.show{opacity:1}
+.pad-foot .ready i{width:8px;height:8px;border-radius:50%;background:#2DB34A;box-shadow:0 0 0 4px rgba(45,179,74,.2)}
+@keyframes write{to{clip-path:inset(0 0 0 0)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes strike{to{width:calc(var(--sw) + 8px)}}
+.pad-bag{position:absolute;right:-60px;bottom:-120px;width:140px;transform:rotate(-8deg);filter:drop-shadow(0 18px 20px rgba(80,50,0,.3))}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:64px}.pad-bag{right:-6px;bottom:-70px;width:110px}.facts{margin-top:110px}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:2px solid var(--ink)}
+.fact{padding:22px 20px 26px 0}
+.fact + .fact{padding-left:22px;border-left:1px solid rgba(26,31,22,.25)}
+.fact strong{display:block;font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.fact span{font-size:14.5px;color:#3b3f30}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(3){padding-left:0;border-left:0}.fact:nth-child(n+3){border-top:1px solid rgba(26,31,22,.25)}}
+
+/* ---------- section scaffolding ---------- */
+section{position:relative}
+.sec{padding:120px 0}
+@media (max-width:700px){.sec{padding:80px 0}}
+.h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4.6vw,3.9rem);line-height:1;letter-spacing:-.035em;max-width:16ch}
+html[data-lang="ta"] .h2{line-height:1.15;letter-spacing:0;font-size:clamp(1.9rem,3.6vw,3rem)}
+.sub{margin-top:18px;font-size:1.1rem;max-width:52ch;color:var(--muted)}
+
+/* ---------- aisles directory ---------- */
+.aisles-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.aisles{display:grid;grid-template-columns:minmax(260px,400px) 1fr;gap:0;border:2px solid var(--ink);border-radius:22px;overflow:hidden;background:#fff}
+.board{background:var(--leaf);color:#fff;padding:14px}
+.board button{width:100%;display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;text-align:left;padding:13px 14px;border-radius:12px;font-weight:600;font-size:16px;color:rgba(255,255,255,.82);transition:background .2s,color .2s}
+.board button .no{font-family:var(--display);font-weight:800;font-size:15px;width:36px;height:30px;border:1.5px solid rgba(255,255,255,.4);border-radius:7px;display:grid;place-items:center}
+.board button .arr{opacity:0;transform:translateX(-6px);transition:.2s}
+.board button:hover{background:rgba(255,255,255,.08);color:#fff}
+.board button[aria-selected="true"]{background:var(--turmeric);color:var(--ink)}
+.board button[aria-selected="true"] .no{border-color:var(--ink)}
+.board button[aria-selected="true"] .arr{opacity:1;transform:none}
+.shelf{padding:40px 44px 44px;position:relative;min-height:520px;display:flex;flex-direction:column}
+.shelf-top{display:flex;justify-content:space-between;align-items:start;gap:20px}
+.shelf h3{font-family:var(--display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.shelf .hint{font-size:14.5px;color:var(--muted);margin-top:8px}
+.shelf-art{width:92px;height:92px;flex:none}
+.items{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;align-content:flex-start}
+.item{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--line);background:#fff;padding:11px 16px 11px 18px;border-radius:999px;font-weight:600;font-size:16px;transition:border-color .15s, background .15s, transform .15s}
+.item .plus{width:24px;height:24px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-size:16px;line-height:1;color:var(--leaf);transition:.2s}
+.item:hover{border-color:var(--ink)}
+.item:active{transform:scale(.96)}
+.item.added{background:var(--mint);border-color:var(--leaf)}
+.item.added .plus{background:var(--leaf);color:#fff}
+.shelf-in .items .item{animation:pop .4s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.95)}}
+.shelf-note{margin-top:auto;padding-top:32px;font-size:14.5px;color:var(--muted);display:flex;gap:10px;align-items:center}
+.shelf-note svg{width:18px;height:18px;flex:none}
+@media (max-width:860px){
+  .aisles{grid-template-columns:1fr}
+  .board{display:flex;overflow-x:auto;gap:6px;scrollbar-width:none;padding:10px}
+  .board::-webkit-scrollbar{display:none}
+  .board button{width:auto;grid-template-columns:auto auto;white-space:nowrap;padding:10px 14px}
+  .board button .arr{display:none}
+  .shelf{padding:28px 20px 28px;min-height:0}
+  .shelf-art{width:64px;height:64px}
+}
+
+/* ---------- write your list ---------- */
+.order{background:var(--mint)}
+.order-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.steps{list-style:none;margin-top:44px;display:grid;gap:26px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:20px;background:#fff}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--muted);font-size:15.5px}
+.areas{margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+.areas p{font-weight:600;margin-bottom:12px}
+.areas div{display:flex;flex-wrap:wrap;gap:8px}
+.areas span{background:#fff;border-radius:8px;padding:6px 12px;font-size:14.5px}
+
+.sheet{background:#fff;border-radius:6px;box-shadow:0 30px 70px -30px rgba(14,90,58,.45);position:relative;overflow:hidden}
+.sheet-head{background:var(--leaf);color:#fff;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.sheet-head b{font-family:var(--display);font-size:22px;letter-spacing:-.02em}
+.sheet-head span{font-size:14px;opacity:.8}
+.sheet-body{padding:8px 28px 0 64px;background-image:linear-gradient(90deg,transparent 44px,#F3B0BC 44px,#F3B0BC 46px,transparent 46px),repeating-linear-gradient(#fff 0 47px,var(--ruled) 47px 48px);background-position:0 0,0 8px;min-height:288px}
+.lines{list-style:none}
+.lines li{height:48px;display:flex;align-items:center;gap:12px;font-family:var(--hand);font-size:27px;color:#23324a;animation:inkin .35s ease-out}
+html[data-lang="ta"] .lines li{font-size:21px}
+@keyframes inkin{from{opacity:0;transform:translateX(-8px)}}
+.lines .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qty{display:flex;align-items:center;gap:2px;font-family:var(--body);font-size:15px;font-weight:600;border:1.5px solid var(--line);border-radius:9px;background:#fff}
+.qty button{width:30px;height:30px;font-size:18px;line-height:1;border-radius:8px}
+.qty button:hover{background:var(--mint)}
+.qty output{min-width:22px;text-align:center}
+.rm{width:30px;height:30px;border-radius:8px;color:#9a9f95;font-family:var(--body);font-size:20px;line-height:1}
+.rm:hover{color:var(--kumkum);background:#fdecef}
+.empty{height:192px;display:flex;align-items:center;font-family:var(--hand);font-size:24px;color:#8e98a6;line-height:1.3;padding-right:20px}
+html[data-lang="ta"] .empty{font-size:19px}
+.add-line{display:flex;gap:10px;align-items:center;height:48px}
+.add-line input{flex:1;min-width:0;border:0;background:transparent;font-family:var(--hand);font-size:27px;color:#23324a;outline:none;height:46px}
+html[data-lang="ta"] .add-line input{font-size:20px}
+.add-line input::placeholder{color:#a8b3c0}
+.add-line button{font-size:14px;font-weight:600;background:var(--ink);color:#fff;border-radius:9px;padding:7px 14px;font-family:var(--body)}
+.sheet-form{padding:26px 28px 28px;border-top:2px dashed #d9d2c2;display:grid;gap:16px}
+.field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 14px;font-size:16px;background:#fff;transition:border-color .2s}
+.field input:focus{border-color:var(--leaf);outline:none;box-shadow:0 0 0 3px rgba(14,90,58,.15)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--mint);border-radius:12px;padding:4px}
+.seg button{padding:10px;border-radius:9px;font-weight:600;font-size:15px;transition:background .2s}
+.seg button[aria-pressed="true"]{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.send{display:flex;justify-content:center;align-items:center;gap:10px;background:#1FAF55;color:#fff;border-radius:14px;padding:17px;font-weight:600;font-size:17px;box-shadow:0 4px 0 #148040;transition:transform .15s, box-shadow .15s, opacity .2s}
+.send:hover{transform:translateY(-1px);box-shadow:0 5px 0 #148040}
+.send{text-decoration:none}
+.send[aria-disabled="true"]{opacity:.45;cursor:not-allowed;transform:none;pointer-events:none}
+.send svg{width:22px;height:22px}
+.form-msg{font-size:14px;color:var(--muted);text-align:center;min-height:20px}
+@media (max-width:960px){.order-grid{grid-template-columns:1fr;gap:56px}}
+@media (max-width:520px){.sheet-body{padding-left:52px;background-image:linear-gradient(90deg,transparent 34px,#F3B0BC 34px,#F3B0BC 36px,transparent 36px),repeating-linear-gradient(#fff 0 47px,var(--ruled) 47px 48px)}.two{grid-template-columns:1fr}.sheet-head{padding:18px 20px}.sheet-form{padding:22px 20px}}
+
+/* ---------- offers as price tags ---------- */
+.offers-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.offers-head small{font-size:14px;color:var(--muted);max-width:30ch}
+.rack{position:relative;margin-top:64px;padding-top:30px}
+#offers{overflow-x:clip}
+.rack::before{content:"";position:absolute;top:0;left:-24px;right:-24px;height:10px;border-radius:5px;background:linear-gradient(#c9ccc4,#9ea397);box-shadow:0 3px 6px rgba(0,0,0,.15)}
+.tags{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.tag{position:relative;transform-origin:50% -30px;transform:rotate(var(--r,0deg));transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.tag:hover{transform:rotate(calc(var(--r,0deg) * -1.4))}
+.tag::before{content:"";position:absolute;left:50%;top:-30px;width:2px;height:34px;background:#8b8f84;margin-left:-1px}
+.tag-body{background:var(--bg,#fff);color:var(--fg,var(--ink));padding:34px 20px 22px;clip-path:polygon(20% 0,80% 0,100% 13%,100% 100%,0 100%,0 13%);border-radius:0 0 14px 14px;min-height:260px;display:flex;flex-direction:column;position:relative}
+.tag-body::before{content:"";position:absolute;top:14px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--paper);box-shadow:inset 0 1px 2px rgba(0,0,0,.35)}
+.tag .off{font-family:var(--display);font-weight:800;font-size:15px;align-self:flex-start;border:1.5px solid currentColor;border-radius:6px;padding:2px 8px;margin-top:6px}
+.tag h4{font-size:18px;line-height:1.25;margin-top:14px;font-weight:600}
+.tag .unit{font-size:14px;opacity:.75;margin-top:2px}
+.tag .price{margin-top:auto;padding-top:18px;font-family:var(--display);font-weight:800;font-size:38px;letter-spacing:-.03em;line-height:1}
+.tag .price s{font-size:16px;font-weight:400;opacity:.6;margin-left:6px;letter-spacing:0}
+.tag .add{margin-top:14px;font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:3px;text-align:left}
+@media (max-width:1100px){.tags{grid-template-columns:repeat(3,1fr);row-gap:64px}}
+@media (max-width:640px){.tags{grid-template-columns:repeat(2,1fr);gap:14px;row-gap:56px}.tag .price{font-size:30px}.tag-body{min-height:240px;padding:34px 14px 18px}}
+
+/* ---------- festival ---------- */
+.fest{background:var(--leaf);color:#fff;overflow:hidden}
+.fest-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.fest .sub{color:rgba(255,255,255,.78)}
+.kolam{width:100%;max-width:520px;justify-self:center;aspect-ratio:1}
+.kolam .dot{fill:var(--turmeric)}
+.kolam .loop{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.kolam.drawn .loop{animation:kdraw 2.6s cubic-bezier(.6,0,.3,1) forwards}
+@keyframes kdraw{to{stroke-dashoffset:0}}
+.fest-list{margin-top:40px;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.2)}
+.fest-row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.fest-row b{font-size:19px;display:block}
+.fest-row span{font-size:15px;color:rgba(255,255,255,.72)}
+.fest-row button{border:1.5px solid rgba(255,255,255,.55);border-radius:10px;padding:9px 14px;font-weight:600;font-size:14px;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+.fest-row button:hover{background:var(--turmeric);color:var(--ink);border-color:var(--turmeric)}
+.fest-row button.added{background:var(--turmeric);color:var(--ink);border-color:var(--turmeric)}
+@media (max-width:900px){.fest-grid{grid-template-columns:1fr;gap:48px}.kolam{max-width:340px;order:-1}}
+
+/* ---------- visit ---------- */
+.visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:stretch}
+.directions{margin-top:36px;display:grid;gap:22px}
+.dir{display:grid;grid-template-columns:44px 1fr;gap:16px}
+.dir svg{width:44px;height:44px;padding:10px;border-radius:12px;background:var(--mint);color:var(--leaf)}
+.dir b{display:block;font-size:17px}
+.dir span{color:var(--muted);font-size:15.5px}
+.hours{margin-top:36px;display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:14px;background:var(--turmeric);font-weight:600}
+.hours i{width:10px;height:10px;border-radius:50%;background:#1FAF55;box-shadow:0 0 0 5px rgba(31,175,85,.25);flex:none}
+.hours.closed i{background:var(--kumkum);box-shadow:0 0 0 5px rgba(229,40,75,.2)}
+.map{border-radius:22px;overflow:hidden;border:2px solid var(--ink);min-height:440px;position:relative;background:var(--mint)}
+.map{display:block;text-decoration:none}
+.map-art{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s}
+.map:hover .map-art{transform:scale(1.03)}
+.map-cta{position:absolute;left:20px;bottom:20px;background:var(--ink);color:#fff;font-weight:600;font-size:15px;padding:12px 18px;border-radius:12px}
+.pay{margin-top:24px;font-size:15px;color:var(--muted)}
+@media (max-width:900px){.visit-grid{grid-template-columns:1fr}.map{min-height:340px}}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#fff;padding:90px 0 36px;overflow:hidden}
+.foot-big{font-family:var(--display);font-weight:800;font-size:clamp(3rem,10vw,9.5rem);line-height:.88;letter-spacing:-.055em;color:var(--turmeric);max-width:10ch}
+html[data-lang="ta"] .foot-big{font-size:clamp(2.6rem,9vw,8rem);line-height:1;letter-spacing:-.01em}
+.foot-row{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-top:50px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18);font-size:14.5px;color:rgba(255,255,255,.7)}
+.foot-row a{color:#fff}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:24px;z-index:80;transform:translate(-50%,calc(100% + 48px));visibility:hidden;background:var(--ink);color:#fff;padding:13px 16px 13px 20px;border-radius:14px;display:flex;gap:16px;align-items:center;font-weight:600;font-size:15px;box-shadow:0 16px 40px rgba(0,0,0,.25);transition:transform .45s cubic-bezier(.3,1.4,.5,1);max-width:calc(100% - 32px)}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+.toast a{color:var(--turmeric);white-space:nowrap}
+
+
+
+/* ---------- drawn items + picker ---------- */
+:root{--c-y:#FFC21A;--c-o:#F28C28;--c-r:#E5284B;--c-g:#2E9E4F;--c-l:#9BD36A;--c-b:#9A6234;--c-u:#3A7BD5;--c-p:#9C5BD6;--c-w:#FFF6DE;--c-k:#5B6470;--c-k2:#C9CED6}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:12px;margin-top:28px}
+.tile{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:16px 10px 14px;border-radius:18px;background:var(--mint);border:2px solid transparent;transition:border-color .2s,transform .25s cubic-bezier(.3,1.6,.5,1),background .2s}
+.tile .ico{width:78px;height:78px;transition:transform .35s cubic-bezier(.3,1.7,.5,1)}
+.tile:hover{border-color:var(--ink);background:#fff}
+.tile:hover .ico{transform:translateY(-4px) rotate(-6deg) scale(1.06)}
+.tile:active{transform:scale(.97)}
+.tile .tn{font-weight:600;font-size:15.5px;line-height:1.25;margin-top:4px}
+.tile .tb{font-size:13px;color:var(--muted)}
+.tile.has{background:#fff;border-color:var(--leaf)}
+.tile .badge{position:absolute;top:10px;right:10px;min-width:24px;height:24px;border-radius:12px;background:var(--leaf);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;padding:0 7px}
+.shelf-in .tiles .tile{animation:pop .45s cubic-bezier(.2,1.4,.4,1) both}
+@media (max-width:520px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile .ico{width:64px;height:64px}}
+
+.pick[hidden]{display:none}
+.pick{position:fixed;inset:0;z-index:90;background:rgba(26,31,22,0);display:grid;place-items:center;padding:20px;transition:background .25s}
+.pick.open{background:rgba(26,31,22,.5)}
+.pick-card{position:relative;width:min(100%,720px);max-height:calc(100dvh - 40px);overflow:auto;background:#fff;border-radius:26px;display:grid;grid-template-columns:260px 1fr;transform:translateY(24px) scale(.97);opacity:0;transition:transform .35s cubic-bezier(.3,1.4,.5,1),opacity .25s}
+.pick.open .pick-card{transform:none;opacity:1}
+.pick-hero{background:color-mix(in srgb,var(--tint) 22%,#fff);display:grid;place-items:center;padding:30px;border-radius:26px 0 0 26px}
+.pick-ico{width:100%;max-width:190px;height:auto}
+.pick.open .pick-ico{animation:wob .7s .1s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes wob{from{transform:scale(.6) rotate(-14deg)}}
+.pick-body{padding:30px 30px 26px;min-width:0}
+.pick-body h3{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1;padding-right:36px}
+.pick-lab{font-weight:600;font-size:14px;margin:22px 0 10px;color:var(--muted)}
+.pick-fresh{margin-top:12px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:500;font-size:15px;transition:background .15s,border-color .15s,color .15s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pick-other{margin-top:10px;width:100%;border:0;border-bottom:1.5px dashed var(--line);padding:8px 2px;font-size:15px;background:transparent;outline:none}
+.pick-other:focus{border-bottom-color:var(--leaf)}
+.pick-foot{display:flex;gap:12px;align-items:center;margin-top:28px}
+.qty.big{font-size:17px}
+.qty.big button{width:40px;height:44px;font-size:22px}
+.qty.big output{min-width:28px}
+.pick-add{flex:1;background:var(--ink);color:#fff;border-radius:14px;padding:14px 18px;font-weight:600;font-size:16px;box-shadow:0 4px 0 var(--leaf-dark);transition:transform .15s,box-shadow .15s}
+.pick-add:hover{transform:translateY(-1px)}
+.pick-add:active{transform:translateY(2px);box-shadow:0 2px 0 var(--leaf-dark)}
+.pick-x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;font-size:26px;line-height:1;z-index:2;background:rgba(255,255,255,.8)}
+.pick-x:hover{background:var(--mint)}
+@media (max-width:640px){
+  .pick{place-items:end stretch;padding:0}
+  .pick-card{grid-template-columns:1fr;border-radius:26px 26px 0 0;max-height:92dvh;transform:translateY(100%)}
+  .pick-hero{border-radius:26px 26px 0 0;padding:18px}
+  .pick-ico{max-width:110px}
+  .pick-body{padding:20px 18px 24px}
+  .pick-body h3{font-size:25px}
+}
+
+/* ---------- brand theme: night signboard ---------- */
+.nav,.hero{background:var(--sign);color:#fff}
+.nav.scrolled{box-shadow:0 1px 0 rgba(255,255,255,.12)}
+.brand{color:#fff}
+.nav-links a::after{background:var(--vv-red)}
+.lang{border-color:rgba(255,255,255,.6)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--sign)}
+.list-btn{background:var(--vv-red)}
+.list-btn .count{background:var(--turmeric);color:var(--ink)}
+.hero{background:radial-gradient(120% 90% at 85% 10%,var(--sign-2),var(--sign) 60%)}
+.hero p.lede{color:rgba(255,255,255,.8)}
+.hero .btn-ink{background:var(--vv-red);box-shadow:0 4px 0 var(--vv-red-dark)}
+.hero .btn-ink:hover{box-shadow:0 6px 0 var(--vv-red-dark)}
+.hero .btn-ink:active{box-shadow:0 2px 0 var(--vv-red-dark)}
+.hero .btn-line{border-color:rgba(255,255,255,.7)}
+.hero .btn-line:hover{background:rgba(255,255,255,.08)}
+.facts{border-top-color:rgba(255,255,255,.85)}
+.fact + .fact{border-left-color:rgba(255,255,255,.2)}
+.fact:nth-child(n+3){border-top-color:rgba(255,255,255,.2)}
+.fact span{color:rgba(255,255,255,.7)}
+.pad{box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 2px 0 #e9e1cf}
+.pad-bag{filter:drop-shadow(0 18px 20px rgba(0,0,0,.45))}
+/* neon strip under the hero, like the lit sign band */
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--vv-red) 0 40%,var(--vv-plum) 40% 55%,var(--vv-blue) 55% 85%,var(--turmeric) 85%)}
+.hero .facts{padding-bottom:6px}
+.board{background:var(--sign)}
+.board button[aria-selected="true"]{background:var(--turmeric)}
+.sheet-head{background:var(--sign)}
+.fest{background:var(--vv-blue)}
+.kolam .dot{fill:var(--turmeric)}
+footer{background:var(--sign)}
+.foot-big{color:var(--vv-red)}
+.tag-body::before{background:#fff}
+.store{position:relative;border-radius:22px;overflow:hidden;border:2px solid var(--ink);background:var(--sign);display:flex;flex-direction:column}
+.store img{width:100%;height:auto;flex:1;object-fit:cover;max-width:100%}
+.store figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 18px;color:#fff;font-size:15px;background:var(--sign)}
+.store figcaption > span{flex:1 1 220px}
+.store .map-cta{position:static;background:var(--vv-red);text-decoration:none;white-space:nowrap}
+
+/* ---------- logo lockup, like the lit sign ---------- */
+.brand{font-family:"Archivo Black","Catamaran",sans-serif !important;font-size:22px !important;letter-spacing:.01em !important;gap:12px}
+.brand-mark{width:40px;height:40px;filter:drop-shadow(0 0 6px rgba(190,170,255,.55))}
+.brand .wm{color:#FF2A34;text-shadow:0 0 14px rgba(255,42,52,.45)}
+.brand .wm-ta{color:#5D6BFF;font-family:"Catamaran",sans-serif;font-weight:800;font-size:23px;text-shadow:0 0 14px rgba(93,107,255,.5)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* ---------- search ---------- */
+.search{display:flex;align-items:center;gap:10px;border:2px solid var(--ink);border-radius:14px;padding:0 14px;min-width:min(100%,360px);background:#fff}
+.search svg{width:20px;height:20px;flex:none;color:var(--muted)}
+.search input{border:0;outline:none;height:52px;flex:1;min-width:0;font-size:16px;background:transparent}
+.search:focus-within{box-shadow:0 0 0 4px rgba(38,56,201,.18)}
+.noresult{margin-top:28px;display:grid;gap:16px;justify-items:start;max-width:46ch;color:var(--muted)}
+.noresult .pick-add{flex:none}
+/* ---------- visit extras ---------- */
+.busy{margin-top:18px;display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.busy svg{width:20px;height:20px;flex:none;fill:var(--vv-red);margin-top:2px}
+/* ---------- review ---------- */
+.quote{max-width:62ch;margin-bottom:72px}
+.quote p{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.3;color:#fff}
+.quote figcaption{margin-top:16px;color:rgba(255,255,255,.65);font-size:14.5px}
+/* ---------- mobile action bar ---------- */
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:var(--sign);box-shadow:0 -8px 24px rgba(0,0,0,.18)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:12px;color:#fff;text-decoration:none;font-weight:600;font-size:15px;background:rgba(255,255,255,.08)}
+  .mbar svg{width:19px;height:19px}
+  .mbar .mbar-list{background:var(--vv-red)}
+  .mbar b{min-width:22px;height:22px;border-radius:11px;background:var(--turmeric);color:var(--ink);display:grid;place-items:center;font-size:12px;padding:0 6px}
+  body{padding-bottom:76px}
+  .toast{bottom:88px}
+  .list-btn{display:none}
+  .lang{margin-left:auto}
+}
+
+.h2,.hero h1,.foot-big{overflow-wrap:break-word}
+@media (max-width:520px){html[data-lang="ta"] .h2{font-size:1.6rem;overflow-wrap:anywhere}html[data-lang="ta"] .hero h1{font-size:2.1rem}}
+/* ================= reel-inspired layer ================= */
+/* intro: the sign switching on */
+.intro{position:fixed;inset:0;z-index:200;background:var(--sign);display:grid;place-items:center;clip-path:inset(0 0 0 0);transition:clip-path .9s cubic-bezier(.7,0,.2,1)}
+.intro.lift{clip-path:inset(0 0 100% 0)}
+.intro[hidden]{display:none}
+.intro-sign{display:flex;align-items:center;gap:clamp(12px,3vw,28px);flex-wrap:wrap;justify-content:center;padding:0 16px}
+.intro-emb{width:clamp(52px,8vw,84px);opacity:0;animation:neon 1s .15s steps(1,end) forwards;filter:drop-shadow(0 0 14px rgba(229,36,94,.7))}
+.intro-ta{font-family:"Catamaran",sans-serif;font-weight:800;font-size:clamp(28px,5vw,54px);color:#5D6BFF;text-shadow:0 0 22px rgba(93,107,255,.75);opacity:0;animation:neon 1s .45s steps(1,end) forwards}
+.intro-en{font-family:"Archivo Black",sans-serif;font-size:clamp(32px,6vw,64px);color:#FF2A34;text-shadow:0 0 24px rgba(255,42,52,.7);opacity:0;animation:neon 1s .7s steps(1,end) forwards}
+@keyframes neon{0%{opacity:0}10%{opacity:1}18%{opacity:.15}26%{opacity:1}34%{opacity:.4}42%,100%{opacity:1}}
+
+/* story */
+.story{position:relative;height:420vh;background:var(--paper)}
+.story-pin{position:sticky;top:72px;height:calc(100vh - 72px);height:calc(100svh - 72px);display:flex;align-items:center;overflow:hidden}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;width:100%}
+.story-kicker{font-family:var(--hand);font-size:34px;color:var(--vv-blue);line-height:1}
+.stages{list-style:none;margin-top:22px;display:grid}
+.stages li{grid-area:1/1;opacity:0;transform:translateY(18px);transition:opacity .45s,transform .45s;pointer-events:none}
+.stages li.on{opacity:1;transform:none}
+.stages b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.2vw,3.6rem);line-height:1.04;letter-spacing:-.02em;max-width:13ch}
+html[data-lang="ta"] .stages b{font-size:clamp(1.6rem,3.2vw,2.7rem);line-height:1.2;letter-spacing:0}
+.stages li > span{display:block;margin-top:16px;font-size:1.1rem;color:var(--muted);max-width:36ch}
+.story-count{margin-top:34px;font-weight:600;display:flex;gap:6px;align-items:baseline;color:var(--muted)}
+.story-count #storyN{font-family:var(--display);font-size:44px;color:var(--vv-red);line-height:1;min-width:1.2ch;font-variant-numeric:tabular-nums}
+.story-stage{position:relative;width:min(100%,480px);aspect-ratio:300/400;justify-self:center}
+.bag-back,.bag-front{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto}
+.bag-back{z-index:1}.bag-front{z-index:3;filter:drop-shadow(0 22px 26px rgba(80,50,0,.22))}
+.flyers{position:absolute;inset:0;z-index:2}
+.flyer{position:absolute;left:0;top:0;width:26%;will-change:transform}
+.flyer svg{width:100%;height:auto;display:block}
+.bag-shadow{position:absolute;left:12%;right:12%;bottom:-3%;height:5%;border-radius:50%;background:rgba(0,0,0,.12);filter:blur(6px);z-index:0}
+@media (max-width:860px){
+  .story{height:380vh}
+  .story-grid{grid-template-columns:1fr;gap:12px;align-content:center}
+  .story-stage{width:min(72%,300px);order:2}
+  .stages b{font-size:1.75rem}
+  .stages li > span{font-size:1rem;margin-top:8px}
+  .story-count{margin-top:12px}
+  .story-kicker{font-size:28px}
+}
+
+/* manifesto with pictures inside the sentence */
+.manifesto{padding:40px 0 120px}
+.mf{font-family:var(--display);font-size:clamp(1.9rem,4.6vw,4rem);line-height:1.18;letter-spacing:-.02em;max-width:22ch}
+html[data-lang="ta"] .mf{font-size:clamp(1.5rem,3.2vw,2.8rem);line-height:1.5;letter-spacing:0;max-width:28ch}
+.mf .w{opacity:.18;transition:opacity .35s}
+.mf .w.lit{opacity:1}
+.mf i{display:inline-grid;place-items:center;width:1.25em;height:.95em;border-radius:999px;vertical-align:-.1em;margin:0 .06em;background:var(--tint);transform:scale(.6) rotate(-12deg);opacity:.25;transition:transform .5s cubic-bezier(.3,1.7,.5,1),opacity .3s}
+.mf i.lit{transform:none;opacity:1}
+.mf i svg{width:.85em;height:.85em}
+
+/* storefront band */
+.front{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;overflow:hidden;background:var(--sign);color:#fff}
+.front-img{position:absolute;inset:-12% 0;background-size:cover;background-position:center 35%;filter:saturate(1.1) contrast(1.05);will-change:transform}
+.front::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,18,24,.15) 0%,rgba(44,18,24,.35) 45%,rgba(44,18,24,.94) 100%)}
+.front-copy{position:relative;z-index:1;padding-block:0 72px}
+.front-h{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,6vw,5.6rem);line-height:1;letter-spacing:-.03em;max-width:14ch}
+html[data-lang="ta"] .front-h{font-size:clamp(2rem,4.4vw,4rem);line-height:1.2;letter-spacing:0}
+.front-copy p{margin-top:18px;max-width:46ch;color:rgba(255,255,255,.82);font-size:1.1rem}
+.btn-sign{margin-top:26px;background:var(--vv-red);color:#fff;box-shadow:0 4px 0 var(--vv-red-dark)}
+.btn-sign:hover{transform:translateY(-2px)}
+#visit .visit-grid{grid-template-columns:1fr}
+#visit .directions{grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:860px){#visit .directions{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  .story{height:auto}.story-pin{position:relative;top:0;height:auto;padding:80px 0}
+  .stages{gap:26px}.stages li{grid-area:auto;opacity:1;transform:none}
+  .mf .w,.mf i{opacity:1;transform:none}
+}
+
+/* ---------- type: premium serif ---------- */
+.hero h1{font-size:var(--hero);letter-spacing:var(--hero-ls)}
+.h2{letter-spacing:var(--h2-ls)}
+:root{--display:"Young Serif",Georgia,serif;--brand:"Young Serif",Georgia,serif;--body:"Albert Sans",system-ui,sans-serif;--hand:"Nanum Pen Script","Comic Sans MS",cursive;--hs:33px;--hero:clamp(2.8rem,6.6vw,6.2rem);--hero-ls:-.03em;--h2-ls:-.02em}
+html[data-lang="ta"]{--display:"Tiro Tamil","Young Serif",serif;--body:"Catamaran",system-ui,sans-serif}
+.hero h1{line-height:.98}
+.h2{line-height:1.02}
+
+/* ---------- type overrides: single-weight display faces ---------- */
+.brand,.hero h1,.fact strong,.h2,.board button .no,.shelf h3,.steps li::before,.sheet-head b,.tag .off,.tag .price,.foot-big{font-weight:400}
+.brand{font-size:25px;letter-spacing:0;font-family:var(--brand)}
+.hero h1{font-size:clamp(2.7rem,6.3vw,5.9rem);line-height:1.02;letter-spacing:-.005em;max-width:12ch}
+.hero h1 .en{display:block}
+.h2{letter-spacing:0;line-height:1.06}
+.fact strong{letter-spacing:0;font-size:clamp(1.5rem,2.3vw,2.05rem)}
+.shelf h3{letter-spacing:0}
+.tag .price{letter-spacing:0;font-size:34px}
+.tag .off{font-family:var(--body);font-weight:700}
+.board button .no{font-family:var(--body);font-weight:700}
+.steps li::before{font-family:var(--display);padding-top:2px}
+.foot-big{letter-spacing:-.01em;line-height:.98}
+.sheet-head b{letter-spacing:0}
+.pad li{font-size:var(--hs)}
+.lines li,.add-line input{font-size:var(--hs)}
+.pad-title{font-size:30px;font-weight:400}
+.empty{font-size:27px}
+body{font-weight:400;letter-spacing:.003em}
+.nav-links,.btn,.list-btn,.item,.lang{font-weight:500}
+html[data-lang="ta"] .hero h1{font-size:clamp(2.1rem,4.4vw,4.1rem);line-height:1.12;max-width:13ch}
+html[data-lang="ta"] .h2{line-height:1.25}
+html[data-lang="ta"] .pad li{font-size:21px}
+html[data-lang="ta"] .lines li,html[data-lang="ta"] .add-line input{font-size:20px}
+html[data-lang="ta"] .pad-title{font-size:22px}
+html[data-lang="ta"] .empty{font-size:19px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-sign">
+    <svg class="intro-emb" viewBox="0 0 40 40"><defs><clipPath id="embI"><circle cx="20" cy="20" r="16.2"/></clipPath></defs><circle cx="20" cy="20" r="18" fill="#F4F0FF" stroke="#E5245E" stroke-width="2.6"/><g clip-path="url(#embI)" fill="none" stroke="#E5245E" stroke-width="3.4"><path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/></g></svg>
+    <span class="intro-ta">வி.வி. மார்ட்</span>
+    <span class="intro-en">V.V. MART</span>
+  </div>
+</div>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="V.&#8202;V. Mart home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <defs><clipPath id="embClip"><circle cx="20" cy="20" r="16.2"/></clipPath></defs>
+        <circle cx="20" cy="20" r="18" fill="#F4F0FF" stroke="#E5245E" stroke-width="2.6"/>
+        <g clip-path="url(#embClip)" fill="none" stroke="#E5245E" stroke-width="3.4" stroke-linejoin="miter" stroke-linecap="butt">
+          <path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/>
+        </g>
+      </svg>
+      <span class="wm en">V.V. MART</span><span class="wm wm-ta ta">வி.வி. மார்ட்</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#aisles"><span class="en">Aisles</span><span class="ta">பிரிவுகள்</span></a>
+      <a href="#offers"><span class="en">Offers</span><span class="ta">சலுகைகள்</span></a>
+      <a href="#festival"><span class="en">Festival shelf</span><span class="ta">பண்டிகை</span></a>
+      <a href="#visit"><span class="en">Visit</span><span class="ta">வருகை</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="ta" aria-pressed="false">தமிழ்</button>
+    </div>
+    <a class="list-btn" href="#order">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg>
+      <span class="lbl"><span class="en">My list</span><span class="ta">என் பட்டியல்</span></span>
+      <span class="count" id="navCount" aria-live="polite">0</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1>
+          <span class="en">Your whole list, one shop away.</span>
+          <span class="ta">உங்கள் முழு பட்டியலும் ஒரே கடையில்.</span>
+        </h1>
+        <p class="lede">
+          <span class="en">Rice and dal, Monday's vegetables, camphor for the evening lamp, a gift for Saturday's function. V.&#8202;V. Mart has stocked Nanganallur's everyday since 2013. Send us your list on WhatsApp and we'll pack it the same day.</span>
+          <span class="ta">அரிசி, பருப்பு, காய்கறி, மாலை விளக்குக்குக் கற்பூரம், சனிக்கிழமை விசேஷத்துக்கு ஒரு பரிசு. 2013 முதல் நங்கநல்லூரின் அன்றாடத் தேவைகள் வி.வி. மார்ட்டில். உங்கள் பட்டியலை வாட்ஸ்அப்பில் அனுப்புங்கள், அன்றே தயார் செய்து தருகிறோம்.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-ink" href="#order">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+            <span class="en">Write your list</span><span class="ta">பட்டியல் எழுதுங்கள்</span>
+          </a>
+          <a class="btn btn-line" href="#visit"><span class="en">Find the store</span><span class="ta">கடையைக் கண்டறிய</span></a>
+        </div>
+      </div>
+
+      <div class="pad-stage" aria-hidden="true">
+        <div class="pad" id="heroPad">
+          <div class="pad-title"><span class="en">Saturday list</span><span class="ta">சனிக்கிழமை பட்டியல்</span></div>
+          <ul id="padList"></ul>
+          <div class="pad-foot">
+            <span id="padCount">0 / 6</span>
+            <span class="ready" id="padReady"><i></i><span class="en">Packed, out for delivery</span><span class="ta">தயார், டெலிவரிக்கு புறப்பட்டது</span></span>
+          </div>
+        </div>
+        <svg class="pad-bag" viewBox="0 0 300 340"><path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/>
+      <path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#FFD81F" stroke-width="10" stroke-linecap="round"/>
+      <path d="M40 96h220l-6 18H46z" fill="#C99600"/><path d="M34 96h232l-8 222a14 14 0 0 1-14 13H56a14 14 0 0 1-14-13z" fill="#FFD81F"/>
+      <path d="M34 96h232l-1 18H35z" fill="#F2B705"/>
+      <path d="M48 110h204l-7 200a8 8 0 0 1-8 8H63a8 8 0 0 1-8-8z" fill="none" stroke="#C99600" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <g transform="translate(128 150) scale(1.1)"><circle cx="20" cy="20" r="18" fill="#FFF8D6" stroke="#E5245E" stroke-width="2.6"/><g clip-path="url(#embCh)" fill="none" stroke="#E5245E" stroke-width="3.4"><path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/></g><clipPath id="embCh"><circle cx="20" cy="20" r="16.2"/></clipPath></g>
+      <text x="150" y="232" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="30" fill="#E3202B" letter-spacing="1">V.V. MART</text>
+      <text x="150" y="262" text-anchor="middle" font-family="Catamaran, sans-serif" font-weight="800" font-size="19" fill="#2638C9">வி.வி. மார்ட்</text>
+      <text x="150" y="292" text-anchor="middle" font-family="Albert Sans, sans-serif" font-size="11" fill="#7A5A00" letter-spacing="1.2">NANGANALLUR, EST. 2013</text></svg>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><strong>4.1★</strong><span class="en">from 4,600+ Google reviews</span><span class="ta">4,600+ கூகுள் மதிப்புரைகள்</span></div>
+      <div class="fact"><strong><span class="en">Since 2013</span><span class="ta">2013 முதல்</span></strong><span class="en">on 1st Main Road</span><span class="ta">1வது மெயின் ரோட்டில்</span></div>
+      <div class="fact"><strong><span class="en">Till 10 pm</span><span class="ta">இரவு 10 வரை</span></strong><span class="en">open every day</span><span class="ta">தினமும் திறந்திருக்கும்</span></div>
+      <div class="fact"><strong><span class="en">Same day</span><span class="ta">அதே நாள்</span></strong><span class="en">home delivery nearby</span><span class="ta">அருகில் வீட்டு டெலிவரி</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= STORY: the manjappai fills up as you scroll ================= -->
+<section class="story" id="story" aria-label="A week of shopping in one bag">
+  <div class="story-pin">
+    <div class="wrap story-grid">
+      <div class="story-copy">
+        <p class="story-kicker"><span class="en">One bag, all week</span><span class="ta">ஒரே பை, வாரம் முழுதும்</span></p>
+        <ol class="stages">
+          <li class="on"><b><span class="en">Monday, the monthly rice and dal.</span><span class="ta">திங்கள், மாதாந்திர அரிசி பருப்பு.</span></b><span class="en">Ponni from our sacks, toor dal, gingelly oil.</span><span class="ta">மூட்டையிலிருந்து பொன்னி, துவரம் பருப்பு, நல்லெண்ணெய்.</span></li>
+          <li><b><span class="en">Wednesday, the vegetables.</span><span class="ta">புதன், காய்கறிகள்.</span></b><span class="en">Drumstick for sambar, tomatoes, curry leaves.</span><span class="ta">சாம்பாருக்கு முருங்கை, தக்காளி, கறிவேப்பிலை.</span></li>
+          <li><b><span class="en">Friday, the evening lamp.</span><span class="ta">வெள்ளி, மாலை விளக்கு.</span></b><span class="en">Camphor, cotton wicks, a new agal.</span><span class="ta">கற்பூரம், திரி, புதிய அகல்.</span></li>
+          <li><b><span class="en">Saturday, a gift for the function.</span><span class="ta">சனி, விசேஷத்துக்கு ஒரு பரிசு.</span></b><span class="en">Wrapped at the counter, with filter coffee for home.</span><span class="ta">கவுண்டரிலேயே பொதிந்து, வீட்டுக்கு ஃபில்டர் காபியுடன்.</span></li>
+        </ol>
+        <p class="story-count"><span id="storyN">0</span> <span class="en">of 8 in the bag</span><span class="ta">/ 8 பையில்</span></p>
+      </div>
+      <div class="story-stage" id="stage">
+        <svg class="bag-back" viewBox="0 0 300 340" aria-hidden="true"><path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/>
+      <path d="M96 100C96 40 120 18 150 18s54 22 54 82" fill="none" stroke="#FFD81F" stroke-width="10" stroke-linecap="round"/>
+      <path d="M40 96h220l-6 18H46z" fill="#C99600"/></svg>
+        <div class="flyers" id="flyers"></div>
+        <svg class="bag-front" viewBox="0 0 300 340" aria-hidden="true"><path d="M34 96h232l-8 222a14 14 0 0 1-14 13H56a14 14 0 0 1-14-13z" fill="#FFD81F"/>
+      <path d="M34 96h232l-1 18H35z" fill="#F2B705"/>
+      <path d="M48 110h204l-7 200a8 8 0 0 1-8 8H63a8 8 0 0 1-8-8z" fill="none" stroke="#C99600" stroke-width="1.6" stroke-dasharray="5 5"/>
+      <g transform="translate(128 150) scale(1.1)"><circle cx="20" cy="20" r="18" fill="#FFF8D6" stroke="#E5245E" stroke-width="2.6"/><g clip-path="url(#embCs)" fill="none" stroke="#E5245E" stroke-width="3.4"><path d="M-1 4L20 35.5L41 4"/><path d="M5.5 2L20 23.5L34.5 2"/><path d="M12 0L20 11.5L28 0"/></g><clipPath id="embCs"><circle cx="20" cy="20" r="16.2"/></clipPath></g>
+      <text x="150" y="232" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="30" fill="#E3202B" letter-spacing="1">V.V. MART</text>
+      <text x="150" y="262" text-anchor="middle" font-family="Catamaran, sans-serif" font-weight="800" font-size="19" fill="#2638C9">வி.வி. மார்ட்</text>
+      <text x="150" y="292" text-anchor="middle" font-family="Albert Sans, sans-serif" font-size="11" fill="#7A5A00" letter-spacing="1.2">NANGANALLUR, EST. 2013</text></svg>
+        <div class="bag-shadow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MANIFESTO: inline pictures in the sentence ================= -->
+<section class="manifesto">
+  <div class="wrap">
+    <p class="mf" id="mf">
+      <span class="en">From <i data-ic="sack|y"></i> ponni rice to <i data-ic="flame|w"></i> karpooram, from <i data-ic="cup|b"></i> filter coffee to <i data-ic="rings|r"></i> bangles. Since 2013, Nanganallur has brought its <i data-ic="pouch|r"></i> whole list to one shop on 1st Main Road.</span>
+      <span class="ta"><i data-ic="sack|y"></i> பொன்னி அரிசி முதல் <i data-ic="flame|w"></i> கற்பூரம் வரை, <i data-ic="cup|b"></i> ஃபில்டர் காபி முதல் <i data-ic="rings|r"></i> வளையல் வரை. 2013 முதல் நங்கநல்லூர் தன் <i data-ic="pouch|r"></i> முழு பட்டியலையும் 1வது மெயின் ரோட்டில் உள்ள ஒரே கடைக்குக் கொண்டு வருகிறது.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ================= AISLES ================= -->
+<section class="sec" id="aisles">
+  <div class="wrap">
+    <div class="aisles-head">
+      <div>
+        <h2 class="h2"><span class="en">Walk the aisles from your sofa.</span><span class="ta">வீட்டிலிருந்தே கடையைச் சுற்றிப் பாருங்கள்.</span></h2>
+        <p class="sub"><span class="en">Eight aisles, from rice and dal to pooja items and gifts. Tap any item to pick its brand and size.</span><span class="ta">அரிசி, பருப்பு முதல் பூஜை பொருட்கள், பரிசுகள் வரை எட்டு பிரிவுகள். பொருளைத் தொட்டு பிராண்டு, அளவைத் தேர்வுசெய்யுங்கள்.</span></p>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <label for="q" class="sr">Search the shop</label>
+        <input id="q" type="search" autocomplete="off" placeholder="Search sambar, camphor, Aachi…">
+      </div>
+    </div>
+    <div class="aisles">
+      <div class="board" role="tablist" aria-label="Aisles" id="board"></div>
+      <div class="shelf" role="tabpanel" id="shelf" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER ================= -->
+<section class="sec order" id="order">
+  <div class="wrap order-grid">
+    <div>
+      <h2 class="h2"><span class="en">Send the list. We'll do the running around.</span><span class="ta">பட்டியலை அனுப்புங்கள். மீதியை நாங்கள் பார்த்துக்கொள்கிறோம்.</span></h2>
+      <p class="sub"><span class="en">The way Nanganallur already shops: write it down, send it to the shop, pick it up or have it at your door.</span><span class="ta">நங்கநல்லூர் வழக்கம்போல: எழுதுங்கள், கடைக்கு அனுப்புங்கள், நேரில் வாங்குங்கள் அல்லது வீட்டுக்கே பெறுங்கள்.</span></p>
+      <ol class="steps">
+        <li><div><b><span class="en">Write your list</span><span class="ta">பட்டியல் எழுதுங்கள்</span></b><span class="en">Tap items in the aisles or type anything we stock, brand names included.</span><span class="ta">பிரிவுகளில் தொட்டுச் சேர்க்கலாம் அல்லது பிராண்ட் பெயருடன் தட்டச்சு செய்யலாம்.</span></div></li>
+        <li><div><b><span class="en">We confirm on WhatsApp</span><span class="ta">வாட்ஸ்அப்பில் உறுதி செய்கிறோம்</span></b><span class="en">The shop replies with what's in stock and your total.</span><span class="ta">இருப்பு மற்றும் மொத்தத் தொகையைக் கடை பதில் அனுப்பும்.</span></div></li>
+        <li><div><b><span class="en">Collect or receive it today</span><span class="ta">இன்றே பெறுங்கள்</span></b><span class="en">We deliver the same day, or keep it packed at the billing counter so you skip the evening queue.</span><span class="ta">அன்றே டெலிவரி, அல்லது மாலை வரிசையைத் தவிர்க்க பில்லிங் கவுண்டரில் தயாராக வைத்திருப்போம்.</span></div></li>
+      </ol>
+      <div class="areas">
+        <p><span class="en">We deliver around</span><span class="ta">டெலிவரி பகுதிகள்</span></p>
+        <div>
+          <span class="en">Nanganallur</span><span class="ta">நங்கநல்லூர்</span>
+          <span class="en">Pazhavanthangal</span><span class="ta">பழவந்தாங்கல்</span>
+          <span class="en">Adambakkam</span><span class="ta">ஆதம்பாக்கம்</span>
+          <span class="en">Madipakkam</span><span class="ta">மடிப்பாக்கம்</span>
+          <span class="en">Meenambakkam</span><span class="ta">மீனம்பாக்கம்</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sheet">
+      <div class="sheet-head">
+        <b><span class="en">My list</span><span class="ta">என் பட்டியல்</span></b>
+        <span id="sheetCount"></span>
+      </div>
+      <div class="sheet-body">
+        <ul class="lines" id="lines"></ul>
+        <div class="empty" id="empty"><span class="en">Nothing here yet. Tap items in the aisles above, or write one below.</span><span class="ta">இன்னும் எதுவும் இல்லை. மேலே உள்ள பிரிவுகளில் தொடுங்கள், அல்லது கீழே எழுதுங்கள்.</span></div>
+        <form class="add-line" id="addForm">
+          <label for="addInput" class="en" style="position:absolute;left:-9999px">Add an item</label>
+          <input id="addInput" autocomplete="off" placeholder="+ Aachi sambar powder 200g">
+          <button type="submit"><span class="en">Add</span><span class="ta">சேர்</span></button>
+        </form>
+      </div>
+      <div class="sheet-form">
+        <div class="seg" role="group" aria-label="Delivery or pickup">
+          <button type="button" data-mode="delivery" aria-pressed="true"><span class="en">Home delivery</span><span class="ta">வீட்டு டெலிவரி</span></button>
+          <button type="button" data-mode="pickup" aria-pressed="false"><span class="en">I'll pick it up</span><span class="ta">நேரில் வாங்குவேன்</span></button>
+        </div>
+        <div class="two">
+          <div class="field"><label for="fName"><span class="en">Your name</span><span class="ta">உங்கள் பெயர்</span></label><input id="fName" autocomplete="name"></div>
+          <div class="field" id="addrField"><label for="fAddr"><span class="en">Street and area</span><span class="ta">தெரு மற்றும் பகுதி</span></label><input id="fAddr" autocomplete="street-address" placeholder="e.g. 4th Main Road, Nanganallur"></div>
+        </div>
+        <a class="send" id="sendBtn" href="#order" target="_blank" rel="noopener" aria-disabled="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          <span class="en">Send list on WhatsApp</span><span class="ta">வாட்ஸ்அப்பில் அனுப்பு</span>
+        </a>
+        <p class="form-msg" id="formMsg"><span class="en">Add at least one item to send your list.</span><span class="ta">அனுப்ப குறைந்தது ஒரு பொருளைச் சேர்க்கவும்.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFERS ================= -->
+<section class="sec" id="offers">
+  <div class="wrap">
+    <div class="offers-head">
+      <div>
+        <h2 class="h2"><span class="en">This week on the rack.</span><span class="ta">இந்த வார சலுகைகள்.</span></h2>
+        <p class="sub"><span class="en">Fresh tags every Monday. Tap a tag to add it to your list.</span><span class="ta">ஒவ்வொரு திங்களும் புதிய சலுகைகள். பட்டியலில் சேர்க்க டேக்கைத் தொடுங்கள்.</span></p>
+      </div>
+      <small><span class="en">Sample prices for this concept. The shop updates these each week.</span><span class="ta">இவை மாதிரி விலைகள். கடை ஒவ்வொரு வாரமும் புதுப்பிக்கும்.</span></small>
+    </div>
+    <div class="rack"><div class="tags" id="tags"></div></div>
+  </div>
+</section>
+
+<!-- ================= FESTIVAL ================= -->
+<section class="sec fest" id="festival">
+  <div class="wrap fest-grid">
+    <svg class="kolam" id="kolam" viewBox="0 0 400 400" aria-hidden="true"></svg>
+    <div>
+      <h2 class="h2"><span class="en">The festival shelf fills up a week early.</span><span class="ta">பண்டிகைப் பொருட்கள் ஒரு வாரம் முன்பே தயார்.</span></h2>
+      <p class="sub"><span class="en">Deepavali, Karthigai Deepam, Pongal and every function in between. Pooja items, lamps, sweets and return gifts, all from the same counter.</span><span class="ta">தீபாவளி, கார்த்திகை தீபம், பொங்கல் மற்றும் எல்லா விசேஷங்களுக்கும். பூஜை பொருட்கள், விளக்குகள், இனிப்புகள், தாம்பூலப் பரிசுகள் ஒரே இடத்தில்.</span></p>
+      <div class="fest-list" id="festList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STOREFRONT ================= -->
+<section class="front" aria-label="The V.V. Mart storefront">
+  <div class="front-img" id="frontImg" style="background-image:url(assets/storefront.jpg)" role="img" aria-label="V.V. Mart storefront at night: red V.V. MART sign on a maroon band, blue Tamil lettering, yellow welcome banners"></div>
+  <div class="wrap front-copy">
+    <h2 class="front-h"><span class="en">One shop. 1st Main Road. Lit up till 10.</span><span class="ta">ஒரே கடை. 1வது மெயின் ரோடு. இரவு 10 வரை.</span></h2>
+    <p><span class="en">Look for the red V.V. MART sign above the yellow welcome banners, opposite the Sub Registrar office.</span><span class="ta">சார் பதிவாளர் அலுவலகம் எதிரே, மஞ்சள் வரவேற்பு பேனர்களுக்கு மேலே சிவப்பு V.V. MART பலகை.</span></p>
+    <a class="btn btn-sign" href="https://www.google.com/maps/search/?api=1&query=V.V.+Mart+39+1st+Main+Rd+NCBS+Colony+Nanganallur+Chennai" target="_blank" rel="noopener"><span class="en">Get directions</span><span class="ta">வழி காட்டு</span></a>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section class="sec" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2 class="h2"><span class="en">Easy to find, opposite the registrar office.</span><span class="ta">பதிவு அலுவலகம் எதிரே, எளிதில் கண்டுபிடிக்கலாம்.</span></h2>
+      <div class="directions">
+        <div class="dir">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>39, 1st Main Road, NCBS Colony, Nanganallur, Chennai 600061</b><span class="en">Near the ration shop, opposite the Sub Registrar office</span><span class="ta">ரேஷன் கடை அருகில், சார் பதிவாளர் அலுவலகம் எதிரே</span></div>
+        </div>
+        <div class="dir">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 18v3M16 18v3"/><circle cx="8.5" cy="14.5" r=".8" fill="currentColor"/><circle cx="15.5" cy="14.5" r=".8" fill="currentColor"/></svg>
+          <div><b><span class="en">Anjaneyar Kovil bus stop</span><span class="ta">ஆஞ்சநேயர் கோவில் பேருந்து நிறுத்தம்</span></b><span class="en">About a minute's walk. Pazhavanthangal station is the nearest train.</span><span class="ta">ஒரு நிமிட நடை. அருகிலுள்ள ரயில் நிலையம் பழவந்தாங்கல்.</span></div>
+        </div>
+        <div class="dir">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          <div><b>+91 00000 00000</b><span class="en">Shop phone and WhatsApp (sample number)</span><span class="ta">கடை தொலைபேசி மற்றும் வாட்ஸ்அப் (மாதிரி எண்)</span></div>
+        </div>
+      </div>
+      <div class="hours" id="hours"><i></i><span id="hoursText"></span></div>
+      <p class="busy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13" width="3" height="7" rx="1"/><rect x="8" y="9" width="3" height="11" rx="1"/><rect x="13" y="5" width="3" height="15" rx="1"/><rect x="18" y="10" width="3" height="10" rx="1"/></svg><span class="en">Evenings are the busiest. Come before 5 pm, or order ahead and just pick it up.</span><span class="ta">மாலை நேரம் கூட்டம் அதிகம். 5 மணிக்கு முன் வாருங்கள், அல்லது முன்பே ஆர்டர் செய்து எடுத்துச் செல்லுங்கள்.</span></p>
+      <p class="pay"><span class="en">Pay by UPI, card or cash at the counter. Ask about a monthly grocery account.</span><span class="ta">UPI, கார்டு அல்லது ரொக்கமாகச் செலுத்தலாம். மாதாந்திர மளிகைக் கணக்கு பற்றிக் கேளுங்கள்.</span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <figure class="quote">
+      <blockquote><p>“When I initially shifted to Nanganallur, only VV&#8202;Mart was my choice to have anything to everything for monthly groceries, toiletries, fancy products, gift items, pooja items.”</p></blockquote>
+      <figcaption><span class="en">A customer review on Justdial. Rated 4.1 from 4,600+ Google reviews.</span><span class="ta">ஜஸ்ட்டயலில் ஒரு வாடிக்கையாளர் மதிப்புரை. 4,600+ கூகுள் மதிப்புரைகளில் 4.1.</span></figcaption>
+    </figure>
+    <div class="foot-big"><span class="en">Anything to everything.</span><span class="ta">எல்லாமே இங்கே.</span></div>
+    <div class="foot-row">
+      <span>V.&#8202;V. Mart, 39, 1st Main Road, NCBS Colony, Nanganallur, Chennai 600061</span>
+      <span><span class="en">Website concept. Not the shop's official site.</span><span class="ta">இணையதள மாதிரி. கடையின் அதிகாரப்பூர்வ தளம் அல்ல.</span></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="en">Call</span><span class="ta">அழை</span></a>
+  <a href="#aisles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h18M3 15h18M7 3v18M17 3v18"/></svg><span class="en">Aisles</span><span class="ta">பிரிவுகள்</span></a>
+  <a href="#order" class="mbar-list"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg><span class="en">My list</span><span class="ta">பட்டியல்</span><b id="mbarCount">0</b></a>
+</nav>
+
+<div class="pick" id="pick" hidden></div>
+
+<div class="toast" id="toast" role="status"><span id="toastText"></span><a href="#order"><span class="en">View list</span><span class="ta">பட்டியல் பார்</span></a></div>
+
+<script>
+/* Replace with the shop's real WhatsApp number (country code, no +) before handing over */
+const WHATSAPP = "910000000000";
+
+/* item: [en, ta, icon, colour, brands, sizes]. Brands are examples; the shop sets its own range. */
+const KG=["250 g","500 g","1 kg"], BIG=["1 kg","5 kg","10 kg","25 kg"], PK=["100 g","200 g","500 g"], LT=["500 ml","1 L","5 L"];
+const AISLES = [
+  {en:"Rice, dal & staples", ta:"அரிசி, பருப்பு, மளிகை", color:"y", items:[
+    ["Ponni rice","பொன்னி அரிசி","sack","y",["Loose from our sacks","Lalitha","Bell"],BIG],
+    ["Idli rice","இட்லி அரிசி","sack","w",["Loose from our sacks"],BIG],
+    ["Toor dal","துவரம் பருப்பு","pouch","y",["Udhaiyam","Tata Sampann","Loose"],KG],
+    ["Urad dal","உளுத்தம் பருப்பு","pouch","w",["Udhaiyam","Tata Sampann","Loose"],KG],
+    ["Wheat atta","கோதுமை மாவு","sack","o",["Aashirvaad","Pillsbury","Annapoorna"],["1 kg","5 kg","10 kg"]],
+    ["Rava","ரவை","pouch","o",["Anil","Aachi","Loose"],KG],
+    ["Sugar","சர்க்கரை","pouch","w",["Loose","Madhur"],["1 kg","2 kg","5 kg"]],
+    ["Gingelly oil","நல்லெண்ணெய்","bottle","o",["Idhayam","VVS","Anjali"],LT],
+    ["Groundnut oil","கடலை எண்ணெய்","bottle","y",["Gold Winner","Idhayam","Wood-pressed"],LT],
+    ["Tamarind","புளி","blocks","b",["Loose","Aachi"],KG]]},
+  {en:"Vegetables & fruits", ta:"காய்கறி & பழங்கள்", color:"g", items:[
+    ["Tomato","தக்காளி","round","r",[],KG],
+    ["Small onion","சின்ன வெங்காயம்","onion","p",[],KG],
+    ["Drumstick","முருங்கைக்காய்","sticks","g",[],["2 pcs","4 pcs","6 pcs"]],
+    ["Brinjal","கத்திரிக்காய்","pod","p",[],KG],
+    ["Ladies finger","வெண்டைக்காய்","pod","g",[],KG],
+    ["Curry leaves","கறிவேப்பிலை","leaves","g",[],["1 bunch","2 bunches"]],
+    ["Coriander","கொத்தமல்லி","leaves","l",[],["1 bunch","2 bunches"]],
+    ["Banana","வாழைப்பழம்","banana","y",["Poovan","Robusta","Nendran","Rasthali"],["6 pcs","1 dozen"]],
+    ["Coconut","தேங்காய்","round","b",[],["1 pc","2 pcs","3 pcs"]]]},
+  {en:"Masala & pickles", ta:"மசாலா & ஊறுகாய்", color:"r", items:[
+    ["Sambar powder","சாம்பார் பொடி","pouch","r",["Aachi","Sakthi","MTR","Eastern"],PK],
+    ["Rasam powder","ரசப் பொடி","pouch","o",["Aachi","Sakthi","MTR"],PK],
+    ["Turmeric powder","மஞ்சள் தூள்","tin","y",["Aachi","Sakthi","Everest"],PK],
+    ["Chilli powder","மிளகாய்த் தூள்","tin","r",["Aachi","Sakthi","Everest"],PK],
+    ["Asafoetida","பெருங்காயம்","tin","w",["LG","Everest"],["50 g","100 g"]],
+    ["Mustard","கடுகு","bowl","b",["Loose","Aachi"],PK],
+    ["Jeera","சீரகம்","bowl","o",["Loose","Aachi"],PK],
+    ["Mango pickle","மாங்காய் ஊறுகாய்","jar","r",["Aachi","Priya","Mother's Recipe"],["200 g","300 g","500 g"]]]},
+  {en:"Snacks & sweets", ta:"தின்பண்டம் & இனிப்பு", color:"o", items:[
+    ["Murukku","முறுக்கு","coil","o",["Shop-packed","Grand Sweets"],["200 g","500 g"]],
+    ["Mixture","மிக்சர்","pouch","y",["Shop-packed","Grand Sweets","Haldiram's"],["200 g","500 g"]],
+    ["Ribbon pakoda","ரிப்பன் பக்கோடா","pouch","o",["Shop-packed","Grand Sweets"],["200 g","500 g"]],
+    ["Mysore pak","மைசூர் பாக்","blocks","y",["Sri Krishna Sweets","Grand Sweets"],["250 g","500 g"]],
+    ["Biscuits","பிஸ்கட்","biscuit","o",["Britannia","Parle","Sunfeast"],["1 pack","Family pack"]],
+    ["Chocolates","சாக்லேட்","choco","b",["Cadbury","Nestlé","Amul"],["Small","Large"]],
+    ["Filter coffee powder","ஃபில்டர் காபி தூள்","cup","b",["Narasu's","Leo","Cothas","Bru"],["200 g","500 g"]]]},
+  {en:"Household & cleaning", ta:"வீட்டு உபயோகம்", color:"u", items:[
+    ["Detergent powder","சலவைத் தூள்","box","u",["Surf Excel","Ariel","Rin","Tide"],["500 g","1 kg","4 kg"]],
+    ["Dishwash bar","பாத்திரம் கழுவும் சோப்பு","bar","l",["Vim","Exo","Pril"],["1 bar","3 bars"]],
+    ["Floor cleaner","தரை சுத்திகரிப்பான்","bottle","u",["Lizol","Domex"],["500 ml","1 L","2 L"]],
+    ["Garbage bags","குப்பைப் பைகள்","roll","k",[],["Small","Medium","Large"]],
+    ["Mosquito coil","கொசுவர்த்தி","coil","g",["Good Knight","Mortein"],["1 pack","2 packs"]],
+    ["Scrub pads","தேய்ப்பான்","pad","l",["Scotch-Brite","Gala"],["1 pc","3 pcs"]]]},
+  {en:"Cosmetics & personal care", ta:"அழகு & பராமரிப்பு", color:"p", items:[
+    ["Coconut oil","தேங்காய் எண்ணெய்","bottle","b",["Parachute","VVD"],["200 ml","500 ml","1 L"]],
+    ["Shampoo","ஷாம்பு","bottle","p",["Clinic Plus","Dove","Sunsilk","Head & Shoulders"],["Sachets","180 ml","340 ml"]],
+    ["Bath soap","குளியல் சோப்பு","bar","p",["Mysore Sandal","Medimix","Hamam","Lux"],["1 bar","4 bars"]],
+    ["Toothpaste","பற்பசை","tube","r",["Colgate","Close-Up","Dabur Red","Pepsodent"],["100 g","150 g","200 g"]],
+    ["Kajal","கண் மை","tube","k",["Eyetex","Lakmé","Maybelline"],["1 pc"]],
+    ["Talc","பவுடர்","tin","p",["Pond's","Cuticura","Yardley"],["100 g","400 g"]],
+    ["Shikakai","சீயக்காய்","pouch","b",["Loose","Meera"],["100 g","200 g"]]]},
+  {en:"Pooja items", ta:"பூஜை பொருட்கள்", color:"y", items:[
+    ["Camphor","கற்பூரம்","flame","w",["Cycle","Mangaldeep","Loose"],["Small","Large"]],
+    ["Agarbathi","ஊதுபத்தி","incense","p",["Cycle","Zed Black","Hem"],["1 pack","3 packs"]],
+    ["Kumkum","குங்குமம்","bowl","r",["Loose"],["50 g","100 g"]],
+    ["Vibhuti","விபூதி","bowl","w",["Loose"],["50 g","100 g"]],
+    ["Lamp oil","விளக்கெண்ணெய்","bottle","y",["Loose","Deepam oil"],["500 ml","1 L"]],
+    ["Cotton wicks","திரி","lamp","o",["Loose"],["1 pack","3 packs"]],
+    ["Sambrani","சாம்பிராணி","incense","b",["Cycle","Loose"],["1 pack","3 packs"]],
+    ["Turmeric pieces","மஞ்சள் கிழங்கு","bowl","y",["Loose"],["100 g","250 g"]]]},
+  {en:"Gifts & fancy", ta:"பரிசு & ஃபேன்ஸி", color:"g", items:[
+    ["Gift boxes","பரிசுப் பெட்டிகள்","gift","r",[],["Under ₹100","₹100–300","₹300+"]],
+    ["Return gifts","தாம்பூலப் பரிசுகள்","gift","g",[],["10 pcs","25 pcs","50 pcs"]],
+    ["Toys","பொம்மைகள்","top","u",[],["Under ₹100","₹100–300","₹300+"]],
+    ["Stationery","எழுதுபொருட்கள்","pencil","y",["Classmate","Natraj","Camlin"],["1 set"]],
+    ["Bangles","வளையல்கள்","rings","r",[],["1 dozen","2 dozen"]],
+    ["Hair clips","ஹேர் கிளிப்","rings","p",[],["1 card","3 cards"]]]}
+];
+const OFFERS = [
+  {en:"Ponni boiled rice", ta:"பொன்னி புழுங்கல் அரிசி", uen:"25 kg bag", uta:"25 கிலோ மூட்டை", p:1349, o:1520, bg:"#FFC21A"},
+  {en:"Gingelly oil", ta:"நல்லெண்ணெய்", uen:"1 litre", uta:"1 லிட்டர்", p:289, o:330, bg:"#fff"},
+  {en:"Toor dal", ta:"துவரம் பருப்பு", uen:"1 kg", uta:"1 கிலோ", p:139, o:165, bg:"#E5284B", fg:"#fff"},
+  {en:"Detergent powder", ta:"சலவைத் தூள்", uen:"4 kg pack", uta:"4 கிலோ பேக்", p:399, o:460, bg:"#fff"},
+  {en:"Festive sweet box", ta:"பண்டிகை இனிப்புப் பெட்டி", uen:"500 g assorted", uta:"500 கிராம் கலவை", p:249, o:299, bg:"#2638C9", fg:"#fff"}
+];
+
+const FEST = [
+  {en:"Deepavali sweet & savoury box", ta:"தீபாவளி இனிப்பு காரப் பெட்டி", den:"Mysore pak, murukku, mixture, packed to gift", dta:"மைசூர் பாக், முறுக்கு, மிக்சர், பரிசுப் பொதியில்"},
+  {en:"Karthigai agal vilakku set", ta:"கார்த்திகை அகல் விளக்கு செட்", den:"Clay lamps with wicks and lamp oil", dta:"களிமண் விளக்குகள், திரி, எண்ணெயுடன்"},
+  {en:"Complete pooja kit", ta:"முழு பூஜை கிட்", den:"Camphor, agarbathi, kumkum, turmeric, sambrani", dta:"கற்பூரம், ஊதுபத்தி, குங்குமம், மஞ்சள், சாம்பிராணி"},
+  {en:"Thamboolam return gifts", ta:"தாம்பூலப் பரிசுகள்", den:"For housewarmings, functions and golu, in bulk", dta:"கிரகப்பிரவேசம், விசேஷம், கொலுவுக்கு மொத்தமாக"}
+];
+
+const HERO = [["Ponni rice 5 kg","பொன்னி அரிசி 5 கிலோ"],["Toor dal 1 kg","துவரம் பருப்பு 1 கிலோ"],["Drumstick, tomato","முருங்கை, தக்காளி"],["Gingelly oil","நல்லெண்ணெய்"],["Camphor, wicks","கற்பூரம், திரி"],["Gift box for Priya","ப்ரியாவுக்கு பரிசுப் பெட்டி"]];
+
+let lang = "en";
+try{ const s = localStorage.getItem("vvm-lang"); if(s==="ta"||s==="en") lang = s; }catch(e){}
+let list = [];
+try{ list = JSON.parse(localStorage.getItem("vvm-list")||"[]"); if(!Array.isArray(list)) list=[]; }catch(e){ list=[]; }
+let mode = "delivery";
+let current = 0;
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = s => document.querySelector(s);
+const t = (en,ta) => lang==="ta" ? ta : en;
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- language ---------- */
+function setLang(l){
+  lang = l;
+  document.documentElement.dataset.lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll("[data-set-lang]").forEach(b=>b.setAttribute("aria-pressed", b.dataset.setLang===l));
+  $("#addInput").placeholder = t("+ Aachi sambar powder 200g","+ சாம்பார் பொடி 200 கிராம்");
+  $("#q").placeholder = t("Search sambar, camphor, Aachi…","சாம்பார், கற்பூரம், ஆச்சி… தேடுங்கள்");
+  $("#fAddr").placeholder = t("e.g. 4th Main Road, Nanganallur","எ.கா. 4வது மெயின் ரோடு, நங்கநல்லூர்");
+  try{ localStorage.setItem("vvm-lang", l); }catch(e){}
+  renderBoard(); renderShelf(false); renderTags(); renderFest(); renderList(); renderHours();
+}
+document.querySelectorAll("[data-set-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.setLang)));
+
+/* ---------- list state ---------- */
+function save(){ try{ localStorage.setItem("vvm-list", JSON.stringify(list)); }catch(e){} }
+function inList(en){ return list.some(x=>x.en===en); }
+function addItem(en, ta, silent){
+  const f = list.find(x=>x.en===en);
+  if(f) f.q++; else list.push({en, ta: ta||en, q:1});
+  save(); renderList(); bump();
+  if(!silent) toast(t(`${en} added to your list`, `${ta||en} பட்டியலில் சேர்க்கப்பட்டது`));
+}
+function bump(){ const c=$("#navCount"); c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump"); setTimeout(()=>c.classList.remove("bump"),300); }
+let toastTimer;
+function toast(msg){ $("#toastText").textContent = msg; $("#toast").classList.add("show"); clearTimeout(toastTimer); toastTimer=setTimeout(()=>$("#toast").classList.remove("show"),2600); }
+
+/* ---------- aisles ---------- */
+/* ---- drawn item set: ink outline, flat fills from the theme tokens ---- */
+const C={y:"var(--c-y)",o:"var(--c-o)",r:"var(--c-r)",g:"var(--c-g)",l:"var(--c-l)",b:"var(--c-b)",u:"var(--c-u)",p:"var(--c-p)",w:"var(--c-w)",k:"var(--c-k)"};
+const SK='stroke="var(--ink)" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"';
+const W='var(--paper)';
+const ICON={
+ sack:c=>`<path d="M19 32c-2 14-1 28 4 36h34c5-8 6-22 4-36z" fill="${c}" ${SK}/><path d="M23 33c6-9 28-9 34 0" fill="${W}" ${SK}/><path d="M27 31c4 3 22 3 26 0" fill="none" ${SK}/><rect x="28" y="44" width="24" height="15" rx="3" fill="${W}" ${SK}/><path d="M33 52h14" ${SK}/>`,
+ pouch:c=>`<path d="M22 24h36l2 42c-12 4-28 4-40 0z" fill="${c}" ${SK}/><path d="M22 24l4-5 4 5 4-5 4 5 4-5 4 5 4-5 4 5 4-5 2 5" fill="none" ${SK}/><circle cx="40" cy="46" r="9" fill="${W}" ${SK}/><circle cx="40" cy="46" r="3.5" fill="${c}"/>`,
+ bottle:c=>`<rect x="33" y="9" width="14" height="8" rx="2" fill="var(--c-r)" ${SK}/><path d="M35 17h10v6c7 3 11 8 11 14v28a5 5 0 0 1-5 5H29a5 5 0 0 1-5-5V37c0-6 4-11 11-14z" fill="${c}" ${SK}/><rect x="29" y="42" width="22" height="16" rx="3" fill="${W}" ${SK}/><path d="M28 31c2-3 4-4 6-5" stroke="${W}" stroke-width="2.6" stroke-linecap="round" fill="none"/>`,
+ jar:c=>`<rect x="25" y="15" width="30" height="10" rx="3" fill="var(--c-g)" ${SK}/><rect x="21" y="25" width="38" height="45" rx="9" fill="${c}" ${SK}/><rect x="27" y="38" width="26" height="16" rx="3" fill="${W}" ${SK}/><circle cx="31" cy="63" r="2.5" fill="${W}"/><circle cx="47" cy="61" r="2" fill="${W}"/>`,
+ tin:c=>`<path d="M24 22v42c0 4 7 7 16 7s16-3 16-7V22" fill="${c}" ${SK}/><ellipse cx="40" cy="22" rx="16" ry="6" fill="${W}" ${SK}/><path d="M24 36c0 4 7 7 16 7s16-3 16-7" fill="none" ${SK}/><path d="M24 54c0 4 7 7 16 7s16-3 16-7" fill="none" ${SK}/>`,
+ box:c=>`<path d="M18 30l22-9 22 9v34l-22 8-22-8z" fill="${c}" ${SK}/><path d="M18 30l22 9 22-9M40 39v33" fill="none" ${SK}/><circle cx="29" cy="52" r="6" fill="${W}" ${SK}/><path d="M48 50l8-3" ${SK}/>`,
+ bar:c=>`<rect x="15" y="34" width="50" height="28" rx="13" fill="${c}" ${SK}/><path d="M24 44c4-4 10-4 14 0" stroke="${W}" stroke-width="2.6" stroke-linecap="round" fill="none"/><circle cx="56" cy="24" r="5" fill="${W}" ${SK}/><circle cx="46" cy="17" r="3" fill="${W}" ${SK}/><circle cx="62" cy="13" r="2.5" fill="${W}" ${SK}/>`,
+ tube:c=>`<path d="M20 58l30-38 10 8-30 38z" fill="${c}" ${SK}/><path d="M50 20l4-5 10 8-4 5" fill="${W}" ${SK}/><path d="M20 58l-4 6 10 8 4-6" fill="${W}" ${SK}/><path d="M30 50l14-18" stroke="${W}" stroke-width="2.6" stroke-linecap="round"/>`,
+ round:c=>`<circle cx="40" cy="46" r="21" fill="${c}" ${SK}/><path d="M40 25c-1-6 2-10 6-12" fill="none" ${SK}/><path d="M40 25c4-5 10-5 13-2-4 4-9 4-13 2z" fill="var(--c-g)" ${SK}/><path d="M28 40c1-4 4-7 8-8" stroke="${W}" stroke-width="2.6" stroke-linecap="round" fill="none"/>`,
+ onion:c=>`<path d="M40 16c2 8 22 18 20 34-2 13-11 20-20 20s-18-7-20-20c-2-16 18-26 20-34z" fill="${c}" ${SK}/><path d="M40 22c-6 12-10 26-6 46M40 22c6 12 10 26 6 46" fill="none" ${SK}/><path d="M36 70l-3 5M44 70l3 5" ${SK}/>`,
+ pod:c=>`<path d="M18 62c6-24 22-40 42-42 2 16-10 40-38 46z" fill="${c}" ${SK}/><path d="M58 20c2-5 6-8 10-8M54 22c3 2 8 2 10 0" fill="none" ${SK}/><path d="M28 52c8-12 16-20 24-24" stroke="${W}" stroke-width="2.4" stroke-linecap="round" fill="none"/>`,
+ sticks:c=>`<path d="M14 58L62 18M18 64L66 26M22 70L68 34" stroke="var(--ink)" stroke-width="9" stroke-linecap="round"/><path d="M14 58L62 18M18 64L66 26M22 70L68 34" stroke="${c}" stroke-width="4.4" stroke-linecap="round"/>`,
+ leaves:c=>`<path d="M40 72V24" ${SK}/><g fill="${c}" ${SK}><path d="M40 30c-6-2-12-8-12-14 7 0 12 6 12 14z"/><path d="M40 30c6-2 12-8 12-14-7 0-12 6-12 14z"/><path d="M40 44c-7-2-14-8-14-15 8 0 14 7 14 15z"/><path d="M40 44c7-2 14-8 14-15-8 0-14 7-14 15z"/><path d="M40 58c-7-2-14-8-14-15 8 0 14 7 14 15z"/><path d="M40 58c7-2 14-8 14-15-8 0-14 7-14 15z"/></g>`,
+ banana:c=>`<path d="M16 34c6 22 30 34 50 22 2-2 0-5-3-4-16 6-34-2-41-20z" fill="${c}" ${SK}/><path d="M14 32c-1-4 6-6 8-2" fill="var(--c-g)" ${SK}/><path d="M24 40c8 10 20 14 32 12" fill="none" ${SK}/>`,
+ blocks:c=>`<rect x="14" y="44" width="24" height="20" rx="4" fill="${c}" ${SK}/><rect x="42" y="44" width="24" height="20" rx="4" fill="${c}" ${SK}/><rect x="28" y="22" width="24" height="20" rx="4" fill="${c}" ${SK}/><g fill="var(--ink)" opacity=".55"><circle cx="22" cy="52" r="1.6"/><circle cx="30" cy="57" r="1.6"/><circle cx="50" cy="50" r="1.6"/><circle cx="58" cy="57" r="1.6"/><circle cx="36" cy="30" r="1.6"/><circle cx="44" cy="35" r="1.6"/></g>`,
+ bowl:c=>`<path d="M30 40c2-10 18-10 20 0" fill="${c}" ${SK}/><path d="M14 42h52c0 15-12 26-26 26S14 57 14 42z" fill="var(--c-k2)" ${SK}/><path d="M22 52c4 6 10 9 18 9" stroke="${W}" stroke-width="2.4" stroke-linecap="round" fill="none"/><path d="M14 42h52" ${SK}/>`,
+ coil:c=>`<path d="M40 44m-4 0a4 4 0 1 1 8 0a8 8 0 1 1-16 0a12 12 0 1 1 24 0a16 16 0 1 1-32 0a20 20 0 1 1 40 0" fill="none" stroke="var(--ink)" stroke-width="8" stroke-linecap="round"/><path d="M40 44m-4 0a4 4 0 1 1 8 0a8 8 0 1 1-16 0a12 12 0 1 1 24 0a16 16 0 1 1-32 0a20 20 0 1 1 40 0" fill="none" stroke="${c}" stroke-width="3.6" stroke-linecap="round"/>`,
+ biscuit:c=>`<circle cx="40" cy="44" r="24" fill="${c}" ${SK}/><circle cx="40" cy="44" r="17" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-dasharray="3 4"/><g fill="var(--ink)"><circle cx="33" cy="38" r="2"/><circle cx="46" cy="37" r="2"/><circle cx="40" cy="47" r="2"/><circle cx="32" cy="52" r="2"/><circle cx="48" cy="52" r="2"/></g>`,
+ choco:c=>`<rect x="20" y="16" width="40" height="54" rx="4" fill="${c}" ${SK}/><path d="M20 34h40M20 52h40M40 16v54" ${SK}/><path d="M20 52l40-12v30H20z" fill="var(--c-r)" ${SK}/><rect x="28" y="56" width="24" height="7" rx="2" fill="${W}" ${SK}/>`,
+ cup:c=>`<path d="M14 50h52l-6 18H20z" fill="var(--c-k2)" ${SK}/><path d="M26 22h28l-3 30H29z" fill="var(--c-k2)" ${SK}/><path d="M28 30h24" ${SK}/><path d="M28 30h24l-1 6H29z" fill="${c}"/><path d="M36 18c-3-4 3-6 0-10M44 18c-3-4 3-6 0-10" fill="none" ${SK}/>`,
+ roll:c=>`<rect x="16" y="24" width="34" height="38" rx="6" fill="${c}" ${SK}/><ellipse cx="50" cy="43" rx="8" ry="19" fill="${c}" ${SK}/><ellipse cx="50" cy="43" rx="3" ry="7" fill="${W}" ${SK}/><path d="M30 62l18 10H62" fill="none" ${SK}/>`,
+ pad:c=>`<rect x="16" y="38" width="48" height="24" rx="6" fill="var(--c-y)" ${SK}/><rect x="16" y="28" width="48" height="14" rx="5" fill="${c}" ${SK}/><path d="M22 35h36" stroke="var(--ink)" stroke-width="1.6" stroke-dasharray="2 3"/>`,
+ flame:c=>`<path d="M40 14c8 10 12 16 12 23a12 12 0 0 1-24 0c0-7 4-13 12-23z" fill="var(--c-o)" ${SK}/><path d="M40 28c4 5 5 8 5 11a5 5 0 0 1-10 0c0-3 1-6 5-11z" fill="var(--c-y)"/><rect x="18" y="54" width="14" height="14" rx="3" fill="${c}" ${SK}/><rect x="33" y="54" width="14" height="14" rx="3" fill="${c}" ${SK}/><rect x="48" y="54" width="14" height="14" rx="3" fill="${c}" ${SK}/>`,
+ incense:c=>`<path d="M24 70l10-42M34 70l8-44M44 70l6-42" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/><path d="M24 70l10-42M34 70l8-44M44 70l6-42" stroke="${c}" stroke-width="2" stroke-linecap="round"/><path d="M34 26c-5-5 3-8-1-14M42 24c-4-5 4-8 0-14M50 26c-4-5 4-8 0-14" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" opacity=".55"/><rect x="16" y="62" width="44" height="10" rx="3" fill="var(--c-y)" ${SK}/>`,
+ lamp:c=>`<path d="M40 16c6 8 9 13 9 18a9 9 0 0 1-18 0c0-5 3-10 9-18z" fill="var(--c-y)" ${SK}/><path d="M12 48c4 14 16 20 28 20s24-6 28-20c-6 2-14 3-20 3H32c-6 0-14-1-20-3z" fill="${c}" ${SK}/><path d="M34 46l6-4 6 4" fill="none" ${SK}/><path d="M22 58c6 3 12 4 18 4" stroke="${W}" stroke-width="2.4" stroke-linecap="round" fill="none"/>`,
+ gift:c=>`<rect x="16" y="36" width="48" height="34" rx="4" fill="${c}" ${SK}/><rect x="12" y="28" width="56" height="12" rx="3" fill="${c}" ${SK}/><path d="M36 28h8v42h-8z" fill="var(--c-y)" ${SK}/><path d="M40 28c-8-12-20-10-16-2 3 4 10 2 16 2zM40 28c8-12 20-10 16-2-3 4-10 2-16 2z" fill="var(--c-y)" ${SK}/>`,
+ top:c=>`<path d="M40 70L20 42c0-10 9-16 20-16s20 6 20 16z" fill="${c}" ${SK}/><path d="M20 42c6 5 34 5 40 0" fill="none" ${SK}/><path d="M28 50c6 3 18 3 24 0" stroke="var(--c-y)" stroke-width="4" stroke-linecap="round"/><rect x="36" y="14" width="8" height="12" rx="3" fill="var(--c-y)" ${SK}/>`,
+ pencil:c=>`<path d="M18 62l36-36 8 8-36 36-11 3z" fill="${c}" ${SK}/><path d="M54 26l5-5 8 8-5 5" fill="var(--c-r)" ${SK}/><path d="M18 62l8 8" ${SK}/><path d="M15 73l3-11 8 8z" fill="var(--c-k2)" ${SK}/>`,
+ rings:c=>`<ellipse cx="34" cy="40" rx="18" ry="14" fill="none" stroke="var(--ink)" stroke-width="9"/><ellipse cx="34" cy="40" rx="18" ry="14" fill="none" stroke="${c}" stroke-width="4.4"/><ellipse cx="46" cy="52" rx="18" ry="14" fill="none" stroke="var(--ink)" stroke-width="9"/><ellipse cx="46" cy="52" rx="18" ry="14" fill="none" stroke="var(--c-y)" stroke-width="4.4"/>`
+};
+function drawItem(icon,col,cls){ return `<svg class="${cls||"ico"}" viewBox="0 0 80 80" aria-hidden="true"><ellipse cx="40" cy="74" rx="24" ry="3.5" fill="var(--ink)" opacity=".12"/>${(ICON[icon]||ICON.pouch)(C[col]||C.y)}</svg>`; }
+function itemCount(en){ return list.filter(x=>x.base===en||x.en===en).reduce((n,x)=>n+x.q,0); }
+function renderBoard(){
+  $("#board").innerHTML = AISLES.map((a,i)=>`
+    <button role="tab" id="tab${i}" aria-controls="shelf" aria-selected="${i===current}" tabindex="${i===current?0:-1}" data-i="${i}">
+      <span class="no">${i+1}</span><span>${esc(t(a.en,a.ta))}</span>
+      <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>`).join("");
+}
+let query="";
+function renderShelf(animate){
+  if(query) return renderSearch();
+  const a = AISLES[current], sh=$("#shelf");
+  sh.setAttribute("aria-labelledby","tab"+current);
+  sh.innerHTML = `
+    <div class="shelf-top">
+      <div><h3>${esc(t(a.en,a.ta))}</h3><p class="hint">${esc(t(`Aisle ${current+1} of ${AISLES.length}. Tap an item to choose the brand and size.`,`பிரிவு ${current+1}. பிராண்டு மற்றும் அளவைத் தேர்வுசெய்ய பொருளைத் தொடுங்கள்.`))}</p></div>
+    </div>
+    <div class="tiles">${a.items.map((it,k)=>tileHTML(it,k,current)).join("")}</div>
+    <p class="shelf-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>${esc(t("Don't see it? Write it on your list. If it's sold in Nanganallur, we probably stock it.","இங்கே இல்லையா? பட்டியலில் எழுதுங்கள். பெரும்பாலும் எங்களிடம் இருக்கும்."))}</p>`;
+  sh.classList.toggle("shelf-in", !!animate);
+}
+$("#board").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-i]"); if(!b) return;
+  current=+b.dataset.i; query=""; $("#q").value=""; renderBoard(); renderShelf(true);
+  $("#tab"+current).focus({preventScroll:true});
+});
+$("#board").addEventListener("keydown",e=>{
+  const k={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key]; if(!k) return;
+  e.preventDefault(); current=(current+k+AISLES.length)%AISLES.length; renderBoard(); renderShelf(true); $("#tab"+current).focus();
+});
+function tileHTML(it,k,ai){ const [en,ta,ic,col,br]=it, n=itemCount(en);
+  return `<button class="tile ${n?"has":""}" data-a="${ai}" data-k="${k}" style="animation-delay:${Math.min(k,10)*40}ms">
+    ${drawItem(ic,col)}<span class="tn">${esc(t(en,ta))}</span>
+    <span class="tb">${br.length>1?esc(t(`${br.length} brands`,`${br.length} பிராண்டுகள்`)):br.length===1?esc(br[0]):esc(t("Fresh daily","தினமும் புதியது"))}</span>
+    ${n?`<span class="badge">${n}</span>`:""}</button>`; }
+function renderSearch(){
+  const q=query.toLowerCase(), hits=[];
+  AISLES.forEach((a,ai)=>a.items.forEach((it,k)=>{ if([it[0],it[1],...it[4],a.en,a.ta].some(x=>x.toLowerCase().includes(q))) hits.push([it,k,ai]); }));
+  $("#shelf").innerHTML=`<div class="shelf-top"><div><h3>${esc(t(`Results for “${query}”`,`“${query}” தேடல் முடிவுகள்`))}</h3>
+    <p class="hint">${hits.length?esc(t(`${hits.length} item${hits.length>1?"s":""} across the shop.`,`கடை முழுவதும் ${hits.length} பொருட்கள்.`)):""}</p></div></div>
+    ${hits.length?`<div class="tiles">${hits.map(([it,k,ai])=>tileHTML(it,k,ai)).join("")}</div>`:
+    `<div class="noresult"><p>${esc(t(`We couldn't find “${query}” on these shelves. Add it to your list anyway and the shop will check.`,`“${query}” இங்கே இல்லை. பட்டியலில் சேர்த்தால் கடை சரிபார்க்கும்.`))}</p>
+     <button type="button" class="pick-add" id="addQuery">${esc(t(`Add “${query}” to my list`,`“${query}” பட்டியலில் சேர்`))}</button></div>`}`;
+  $("#shelf").classList.add("shelf-in");
+}
+$("#q").addEventListener("input",e=>{ query=e.target.value.trim(); document.querySelectorAll("#board button").forEach(b=>b.setAttribute("aria-selected", !query && +b.dataset.i===current)); renderShelf(true); });
+$("#shelf").addEventListener("click",e=>{
+  if(e.target.closest("#addQuery")){ addItem(query,query); $("#q").value=""; query=""; renderBoard(); renderShelf(true); return; }
+  const b=e.target.closest(".tile"); if(!b) return;
+  openPick(AISLES[+(b.dataset.a ?? current)].items[+b.dataset.k], b);
+});
+
+/* ---------- brand & size picker ---------- */
+let pk=null, pkBrand=null, pkSize=null, pkQty=1, pkReturn=null;
+function openPick(it, from){
+  pk=it; const [en,ta,ic,col,br,sz]=it; pkBrand=br.length===1?br[0]:null; pkSize=sz[0]; pkQty=1; pkReturn=from;
+  const d=$("#pick");
+  d.innerHTML=`<div class="pick-card" role="dialog" aria-modal="true" aria-labelledby="pickTitle">
+    <button type="button" class="pick-x" data-close aria-label="${t("Close","மூடு")}">×</button>
+    <div class="pick-hero" style="--tint:${C[col]}">${drawItem(ic,col,"pick-ico")}</div>
+    <div class="pick-body">
+      <h3 id="pickTitle">${esc(t(en,ta))}</h3>
+      ${br.length?`<p class="pick-lab">${AISLES[1].items.includes(it)?t("Variety","வகை"):t("Brand","பிராண்டு")}</p>
+      <div class="chips" data-g="brand">${br.map(x=>`<button type="button" class="chip" data-v="${esc(x)}" aria-pressed="${x===pkBrand}">${esc(x)}</button>`).join("")}
+        <button type="button" class="chip" data-v="__any" aria-pressed="false">${AISLES[1].items.includes(it)?t("Any variety","எதுவானாலும்"):t("Any brand","எதுவானாலும்")}</button></div>
+      <input class="pick-other" id="pickOther" placeholder="${t("Or write another brand","அல்லது வேறு பிராண்டை எழுதுங்கள்")}" autocomplete="off">`:`<p class="pick-fresh">${t("Picked fresh from the morning market.","காலைச் சந்தையிலிருந்து புதிதாக.")}</p>`}
+      <p class="pick-lab">${t("Size","அளவு")}</p>
+      <div class="chips" data-g="size">${sz.map(x=>`<button type="button" class="chip" data-v="${esc(x)}" aria-pressed="${x===pkSize}">${esc(x)}</button>`).join("")}</div>
+      <div class="pick-foot">
+        <span class="qty big"><button type="button" data-q="-1" aria-label="Less">−</button><output id="pkQ">1</output><button type="button" data-q="1" aria-label="More">+</button></span>
+        <button type="button" class="pick-add" id="pickAdd">${t("Add to list","பட்டியலில் சேர்")}</button>
+      </div>
+    </div></div>`;
+  d.hidden=false; document.body.style.overflow="hidden";
+  requestAnimationFrame(()=>d.classList.add("open"));
+  setTimeout(()=>{ const f=d.querySelector('.chips .chip'); (f||$("#pickAdd")).focus(); },60);
+}
+function closePick(){ const d=$("#pick"); d.classList.remove("open"); document.body.style.overflow=""; setTimeout(()=>{d.hidden=true;d.innerHTML="";},250); if(pkReturn&&document.contains(pkReturn)) pkReturn.focus({preventScroll:true}); }
+$("#pick").addEventListener("click",e=>{
+  if(e.target.id==="pick"||e.target.closest("[data-close]")) return closePick();
+  const ch=e.target.closest(".chip");
+  if(ch){ const g=ch.parentElement.dataset.g; ch.parentElement.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===ch));
+    if(g==="brand"){ pkBrand=ch.dataset.v==="__any"?null:ch.dataset.v; const o=$("#pickOther"); if(o) o.value=""; } else pkSize=ch.dataset.v; return; }
+  const q=e.target.closest("[data-q]"); if(q){ pkQty=Math.max(1,pkQty+ +q.dataset.q); $("#pkQ").textContent=pkQty; return; }
+  if(e.target.closest("#pickAdd")){
+    const [en,ta]=pk, other=($("#pickOther")||{}).value?.trim();
+    const brand=other||pkBrand, bits=[brand,pkSize].filter(Boolean).join(", ");
+    const lineEn=bits?`${en} (${bits})`:en, lineTa=bits?`${ta} (${bits})`:ta;
+    const f=list.find(x=>x.en===lineEn);
+    if(f) f.q+=pkQty; else list.push({en:lineEn,ta:lineTa,q:pkQty,base:en});
+    save(); renderList(); bump(); closePick(); renderShelf(false);
+    toast(t(`${lineEn} added to your list`,`${lineTa} பட்டியலில் சேர்க்கப்பட்டது`));
+  }
+});
+$("#pick").addEventListener("input",e=>{ if(e.target.id==="pickOther"&&e.target.value.trim()) e.target.previousElementSibling.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false")); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&!$("#pick").hidden) closePick(); });
+
+/* ---------- list sheet ---------- */
+function renderList(){
+  const ul=$("#lines");
+  ul.innerHTML = list.map((x,i)=>`<li><span class="nm">${esc(t(x.en,x.ta))}</span>
+    <span class="qty"><button type="button" data-dec="${i}" aria-label="Less">−</button><output>${x.q}</output><button type="button" data-inc="${i}" aria-label="More">+</button></span>
+    <button type="button" class="rm" data-rm="${i}" aria-label="Remove">×</button></li>`).join("");
+  $("#empty").style.display = list.length ? "none" : "flex";
+  const n = list.reduce((s,x)=>s+x.q,0);
+  $("#navCount").textContent = list.length; const mc=$("#mbarCount"); if(mc){ mc.textContent=list.length; mc.hidden=!list.length; }
+  $("#sheetCount").textContent = list.length ? t(`${list.length} items, ${n} total`, `${list.length} பொருட்கள், மொத்தம் ${n}`) : "";
+  $("#sendBtn").setAttribute("aria-disabled", !list.length); updateLink();
+  $("#formMsg").style.visibility = list.length ? "hidden":"visible";
+}
+$("#lines").addEventListener("click",e=>{
+  const d=e.target.closest("[data-dec],[data-inc],[data-rm]"); if(!d) return;
+  if(d.dataset.inc!==undefined) list[+d.dataset.inc].q++;
+  if(d.dataset.dec!==undefined){ const i=+d.dataset.dec; list[i].q--; if(list[i].q<1) list.splice(i,1); }
+  if(d.dataset.rm!==undefined) list.splice(+d.dataset.rm,1);
+  save(); renderList(); renderShelf(false); renderFest();
+});
+$("#addForm").addEventListener("submit",e=>{
+  e.preventDefault(); const v=$("#addInput").value.trim(); if(!v) return;
+  addItem(v,v,true); $("#addInput").value=""; $("#addInput").focus();
+});
+document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>{
+  mode=b.dataset.mode;
+  document.querySelectorAll("[data-mode]").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  $("#addrField").hidden = mode==="pickup"; updateLink();
+}));
+function updateLink(){
+  const name=$("#fName").value.trim(), addr=$("#fAddr").value.trim();
+  const lines = list.map((x,i)=>`${i+1}. ${x.en===x.ta?x.en:x.en+" / "+x.ta} × ${x.q}`).join("\n");
+  const msg = `Hi V.V. Mart, here's my list:\n\n${lines}\n\n${name?"Name: "+name+"\n":""}${mode==="pickup"?"I'll pick it up at the shop.":"Deliver to: "+(addr||"(will share)")}`;
+  $("#sendBtn").href = list.length ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}` : "#order";
+}
+["#fName","#fAddr"].forEach(id=>$(id).addEventListener("input",updateLink));
+
+/* ---------- offers ---------- */
+function renderTags(){
+  const r=[-3,2,-1.5,3,-2.5];
+  $("#tags").innerHTML = OFFERS.map((o,i)=>{
+    const pct=Math.round((1-o.p/o.o)*100);
+    return `<div class="tag" style="--r:${r[i]}deg;--bg:${o.bg};--fg:${o.fg||"var(--ink)"}">
+      <div class="tag-body">
+        <span class="off">${pct}% ${t("off","தள்ளுபடி")}</span>
+        <h4>${esc(t(o.en,o.ta))}</h4><div class="unit">${esc(t(o.uen,o.uta))}</div>
+        <div class="price">₹${o.p.toLocaleString("en-IN")}<s>₹${o.o.toLocaleString("en-IN")}</s></div>
+        <button class="add" type="button" data-oi="${i}">${t("Add to list","பட்டியலில் சேர்")}</button>
+      </div></div>`;}).join("");
+}
+$("#tags").addEventListener("click",e=>{
+  const b=e.target.closest("[data-oi]"); if(!b) return; const o=OFFERS[+b.dataset.oi];
+  addItem(`${o.en} (${o.uen}, offer)`, `${o.ta} (${o.uta}, சலுகை)`);
+});
+
+/* ---------- festival ---------- */
+function renderFest(){
+  $("#festList").innerHTML = FEST.map((f,i)=>{
+    const added=inList(f.en);
+    return `<div class="fest-row"><div><b>${esc(t(f.en,f.ta))}</b><span>${esc(t(f.den,f.dta))}</span></div>
+    <button type="button" class="${added?"added":""}" data-fi="${i}">${added?t("On your list","பட்டியலில் உள்ளது"):t("Add to list","பட்டியலில் சேர்")}</button></div>`;}).join("");
+}
+$("#festList").addEventListener("click",e=>{
+  const b=e.target.closest("[data-fi]"); if(!b) return; const f=FEST[+b.dataset.fi];
+  addItem(f.en,f.ta); renderFest();
+});
+
+/* kolam: dot grid with loops drawn once when it scrolls into view */
+(function kolam(){
+  const svg=$("#kolam"), ns="http://www.w3.org/2000/svg", N=5, gap=64, o=200-(N-1)*gap/2;
+  let html="";
+  const P=(i,j)=>[o+i*gap,o+j*gap];
+  // petal loops around each dot (sikku-style curves connecting diagonals)
+  for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+    const [x,y]=P(i,j), r=gap/2, k=r*0.9;
+    if((i+j)%2===0){
+      html+=`<path class="loop" d="M${x} ${y-r} C${x+k} ${y-r} ${x+r} ${y-k} ${x+r} ${y} C${x+r} ${y+k} ${x+k} ${y+r} ${x} ${y+r} C${x-k} ${y+r} ${x-r} ${y+k} ${x-r} ${y} C${x-r} ${y-k} ${x-k} ${y-r} ${x} ${y-r}Z"/>`;
+    }
+  }
+  // outer diamond weave
+  const c=200, R=(N-1)*gap/2+gap*0.95;
+  html+=`<path class="loop" d="M${c} ${c-R} Q${c+R*0.15} ${c-R*0.15} ${c+R} ${c} Q${c+R*0.15} ${c+R*0.15} ${c} ${c+R} Q${c-R*0.15} ${c+R*0.15} ${c-R} ${c} Q${c-R*0.15} ${c-R*0.15} ${c} ${c-R}Z"/>`;
+  for(let i=0;i<N-1;i++)for(let j=0;j<N-1;j++){
+    const [x,y]=P(i,j), m=gap/2;
+    html+=`<path class="loop" d="M${x+m} ${y+m-20} L${x+m+20} ${y+m} L${x+m} ${y+m+20} L${x+m-20} ${y+m}Z"/>`;
+  }
+  for(let i=0;i<N;i++)for(let j=0;j<N;j++){ const [x,y]=P(i,j); html+=`<circle class="dot" cx="${x}" cy="${y}" r="4.5"/>`; }
+  svg.innerHTML=html;
+  svg.querySelectorAll(".loop").forEach((p,i)=>{
+    const L=p.getTotalLength(); p.style.strokeDasharray=L; p.style.strokeDashoffset=reduce?0:L; p.style.animationDelay=(i*40)+"ms";
+  });
+  if(reduce) return;
+  new IntersectionObserver((es,ob)=>{ es.forEach(e=>{ if(e.isIntersecting){ svg.classList.add("drawn"); ob.disconnect(); } }); },{threshold:.35}).observe(svg);
+})();
+
+/* ---------- hours (IST) ---------- */
+function renderHours(){
+  const now=new Date(), ist=new Date(now.getTime()+(now.getTimezoneOffset()+330)*60000), h=ist.getHours()+ist.getMinutes()/60;
+  const open = h>=8 && h<22;
+  $("#hours").classList.toggle("closed",!open);
+  $("#hoursText").textContent = open ? t("Open now, until 10 pm today","இப்போது திறந்துள்ளது, இரவு 10 வரை") : t("Closed now, opens in the morning","இப்போது மூடியுள்ளது, காலையில் திறக்கும்");
+}
+
+/* ---------- hero notepad: the one orchestrated moment ---------- */
+(function hero(){
+  const ul=$("#padList");
+  ul.innerHTML = HERO.map(([en,ta])=>`<li><svg class="tick" viewBox="0 0 20 20"><path d="M3 10.5l4.5 4.5L17 5" fill="none" stroke="#2638C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="w"><span class="en">${en}</span><span class="ta">${ta}</span></span><span class="strike"></span></li>`).join("");
+  const lis=[...ul.children], count=$("#padCount");
+  lis.forEach((li,i)=>li.querySelector(".w").style.animationDelay = reduce?"0s":(0.35+i*0.42)+"s");
+  const tickStart = reduce?0:(0.35+lis.length*0.42+0.5)*1000;
+  lis.forEach((li,i)=>setTimeout(()=>{
+    li.style.setProperty("--sw", li.querySelector(".w").offsetWidth+"px");
+    li.classList.add("done"); count.textContent=`${i+1} / ${lis.length}`;
+    if(i===lis.length-1) $("#padReady").classList.add("show");
+  }, tickStart + (reduce?0:i*380)));
+})();
+
+/* in-page links scroll smoothly without writing #section into the address,
+   and a fresh load always starts on the hero */
+try{ history.scrollRestoration = "manual"; }catch(e){}
+if(location.hash){ try{ history.replaceState(null, "", location.pathname + location.search); }catch(e){} }
+scrollTo(0,0);
+addEventListener("load",()=>scrollTo(0,0));
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="#"]'); if(!a || a.target==="_blank") return;
+  const id=a.getAttribute("href").slice(1), el=id ? document.getElementById(id) : null;
+  e.preventDefault();
+  if(!el){ scrollTo({top:0,behavior:reduce?"auto":"smooth"}); return; }
+  const navH=$("#nav").offsetHeight;
+  scrollTo({top: el.getBoundingClientRect().top + scrollY - navH + 1, behavior: reduce?"auto":"smooth"});
+});
+
+/* nav shadow */
+addEventListener("scroll",()=>$("#nav").classList.toggle("scrolled",scrollY>10),{passive:true});
+
+
+/* ================= reel-inspired motion ================= */
+/* intro: the sign switches on once per visit */
+(function(){
+  const el=$("#intro"); let seen=false;
+  try{ seen=sessionStorage.getItem("vvm-intro")==="1"; }catch(e){}
+  if(reduce||seen){ el.hidden=true; return; }
+  document.body.style.overflow="hidden";
+  setTimeout(()=>el.classList.add("lift"),1650);
+  setTimeout(()=>{ el.hidden=true; document.body.style.overflow=""; try{sessionStorage.setItem("vvm-intro","1");}catch(e){} },2600);
+})();
+
+/* story: items fly into the manjappai as the section scrolls */
+const STORY_ITEMS=[["sack","y"],["bottle","o"],["sticks","g"],["round","r"],["flame","w"],["lamp","o"],["gift","r"],["cup","b"]];
+const FLY=[ // start x,y and end x,y as % of the stage, then start and end rotation
+ [-70,-6, 22,24, -40,-8],[130,-14, 52,22, 30,8],[-70,30, 36,21, -60,-28],[130,24, 58,27, 50,10],
+ [-70,-24, 16,28, -20,-6],[130,-30, 44,29, 30,4],[-70,10, 30,26, -30,-10],[130,4, 58,24, 30,12]];
+(function(){
+  const box=$("#flyers"); if(!box) return;
+  box.innerHTML=STORY_ITEMS.map(([ic,c])=>`<div class="flyer">${drawItem(ic,c)}</div>`).join("");
+  const fl=[...box.children], stages=[...document.querySelectorAll(".stages li")], N=$("#storyN"), sec=$("#story");
+  const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+  let lastStage=-1;
+  function place(p){
+    const W=box.clientWidth,H=box.clientHeight; let inBag=0;
+    fl.forEach((f,i)=>{
+      const [sx,sy,ex,ey,sr,er]=FLY[i];
+      const a=0.04+i*0.105, t=Math.min(1,Math.max(0,(p-a)/0.14)), e=ease(t);
+      const x=sx+(ex-sx)*e, arc=Math.sin(e*Math.PI)*-18, y=sy+(ey-sy)*e+arc;
+      f.style.transform=`translate(${x/100*W}px,${y/100*H}px) rotate(${sr+(er-sr)*e}deg)`;
+      f.style.opacity=t>0?1:0;
+      if(t>=1) inBag++;
+    });
+    N.textContent=inBag;
+    const st=Math.min(stages.length-1,Math.floor(p*stages.length*0.999));
+    if(st!==lastStage){ stages.forEach((l,k)=>l.classList.toggle("on",k===st)); lastStage=st; }
+  }
+  if(reduce){ place(1); N.textContent="8"; return; }
+  let ticking=false;
+  function onScroll(){ if(ticking) return; ticking=true; requestAnimationFrame(()=>{ ticking=false;
+    const r=sec.getBoundingClientRect(), total=r.height-innerHeight; place(Math.min(1,Math.max(0,-r.top/Math.max(1,total)))); }); }
+  addEventListener("scroll",onScroll,{passive:true}); addEventListener("resize",onScroll); onScroll();
+})();
+
+/* manifesto: words light up as you read down, pictures pop in */
+(function(){
+  const mf=$("#mf"); if(!mf) return;
+  mf.querySelectorAll("i[data-ic]").forEach(i=>{ const [ic,c]=i.dataset.ic.split("|"); i.style.setProperty("--tint",`color-mix(in srgb, ${C[c]} 30%, #fff)`); i.innerHTML=drawItem(ic,c).replace('<ellipse cx="40" cy="74" rx="24" ry="3.5" fill="var(--ink)" opacity=".12"/>',""); });
+  mf.querySelectorAll(":scope > span").forEach(sp=>{
+    [...sp.childNodes].forEach(n=>{ if(n.nodeType===3){ const frag=document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(w=>{ if(!w) return; if(/^\s+$/.test(w)) frag.append(w); else { const e=document.createElement("span"); e.className="w"; e.textContent=w; frag.append(e);} });
+      n.replaceWith(frag);} });
+  });
+  if(reduce) return;
+  function upd(){ const parts=[...mf.querySelectorAll(":scope > span:not([style*='none']) .w, :scope > span i")].filter(x=>x.offsetParent);
+    const r=mf.getBoundingClientRect(), p=Math.min(1,Math.max(0,(innerHeight*0.85-r.top)/(r.height+innerHeight*0.35)));
+    const n=Math.round(p*parts.length); parts.forEach((x,k)=>x.classList.toggle("lit",k<n)); }
+  addEventListener("scroll",()=>requestAnimationFrame(upd),{passive:true}); upd();
+})();
+
+/* storefront: slow parallax */
+(function(){
+  const im=$("#frontImg"); if(!im||reduce) return;
+  addEventListener("scroll",()=>requestAnimationFrame(()=>{ const r=im.parentElement.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight) return;
+    im.style.transform=`translateY(${(r.top/innerHeight)*-60}px) scale(1.04)`; }),{passive:true});
+})();
+
+setLang(lang);
+</script>
+</body>
+</html>
